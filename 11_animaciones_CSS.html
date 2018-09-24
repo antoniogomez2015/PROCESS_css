@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*
+
+		Tutorial:
+
+			Curso de Diseño y Programación Web: 11. Transformaciones 2D y 3D, transiciones y animaciones | https://www.youtube.com/watch?v=yj93AWX0P_k&index=12&list=PLvq-jIkSeTUbxAO7uRoeNHH6ZCyjr7xq2
+
+	*/
+
+	/*///////////////////////////////////////////////////////////////////////*
+
+	/*
+
+	Animaciones CSS:
+	________________
+
+	_tenemos la posibilidad de crear ó agregar animaciones ha elementos html, para lo cuál, dispondremos de las siguiente propiedades y características:
+
+
+		_#proof{
+			animation: ;
+
+		}
+
+
+	Eventos:
+	________
+
+	_las transiciones requieren eventos de parte del usuario ó de parte del navegador
+
+	_de ésta manera, las transiciones reponden ha eventos de tipo "hover", ó de tipo "click", ó acciones de carga del navegador a través, de javascript, otros
+
+	_lo cuáles, harán de "triggers", ó desencadenantes de las acciones de la transición respectiva, ej:
+
+
+
+		_#proof{
+			transition: background-color 1s ease-out;
+
+		}
+
+			_#proof:hover{
+				background-color: red;
+
+			}
+
+
+	NOTA: lo más recomendable es crear clases css, con los diferentes tipos de animaciones ha realizar para que así, estas animaciones sean reutilizables los elemento iguales y con el mismo comportamiento
+
+
+
+	Propiedades CSS:
+	________________
+
+	_de ésta manera, la propiedad "animation" dispone de los siguiente valores:
+
+		//ejemplo para todas las propiedad aplicadas en un evento
+		_#demo{			
+			animation: nombre de la animacion + duración + repeticiones + delay ó retardo + curva de aceleración;
+		}
+
+
+		_#proof{
+			animation: muevete 4s infinite 2s ease-out;
+
+		}
+
+
+	NOTA: es algunos casos será necesario la implementación de prefijos propietarios para asegurar la compatibilidad de todos los navegadores antiguos
+
+		_webkit- | -moz | -o- | -ms-
+
+
+
+
+	Tipos de Interpolación:
+	_______________________
+
+	_para las animaciones dispondremos de varios tipos de interpolaciones para que así, podamos configurar el comportamiento de la animación en el tiempo y poder así, ajustar el timming, de la animación resultante
+
+	_para lo cuál, dispondremos de las siguientes curvas de animación:
+
+
+		_linear (por defecto) //un movimiento unifome
+
+		_ease;  //una aceleración constante
+
+		_ease-in; //una aceleración al inicio
+
+		_ease_out;  //una aceleración al final
+
+		_ease-in-out;  //una aceleración al inicio y al final
+
+
+
+	Comportamientos:
+	________________
+
+	_también, dispondremos de diferentes tipos de comportamientos para predefinir el comportamiendo que realizará la animación antes y despues de su ejecución
+
+	_de ésta manera, dispondresmo de los siguientes comportamientos:
+
+
+		_normal 
+
+			_este es el comportamiento por defecto el cuál, hace que la animación re repita a partir de su punto inicial como en la mayoría de aplicaciones de animación ha modo de loop, ó reloads
+
+
+		_alternate
+
+			_éste comportamiento permitirá que la animación se reprodusca de forma invertida al finalizar la animación para luego volver ha repetir la animaciónha modo de loops, ó ciclo
+
+			NOTA: ésta opción requiere en la opción de cilo ó intervalo esté en "infinite", ó en un intervalor mayor ha "1";
+
+
+		_reverse
+
+			_éste comportamiento permitirá que la animación desde un punto inicial se comence ha reproducir en reversa ó de forma invertida
+
+
+		_alternate-reverse
+
+			_éste comportamiento permitirá que la animación desde un punto inicial se comence ha reproducir en reversa ó de forma invertida para posteriormente volverse ha reproducir de forma normal ó de iaquierda ha derecha creando un ciclo ó loop
+
+			NOTA: ésta opción requiere en la opción de cilo ó intervalo esté en "infinite", ó en un intervalor mayor ha "1";
+
+
+
+	de ésta manera, podremos utilizar ésta propiedad de la siguiente manera:
+
+
+		_.animado{
+				animation: muevete 4s infinite alternate 1s ease-in-out;
+			}
+
+
+
+
+	Acciones:
+	_________
+
+	_también, tendremos la posibilidad de indicarle a la animación el estado en cuál, ésta tomará al termina la animación
+
+	_ésta opción es especialmente útil cuando realizamos animaciones con un estado final único, sin ciclo ó cloops, definidos
+
+	_de ésta manera, podremos dispononer de los siguientes comportamientos ó cara´cterísticas:
+
+
+		_none
+
+			_Valor por defecto. La animación no aplicará ningún estilo al elemento antes o después de ejecutarlo
+
+
+		_forwards
+
+			_El elemento retendrá los valores de estilo establecidos por el último fotograma clave (depende de la dirección de animación y el recuento de iteración de animación)
+
+
+		_backwards
+
+			_Elemento obtendrá los valores de estilo establecidos por el primer fotograma clave (depende de la dirección de la animación) y retendrá esto durante el período de demora de la animación.
+
+
+		_both
+
+			_Elemento de los valores de estilo establecidos para el primer fotograma clave de la animación y retendrá esto durante el período de la demora de la animación.
+
+
+
+	Keyframes:
+	__________
+
+	_para crear animaciones css, debemos de hacer de la directiva "@keyframes{}"
+
+	_de ésta manera, a parte de las instrucciones css, aplicados sobre el elemento html, respectivo
+
+	_debemos de crear por a parte la directiva "@keyframes{}", dentro de la cuál, debemos de determinar las características de la animación ha realizar
+
+	NOTA: los fotogramas en css, para una animación están definidos en "0", y "100", dentro de los cuáles, debe de ejecutarse la animación en su totalidad
+
+	_de ésta manera, podremos crear intervalor de animación ó variaciones en el timming, en un sólo paso ó en varios pasos ó segmentos ej:
+
+
+
+		//para sólo un intervalo de forma simplificada
+		_@keyframes example {
+
+		    from {background-color: red;}
+		    to {background-color: yellow;}
+
+		}
+
+	
+		
+		//para un sólo intervalo
+		_@keyframes muevete {
+
+			0%{
+				left: 0;	
+			}
+
+			100%{
+				left: 100%;	
+			}
+
+		}
+
+
+		//para más de un intervalo
+		_@keyframes muevete {
+
+			0%{
+				left: 0;	
+			}
+
+			50%{
+				left: 50%;	
+			}
+
+			75%{
+				left: 75%;	
+			}
+
+			100%{
+				left: 100%;	
+			}
+
+		}
+
+
+		//para más de un intervalo combinado
+		_@keyframes muevete {
+
+			0%,75%{
+				left: 0;	
+			}		
+
+			75%,100%{
+				left: 100%;	
+			}
+
+		}
+
+
+	NOTA: es posible en para navegadores antiguos sea requeria la implementación de prefijos propietarios, ej:
+
+
+		_@-webkit-keyframes | @-moz-keyframes | @-ms-keyframes | @-o-keyframes
+
+
+
+	*/
+
+	html,body{
+		border: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+
+		.animacionesCSS{
+			width: 50%;
+			height: auto;
+			text-align: center;
+			margin: 2% auto;
+			background-color: orange;
+			padding: 5%;
+			cursor: pointer;
+		}
+
+			.animacionesCSS h2{
+				font-family: arial,helvetica,sans-serif;
+				font-size: 2.0rem;
+				font-weight: bold;
+				color: white;
+				margin-top: 3%;
+			}
+
+			#pacman{
+				width: 0px;
+				height: 0px;
+				border: 1.5em solid yellow;
+				border-right: 1.5em solid transparent;
+				border-radius: 50%;
+				margin: 5%;
+				position: relative;
+				top: 70%;
+				left: 0;
+			}
+
+			.animado{
+				animation: muevete 4s 1 normal both 1s ease-in-out;
+			}
+
+			@keyframes muevete {
+
+				0%{
+					left: 0;	
+				}
+
+				100%{
+					left: 90%;	
+				}	
+
+
+			}
+
+				.animacionesCSS:hover{
+					background-color: red;
+				}
+	
+
+</style>
+
+<body>
+
+	<article class="animacionesCSS">
+		
+		<h2>Animaciones</h2>
+
+		<div id="pacman" class="animado">			
+
+		</div>
+
+
+	</article>
+
+	
+
+
+</body>
+</html>

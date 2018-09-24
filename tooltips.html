@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tooltips</title>
+
+	<style type="text/css">
+
+	/**
+
+
+	Tutorial: Trucos CSS (33) - Crear tooltips
+		https://www.youtube.com/watch?v=ZwE4DoAwAPQ
+
+	
+
+	Tooltips:
+	_________
+
+	_para crear tooltips, podremos hacerlo a través, de diferentes métodos como el uso de pseudo elementos así, como con elementos complementarios, otros
+
+
+
+	Span:
+	_____
+
+	_de ésta maenra, el área ó contenido el cuál, deseamos que tenga un tooltip, informativo ó gráfico, debemos de enmarcar éste dentro de una etiqueta ó tag, de tipo "<span>", para poder referirnos ha ésta posteriormente ej:
+
+		_texto<span>Agenda</span>
+
+
+
+	Data-:
+	______
+
+	_así, como también, al elemento al cuál, podremos referirnos posteriormente para agregarle ha éste un tooltip, también, debemos de agregarle el atributo de tipo "data-name=''" 
+
+	_el cuál, podremos personalizar con un nombre presonalizado ej:
+
+		_texto<span data-tooltip="">Agenda</span>
+
+	
+
+	_e indicar un valor para éste atributo personalizable ej:
+
+		_texto<span data-tooltip="Vea más información de su Agenda Electrónica">Agenda</span>
+
+	
+
+
+	*/
+
+		body{
+			border: 0;
+			padding: 0;
+			margin: 0 auto;
+		}
+
+			#wrapper{
+				width: 90%;
+				height: auto;
+				margin: 0 auto;
+			}
+
+				section{
+					width: 100%;
+					height: auto;
+				}
+
+					section p{
+						width: 85%;
+						height: auto;
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1rem;
+						line-height: 1.5;
+						text-align: justify;
+						color: #888;
+					}
+
+						section p [data-empresa]{
+							display: inline-block;
+							padding-right: 3%;
+							/*background-color: yellow;*/
+							position: relative;
+							border-bottom: 2px solid dashed blue;
+							cursor: pointer;
+						}
+
+							section p [data-empresa]::after{
+								content: "?";
+								width: 1em;
+								height: 1em;
+								text-align: center;								
+								position: absolute;
+								right: 0px;
+								background-color: blue;
+								color: white;
+								border-radius: 50%;
+								padding: 2% 2% 4% 2%;
+							}
+
+							section p [data-empresa]::before{
+								content: attr(data-empresa);
+								width: 300%;
+								min-height: 100%;
+								display: block;
+								position: absolute;
+								top: 100%;
+								left: 0%;
+								color: white;
+								font-weight: bold;
+								font-style: italic;
+								background-color: orange;
+								border-radius: 5%;	
+								padding: 5%;											
+							}
+
+							
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<section>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. <span data-empresa="MONO | Web, SocialMedia, Producción, Diseño y Producción">MONO</span> Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</section>
+		
+
+	</div>
+	
+</body>
+</html>

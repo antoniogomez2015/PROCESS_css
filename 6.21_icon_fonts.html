@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Tutorial: #44 - Icon fonts, Iconos basados en Fuentes con @font-face de CSS3 | https://www.youtube.com/watch?v=N10_GlMQauk&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=44
+
+		Como utilizar iconos personalizados en nuestro sitio web mediante fuentes y CSS | https://www.youtube.com/watch?v=U7GsS5lhGm8
+
+		Workflow:
+	_________
+
+
+	Download Pack IconMoon:
+
+	_a continuación realizaremos un workflow, con las opciones de la página "https://icomoon.io/#preview-free":
+
+	_primero tenemos la opción de descargar todos los iconos del proyecto de la página web de "Icomoon", como archivos nativos, png,svg, otros, para disponer de éstos y utilizarlos de forma manual
+
+	_a través, del siguiente método; procedemos ha descargar el "iconPack", "IcoMoon" en su versión "free"
+
+
+	IcoMoon App Setting:
+
+	_así, como también, tendremos la posbilidad de configurar sólo los iconos que necesitemos para nuestro proyecto web, de ésta manera, el sistema sólo nos generará los iconos que necesitemos y que le indiquemos el sistema
+
+	_para que así, el sistema nos genere un empaquetado listo para usar de forma directa y automatizada
+
+	_para lo cuál, debemos darle a la ópción de "IconMoon App", en la página web, para que así, nos lleve ha una interface, en la cuál, podamos escoger ó seleccionar lo íconos que deseamos convertir en una fuente personalizada para nuestro uso
+
+	_de ésta manera, al haber terminado de seleccionar los íconos deseados debemos darle en la barra inferior a la opción de "Generate Font"
+
+	_para que así, el sistema nos genere y muestre un sumario con los iconos incluidos en la font, generada y así, como también, tendremos a nuestra disposición en la barra inferior de un botón "Download", a través, del cuál, podremos descargar el empaquetado para nuestra utilización en nuestro proyecto web
+
+
+	Link Css:
+
+	_para a continuáción proceder ha relacionar la hoja de estilos generada en el empaquetado de la fuente generada de íconos personalizados que creamos en pasos anteriores
+
+	_la cuál, debemos pegar en la cabecera <head></head> del respectivo documento html, ej:
+
+		<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	_para posteriormente abrir el archivo "style.css", que hemos relacionado con el documento html, en el paso anterior para que así, podamos editar las rutas de las icon-fuents, con la ruta correcta de nuestro proyecto
+
+
+	Utilización:
+
+	_para luego poder utilizar ó aplicar éstas icons-fonts, dentro de nuestra respectiva página web, debemos hacer a través, del siguiente método:
+
+	_lo más común y recomendado es la utilización de una etiqueta de tipo <span>, dentro del elemento al cuál, deseamos aplicarle un ícono, ya que a través, del "<span>", podremos reajustar vía css, el ícono por a parte del elemento html, respectivo
+
+	_y dentro de dicho <span>, debemos agregar una clase "class="", la cuál, tendrá como nomenclatuva básica "icon-", más el nombre ó código respectivo al ícono que desemos incorporar
+
+	_de ésta manera, para obtener los código respectivos a cada ícono es recomendable abrir el archivo "demo.html", que biene incluido en el pequete generado con el icon-font
+
+	_así, al abrir en el navegador el archivo ó página "demo.html", podremos ver el nombre de cada ícono; dicho nombre corresponderá al nombre de la clase del mismo, ej: "icon-home" 
+
+		_"<h1><span class="icon-home"></span>Hola Mundo</h1>"
+
+	_así, como al propio elemento html, respectivo, en éste ejemplo "h1", podremos agregarles atributos de grupo "font", como font-size/weight/color, otros
+
+	_ya que los íconos pertenecen ha una fuente y debemos controlar su aspecto a través, de atributos de tipo fuente
+
+		h1{
+			font-size: 2rem;
+			color: lightgrey;				
+		}
+
+	_como también, podríamos cambiar el color, tamaño y demás características del mismo ícono, para lo cuál, debemos personalizar la respectiva clase del ícono agregándole más características a través, de más atributos, ej:
+
+		.icon-home{
+			font-size: 4rem;
+			color: red;
+		}
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+		}
+
+		#wrapper{
+			width: 100%;
+			margin: 0 auto;				
+		}
+
+			h1{
+				font-size: 2rem;
+				color: lightgrey;				
+			}
+
+			.icon-home{
+				font-size: 4rem;
+				color: red;
+			}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<h1><span class="icon-home"></span>Hola Mundo</h1>
+
+		
+	</div>
+	
+</body>
+
+</html>

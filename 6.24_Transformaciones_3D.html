@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial: #47 - Transformaciones 3D - Curso de CSS3 desde 0| https://www.youtube.com/watch?v=kn0mvuykcXE&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=47&spfreload=5
+	
+
+	Workflow:
+	_________
+
+	_tenemos la posibilidad de hacer transformaciones espaciales 3d, de elementos html, como contenedores entre otros
+
+	_lo que nos permitirá generar la ilusión 3d, de profundidad y perspectiva y distancia de un elemento html, determinado 
+
+
+	Canvas Container:
+	_________________
+
+	_de ésta manera, debemos agregarle los atributos de control al elemento que hará de padre, de los elementos html, que tomarán un comportamiento 3d, éstos son:
+
+		_-webkit-perspective: 800px;
+
+		_-webkit-perspective-origin:;
+
+
+	Perspective:
+	____________
+
+	_para lo cuál, tendremos que crear un entorno ó contexto 3d, en el elemento determinado previamente, a través, de la propiedad "-webkit-perspective:"
+
+	_pasándole como valor un número entero ej: "10", el cuál, representará la distancia del determinado elemento html, seleccionado y la vista ó posición paralela del usuario "ha modo de distacia de la cámara"
+
+		_entendiéndo así, que entre menos distancia ó valor indicado "mayor será la profundidad", y "mayor será la vista en la que tendremos el elemento html, en el canvas"
+
+		_y entre mayor sea la distancia ó valor indicado "menor será la profundidad", y "menor ó más llana y plana será la vista en la que tendremos el elemento html, en el canvas"
+
+		_donde el valor más normal será de "800px", para un punto medio
+
+	_y dicho valor, deberá representarse a través, de una nomenclatura ó unidades en pixeles "px", ej:
+
+		_-webkit-perspective: 50px;
+
+
+	_y dicho entorno ó contexto 3d, afectará al hijo directo "> child"
+
+
+
+	Perspective-origin:
+	___________________
+
+	_con éste atributo definiremos el punto de vista del ojo del usuario en relación a la ubicación del elemento html, seleccionado respectivamente
+
+	_y dichos puntos de vistas podrán se: 
+
+		_center (valor por defecto)
+
+		_left
+
+		_right
+
+		_top
+
+		_left
+
+	_así, como también, expresar éstos en porcentajes, entendiéndo así, que el valor por defecto es de "50% / 50%", ó un punto medio central del elemento html
+
+
+	_de ésta manera, podremos expresar la sentencia de la siguiente manera:
+
+		_-webkit-perspective-origin: 30% 100%;
+
+		_-webkit-perspective-origin: top left;
+
+
+
+
+
+_éstas trasnformaciones pueden ser del tipo ó recibir los siguiente valores:
+
+		_rotation
+
+		
+	Transform: Rotate():
+	____________________
+
+	_los valores de rotación "rotate()", aplicables a la propiedad "transform", de los elemento hijos ó "childs", del elemento padre con la propiedad "-webkit-perspective", los cuáles reciben la siguientes tipos de nomenclaturas y unidades:
+
+	_ a través, de los siguientes valor, "deg", grados ej: "45deg", así:
+
+		_transform: rotate(45deg);
+
+	_como también, a través, de "grad", ó gradación, donde "400", equivaldrá ha "360", grados, así, de ésta manera, si expresamos "200grad", el elemento determinado rotará "180", grados
+
+		_transform: rotate(200grad);
+
+	_ó también, a través, de la unidad "rad", de "radiand", donde un radian, equivale ha "17", grados, ej: "2rad", lo cuál, equivaldrá ha "34", grados
+
+		_transform: rotate(2red);
+
+
+	_así, como también, dispondremos una palabra clave "turn", la cuál, hará que el elemento gire las veces que le indiquemos ha modo de una vuelta "360", grados, por un valor entero indicado, ej:
+
+		_transform: rotate(3 turn); //3 giros
+
+
+	_ésto es posible a través, de los atributos "rotateX();", para rotar elementos en la cordenada "X"
+
+	_a través, del atributo "rotateY();", para rotar elementos en la cordenada "Y"
+
+	_a través, del atributo "rotateZ()", para rotar elementos en la cordenada "Z"
+
+
+	Transform rotate3d(1,1,1,0deg):
+	_______________________________
+
+	_así, como tamibén, podremos hacer transformaciones de rotación 3d, para los tres ejes al unísonos a través, de la propieadad "rotate3d(x,y,z,a);"
+
+	_pasándo como parámetros los valores de cada uno de éstos respectivos ejes en valores booleanos más el ángulo de rotación en grados para cada uno de éstos
+
+			_donde la posición del valor de "x", equivaldrá a la cordenada "X"
+
+			_donde la posición del valor de "Y", equivaldrá a la cordenada "Y"
+
+			_donde la posición del valor de "Z", equivaldrá a la cordenada "Z"
+
+			_donde la posición del valor de "a", equivaldrá al ángulo de rotación
+
+	_de ésta manera, podremos expresar la sentencia de ésta mnera:
+
+		_transform rotate3d(1,1,0, 45deg);
+
+	_entendiendo así, siguiendo el ejemplo de arriba que dicho elemento rotará en la cordenada "X", y "Y", 45, grados, y en la cordenada "Z", no tendrá ningún tipo de rotación
+
+		_de ésta manera, podremos entender que los valor booleanos con valor de "1", harán la rotación en los grados indicados, en éste caso "45deg"
+
+		_más los valor con un valor booleano de "0", tendrán un valor negativo y por ende no hará ó tomarán la acción de rotación indicada en éste caso de "45deg"
+
+
+
+	Transform translate():
+	______________________
+
+	_y en las transformaciones "3d", tenemos la posibilidad de mover elementos en el espacio 3d, yendo más allá de las propiedades 2d, las cuáles permiten mover elementos en las cordenadas "X", y "Y" 
+
+	_podremos ahora, mover elementos en la cordenada "Z", la cuál, nos permitirá desplazar el elemento hacia el punto de vista del observador hacia adelante ó hacia atras según la perspectiva y el ángulo de origen del usuario ó espectador en relación al elemento html, seleccionado
+
+	_para lo cuál, tendremos que indicar valores positivos para desplazar el elemento hacia adelante y valores negativos para desplazarlo hacia atras, ej:
+
+		_transform: translateZ(-80px);
+
+
+	Transform translate3d():
+	________________________
+
+	_y a través, de éste atributo podremos mover el elemento html, seleccionado en los tres ejes 3d, de forma individual
+
+	_para lo cuál, tendremos que indicar los valores por separado, tanto positivos como negativos separándo éstos por ",", comas y en unidades en pixeles ó porcentajes ej:
+
+		_transform: translate3d(45px, 85px, 65px);
+
+
+
+	Transform scaleZ():
+	___________________
+
+	_y a través, de éste atributo podremos escalar el elemento html, seleccionado en la cordenada "Z", en relación al canvas
+
+	_y dicho atributo nos permitirá asignarle un sólo valor el cuál, se multiplicará por la posición en que se encuentre elemento html, en el eje "Z", que le indiquemos a través, del atributo conjunto "translateZ();", el cuál, será la posición que tomará el elemento html, seleccionado en el eje "Z" ej:
+
+		_transform: scaleZ(2) translateZ(100px);
+
+
+	_de ésta manera, el valor que tenemos indicado en la propiedad "scaleZ()", en éste caso "1", se multiplicará por el valor que tenemos indicado el atributo conjunto "transformZ()", en éste caso "100px, "el elemento html, seleccionado se escalará
+
+	_de ésta manera, podremos entendre que el elemento html, seleccionado respectivamente se escalará en el eje "Z", "200px", en relación a la perspectiva y al punto de vista u origen del usuario ó espectador
+
+
+	Backface visibility:
+	____________________
+
+	_también, dispondremos un atributo el cuál, nos permitirá jugar la visibilidad de ambas faces, ó caras de una "layer", ó elemento html, convertido ahora en 3d
+
+	_éste atributo es especialmente útil para hacer efectos por ejemplo de cartas las cuales se dar vuelta ó giran, éste es un efecto compuesta el cuál, está conformado por dos elementos html, donde cada uno de éstos hará de una de las caras de la respectiva carta, entre otras posibilidades posibles
+
+	_de ésta manera, la propiedad "-webkit-backface-visibility:", permite ó recibe los siguientes valores:
+
+		_visible:
+
+			_éste es el valor defecto
+
+		_hidden:
+
+			_éste valor nos permite ocultar la visualización de la respectiva cara, de ésta manera, cuando el elemento gira "180deg", éste se hará invisible permitiendo así, mostrar otra layer, ó elemento html, que esté tras de éste elemento ahora oculto
+
+
+	Transform style():
+	__________________
+
+	_éste atributo nos permitirá hacer herencias de determinados elementos padres, para que así, de ésta manera, ahora elementos hjos ahora puedan convertirse también, en elementos padres de otros elementos contenidos en éstos
+
+	_de ésta manera, no tendremos que repetir el proceso de configuración del canvas 3d, "perspective:;", sino que con la configuración en el elemento padre inicial podremos hacerla heredable ha otros elementos hijos y así, sucesivamente
+
+	_para lo cuál, dispondremos del atributo "-webkit-transform-style:", al cuál, podremos indicarle como valor los siguientes valores:
+
+		_preserve-3d:
+
+			_éste valor hará que éste elemento respectivo tome los valores de "perspective", de su elemento padre, si es que éste posee alguno
+
+		_flat:
+
+			_éste valor especifica que los elementos hijos NO conservarán su posición 3D. Este es el valor predeterminado
+
+		_initial:
+
+			_éste es el valor por defecto
+
+		_inherit:
+
+			_éste es la opción ó valor heredado
+
+
+	_de ésta manera, podremos expresar la sentencia de la siugiente manera:
+
+		_-webkit-transform-style: preserve-3d;
+
+
+
+
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;
+				-webkit-perspective: 500px;
+				-webkit-perspective-origin: 0% 90%;		
+			}
+
+				#proof{
+					width: 300px;
+					height: 200px;
+					margin: auto;
+					color: #fff;
+					background-color: blue;	
+					text-align: center;					
+					-webkit-transform: rotate3d(1,1,0,20deg);
+					/*transform: translateZ(-50px);
+					transform: scaleZ(1) translateZ(50px);
+					-webkit-backface-visibility: hidden;*/	
+				
+				}
+
+					/*#proof h1{
+						color: #fff;
+						-webkit-transform: rotate(20deg);
+					}*/			
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<h1>Hola Mundo</h1>			
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

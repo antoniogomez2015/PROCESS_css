@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+
+		body{
+			width: 100%;
+			border: 0;
+			margin:0 auto;
+			padding: 0;
+			text-align: center;
+			background-color: #222;
+		}
+
+		/*llamado de la fuente de la ruta de nuestro proyecto*/
+		@font-face{
+			font-family: Comic_Block;
+			src: url(referencias/Comic_Block.ttf),	
+			url(referencias/Comic_Block.oet),
+			url(referencias/Comic_Block.otf);	
+		}
+
+		/*utilización de la fuente personalizada*/
+		h1{
+			font-family: Comic_Block;
+			font-size: 4em;
+			color: #fff;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+
+	<h1>Mono Producción</h1>
+
+	<!--
+
+	Tutorial: (CSS) Como poner cualquier tipografia/fuente en tu web ( @Font-Face ) | https://www.youtube.com/watch?v=pN3Ics48Hg8
+
+	0_proceso para incorporar una fuente que tengamos en físico dentro de la estructura de nuestro proyecto, por ejemplo bajada de "http://www.dafont.com/"
+
+	1_formatos permitidos y recomendables de fuentes para la web:
+
+		_.TTF: True Type Format (para todos los navegadores excepto internet explorer 8)
+
+		_.EOT: Embeded Open Type (sólo internet explorer)
+
+		_.WOFF: Web Open Font Format (la mayoría de navegadores)
+
+	3_a continuación tenemos una opción para la conversión de fuentes:
+
+		https://onlinefontconverter.com/
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	otras páginas que ofrecen servicios de descarga y conversión de fuentes:
+
+		http://fontdeck.com/typefaces
+
+		http://www.linotype.com/
+
+		http://www.fontsquirrel.com/ (tipografias web disponibles)
+
+		https://onlinefontconverter.com/
+
+		https://www.web-font-generator.com/
+
+		http://transfonter.org/
+
+		http://www.font2web.com/
+
+		https://everythingfonts.com/ttf-to-woff
+
+
+
+
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	Otro Tutorial:
+
+
+
+	Conversión de funtes personalizadas a fuentes web
+
+	referencia:
+
+		#43 - Web fonts, Fuentes personalizadas con @font-face
+
+			https://www.youtube.com/watch?v=BAakU9qp0pA
+
+
+		referencia en disco:
+		C:\Users\mono\AppData\Roaming\idesktop\DFolder\capetas y arvhicos\PROCESOS\Font web\Conversion de fuentes personalizadas a fuentes web
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Motor de conversión:
+	____________________
+
+
+		http://www.fontsquirrel.com/tools/webfont-generator
+
+
+		Proceso:
+		________
+
+
+			1_primero procedemos a subir la fuente que deseamos convertir y que previamente descargamos a nuestro pc
+
+				
+			2_luego aceptamos los términos "Agreement:"
+
+		
+			3_para luego si descargar el "Download Web Kit"
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Download Web Kit:
+	_________________
+
+
+		_de ésta manera, los archivos descargados a través, del proceso web kit, debemos descomprimirlos dentro de nuestra
+
+		estructura de archivos, de nuestra web, ej: miSitio/fonts/alpha-echo/
+
+
+		_así, podremos encontrar ésta información en el archivo "stylesheet.css", ubicado en los mismos archivos
+
+		extraidos del web kit		
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+			@font-face {
+    				font-family: 'alpha_echoregular';
+    				src: url('alpha_echo-webfont.eot');
+   				src: url('alpha_echo-webfont.eot?#iefix') format('embedded-opentype'),
+         				url('alpha_echo-webfont.woff2') format('woff2'),
+         				url('alpha_echo-webfont.woff') format('woff'),
+         				url('alpha_echo-webfont.ttf') format('truetype'),
+         				url('alpha_echo-webfont.svg#alpha_echoregular') format('svg');
+    				font-weight: normal;
+    				font-style: normal;
+
+			}
+
+
+		_así, tendremos que colocar ésta regla al principio de nuestro archivo css, de nuestro documento de nuestro proyecto
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+		_más, de ésta manera, tendremos que cambiar las rutas de los archivos a la ruta de nuestro proyecto ej:
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+			@font-face {
+    				font-family: 'alpha_echoregular';
+    				src: url('sources/fonts/alpha_echo/alpha_echo-webfont.eot');
+    				src: url('sources/fonts/alpha_echo/alpha_echo-webfont.eot?#iefix') format('embedded-opentype'),
+         				url('sources/fonts/alpha_echo/alpha_echo-webfont.woff2') format('woff2'),
+         				url('sources/fonts/alpha_echo/alpha_echo-webfont.woff') format('woff'),
+         				url('sources/fonts/alpha_echo/alpha_echo-webfont.ttf') format('truetype'),
+         				url('sources/fonts/alpha_echo/alpha_echo-webfont.svg#alpha_echoregular') format('svg');
+    				font-weight: normal;
+    				font-style: normal;
+
+			}
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+		_dentro de la esctructura de archivos extraidos de la descarga del web kit, encontremos archivos que no son requeridos
+
+		de forma esctricta para el funcionamiento de la fuente, los cualos prodremos suprimir para ahorar espacio, éstos son:
+
+			
+			_el archivo demo:
+
+				_alpha_echo-demo.html
+
+
+			_los archivos extras:
+
+				_specimen_files
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	Aplicación:
+	___________
+
+
+		_para aplicar la fuente relacionada a nuestro proyecto debemos agregar la siguiente instrucción ej:
+
+
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+		h3{
+			font-size: 2em;
+			font-family: 'alpha_echoregular', Arial, sans-serif;
+
+		}
+
+		/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+	-->
+	
+	
+</body>
+</html>

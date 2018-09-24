@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alinear verticalmente</title>
+
+	<style type="text/css">
+		
+		body{
+			border: 0px;
+			margin: 0px;
+			padding: 0px;
+			margin: auto;
+		}
+
+			#wrapper{
+				width: 100%;
+				height: auto;
+				margin: auto;
+			}
+
+				header{
+					width: 80%;
+					min-height: 600px;
+					background-color: #555;
+					position: relative;
+				}
+
+					header p{
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1.5rem;
+						line-height: 2;
+						text-align: center;
+						color: black;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						-webkit-transform: translateY(-50%);
+						-moz-transform: translateY(-50%);
+						-ms-transform: translateY(-50%);
+						-o-transform: translateY(-50%);
+					}
+
+	/*
+
+	_Dispones de dos métodos para el alineamiento vertical de elementos hijos en realción a un elemento padre, cada uno de éstos tiene sus ventajas y limitaciones, éstos son:
+
+		_el primer método está relacionado con las propiedades las tablas de ésta manera podremos utilizar el siguiente método:
+
+			header{
+				width: 80%;
+				min-height: 600px;
+				background-color: #555;
+
+				//más éstas propiedades para el elemento padre
+
+				display: table;
+			}
+
+				header p{
+					font-family: arial,helvetica,sans-serif;
+					font-size: 1.5rem;
+					line-height: 2;
+					text-align: center;
+					color: black;
+
+					//más éstas propiedades para el elemento hijo
+
+					display: table-cell;
+					vertical-align: middle;
+				}
+
+			NOTE: ésta opción tiene la limitante de que no aplica en elementos en "inline-block" aplicando así, sólo ha elementos en bloque
+
+
+
+
+		_el segundo método utiliza las propiedades de posición y de translación de animación de ésta manera, podremos utilizar éste método de la isguiente manera:
+
+
+			header{
+				width: 80%;
+				min-height: 600px;
+				background-color: #555;
+
+				//más éstas propiedades para el elemento padre
+
+				position: relative;
+			}
+
+				header p{
+					font-family: arial,helvetica,sans-serif;
+					font-size: 1.5rem;
+					line-height: 2;
+					text-align: center;
+					color: black;
+
+					//más éstas propiedades para el elemento hijo
+
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					-webkit-transform: translateY(-50%);
+					-moz-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					-o-transform: translateY(-50%);
+				}
+
+	*/
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<header>
+			
+			<p>Plan SocialMedia, Producción y Animación Digital para potencializar productos y servicios en diferentes aplicaciones</p>
+
+		</header>
+
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		quedamos aqui:  #33 - Las Propiedades de Background Básicas - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=Yap61rmTH0k&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=33
+
+	*/
+
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	Tutorial: #21 Otros tipos de valor en CSS - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=41a1RvH9inM&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=21
+
+
+	fondos ó backgrounds, en css
+
+	_a través, de fondos podemos colocar imágenes dentro de divs, ó contenedor html, los cuales son relacionadas a través, de rutas relativas ó enlaces externos
+
+	_cuando creamos un elemento y ha éste en sus estilos no le especificamos un background, entonces el navegador le creará ha éste elemento un fondo transparente
+
+
+		_rutas relativas, éstas son relacinadas a través, de su ubicación relativa a la respectiva hoja de estilos css, de las cuales son llamadas, de ésta manera; 
+
+		_si la imágen que ha sido llamada está en la misma carpeta que la hoja de estilo, entonces se colocará el nombre y extensión de la imágen directamente
+
+		_más si la imágen está en otra carpeta diferente de ésta, entonces tendremos que navegar ha ésta respectiva ubicación cuando esté ésta en una ubicación en un directorio superior ó inferior a la respectiva hoja de estilo
+
+			_navegación en directorios inferiores url(nombre/nombre/nombre)
+
+			_navegación en directorios superiores url(../nombre../nombre../nombre)
+
+		_más para ubicar una imágen a través, de un enlace externo debemos hacerlo de la siguiente manera:
+
+			_url("http://www.example.com/images/fondo1.jpg")
+
+
+	_más también, tendremos el caso en que una imágen de fondo sea más pequeña que el viewport, ó contenedor que la contiene por diferentes motivos, por defecto el navegador en éstos casos hará que la imágen se sepita tanto en horizontal como en vertical para que éstos espacio no queden vacíos enel contenedor
+
+	_pero para controlar ésta sitiación disponemos de otros atributos que nos permitirán controlar como serán representadas las imágenes y su comportamientos en éstos casos:
+
+		_background-repeat:;
+
+
+	_el cuál, contempla los siguientes valores:
+
+		_repeat //valor por defecto
+
+		_no-repeat //
+
+		_repeat-x //éste valor hará que la imágen se repita sólo en el eje "X"
+
+		_repeat-y //éste valor hará que la imágen se repita sólo en el eje "y"
+
+		
+
+	_alternativamente a través, de las especificaciones css3, podremos agregar múltiples backgrounds, ha un contenedor:
+
+	_referencia: #34 - Las Propiedades de Background Avanzadas - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=---M9ZQrAXE&index=34&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85;
+
+	_para ésto, itulizaremos las misma propiedad "brackground-image", más ahora podremos hacer referencias ha varias rutas de archivos de imagenes de fondo separadas por coma, más la posición en las que éstas se expresen si importa para su posición, donde la primera que se enuncie será la primera la última será la última ya que para ésta característica no aplica la propiedad "z-index"
+
+	_ésto nos permitirá hacer composición entre imagenes con diferentes tamaños y motivos así, por ejemplo podriamos poner una imágen grande de fondo, otra imágen que haga de pradera y otro por último que haga de motivo como un vaca por ejemplo
+
+		_background-imge: url(fondo1.jpg), url(fondo2.jpg), url(fondo3.jpg);
+
+
+	_y para controlar todas las imagenes que coloquemos de fondo tendremos que utilizar los demás atributos de imágen más de forma repetida para cada una de las imagenes de fondo el mismo orden de las imágenes ej:
+
+
+		background-imge: url(fondo1.jpg), url(fondo2.jpg), url(fondo3.jpg);
+		background-repeat: no-repeat, no-repeat, no-repeat;
+		background-position: center bottom, right top, top left;
+
+	_ésta opción de cargar mútiples imágenes dentro de un contenedor nos permitirá hacer composiciones entre imágenes de diferentes tamaños y con transparencia para que así, podamos realizar diferentes instancias ó versiones del fondo con sus elementos en diferentes posiciones ha modo de animación holdkeys
+
+	
+	
+
+	Css3: 
+
+		"backgrounds:"	
+
+		
+		_propiedades de fondos para contenedores;
+
+		
+			#body{
+				background-image: url(fondo,jpg);
+			}
+
+			#body{
+				background-image: url(source/images/fondo,jpg);
+			}
+
+			#body{
+				background-image: url(../../fondo,jpg);
+			}
+
+
+			#body{
+				background-image: url(../../fondo,jpg);
+				background-repeat: no-repeat;
+			}	
+						
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

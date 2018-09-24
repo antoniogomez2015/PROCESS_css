@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #41 - Entendiendo Flexbox de CSS3 - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=t58MkLTetKA&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=41
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+	Media Queries , en CSS3
+
+	_media queries, es una modalidad la cuál, permite que el sistema sea sensible y que permite que el tamaño del viewport, sea auto detectable para que así, podamos condicionar y cambiar el css, en relación a un tamaño de viewport, mínimo y específico
+
+	_donde primeramente debemos de haber agregado en el <head>, el tag, <meta>, específicamente el tag:
+
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, 
+	initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+
+	_ésto es posible a través, de la siguiente sentencia ó atributo css, el cuál, se aplicará dentro del documento ".css" ej:
+
+		<style type="text/css">
+
+
+			//opción básica:
+
+			@media screen and (max-width: 768px){
+
+				#wrapper{
+					width:100%;
+					height:auto;
+					margin:0 auto;
+					flex-direction:column;
+				}
+	
+			}
+
+			//opción completa:
+
+			@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
+
+				#wrapper{
+					width:100%;
+					height:auto;
+					margin:0 auto;
+					flex-direction:column;
+				}	
+
+			} 
+
+
+	_de ésta manera, a través, de los media queries, podremos hacer en éste ejemplo que los elementos "flex items", el contenedor principal cambien totalmente cuando el viewport, se haga muy angosto en dispositivos móviles para que así, en éste caso, los elementos "flex items", pasen ha una visualización "flex-directopm:column"
+
+	_ha una visualización en columnas, que es más cercana al usuario de móviles con pantallas pequeñas que la visualización por "row", ó filas adaptada a pantallas ámplias de escritorio
+
+	*/		
+
+	
+
+	body{
+		width: 100%;
+		background-color: #777;
+		margin: 0 auto;
+
+	}
+
+		#wrapper{
+			width: 100%;
+			margin: 0 auto;
+			display: flex;			
+    		justify-content: flex-start;
+    		flex-wrap: wrap;
+    		align-items: baseline;
+		}
+
+		#top, #bottom{
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;
+			flex: 2;
+			order: 2;
+		}
+
+		#lista{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;
+			flex:2;
+			order: 1;
+		}
+
+		#content2{
+			width: 400px;
+			height: 400px;
+			background-color: white;
+			border: 3px solid grey;
+			flex:1;
+			order:-1;
+		}
+
+
+
+</style>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="lista">
+			
+			<ul>
+				<li>producto1</li>
+				<li>producto2</li>
+				<li>producto3</li>
+				<li>producto4</li>
+				<li>producto5</li>
+				<li>producto6</li>
+				<li>producto7</li>
+			</ul>	
+			
+		</div>
+
+		<div id="content2">
+			
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+			<!--<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+			<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>-->
+
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+	</div>
+
+
+</body>
+</html>

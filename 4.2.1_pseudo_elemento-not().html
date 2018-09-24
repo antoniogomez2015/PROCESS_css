@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo elemento :not()</title>
+
+<!--
+
+	Referencia: http://www.w3schools.com/cssref/sel_not.asp
+
+
+	Pseudo elemento :no():
+	______________________
+
+	_éste nos permite excliir elementos ó liminar el alcance css, aplicado ha uno ó más elementos
+
+	_en éste ejemplo podremos ver como estamos liminatando ó excluyendo al elemento de tipo item, de lista "li", con la clase "split1"
+
+	_de la declaración css, que incorpora ó hace referencia a todos los elemntos de tipo item, de lista
+
+-->
+
+<style type="text/css">
+	
+	ul{
+		width: 100%;
+		height: auto;
+		list-style: none;
+	}
+
+		ul li:not(.split){
+			text-decoration: none;
+			height: 50%;
+		}
+
+</style>
+
+</head>
+
+<body>
+
+	<ul>
+		<li>
+			<a href="#">href="#"</a>
+			<a href="#">href="#"</a>
+			<a href="#" class="split1">href="#"</a>
+			<a href="#">href="#"</a>
+			<a href="#">href="#"</a>
+			<a href="#">href="#"</a>
+		</li>
+	</ul>
+	
+</body>
+</html>

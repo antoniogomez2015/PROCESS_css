@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial:#46 - Transformaciones 2D - Curso de CSS3 desde 0 
+			https://www.youtube.com/watch?v=PtsA5-JBsO0&index=46&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		tutorial css3 | propiedad transition (avanzado)
+			https://www.youtube.com/watch?v=qei7CHoUyfg
+	
+
+	Workflow:
+	_________
+
+	_tenemos la posibilidad de hacer transformaciones espaciales 2d, de elementos html, como contenedores entre otros, a través, de la propiedad "transform"
+
+	_éstas trasnformaciones pueden ser del tipo ó recibir los siguiente valores:
+
+		_scale
+
+		_rotation
+
+		_skew (sesgar)
+
+		_move
+
+
+
+	Transform: Rotate():
+	____________________
+
+	_los valores de rotación "rotate()", aplicables a la propiedad "transform", reciben la siguientes tipos de nomenclaturas y unidades:
+
+	_ a través, de los siguientes valor, "deg", grados ej: "45deg", así:
+
+		_transform: rotate(45deg);
+
+	_como también, a través, de "grad", ó gradación, donde "400", equivaldrá ha "360", grados, así, de ésta manera, si expresamos "200grad", el elemento determinado rotará "180", grados
+
+		_transform: rotate(200grad);
+
+	_ó también, a través, de la unidad "rad", de "radiand", donde un radian, equivale ha "17", grados, ej: "2rad", lo cuál, equivaldrá ha "34", grados
+
+		_transform: rotate(2red);
+
+
+	_así, como también, dispondremos una palabra clave "turn", la cuál, hará que el elemento gire las veces que le indiquemos ha modo de una vuelta "360", grados, por un valor entero indicado, ej:
+
+		_transform: rotate(3 turn); //3 giros
+
+
+	Transform: Scale():
+	___________________
+
+	_ésta propiedad nos permitirá escalar el elemento html, seleccionado tanto en su eje "X", a través, del atributo "scaleX();"
+
+	_como en su eje "Y", a través, del atributo "scaleY();"
+
+	_y por medio de valores enteros los cuáles representarán un 100%, del tamaño real ó natural del elementos html, seleccionado, ej:
+
+		_transform: scaleX(1.5);
+
+
+	_en el ejemplo de arriba, estamos indicándole al sistema que escale el elemento html, seleccionado en la cordenada "X", un 50%, distrobuidos 25%, hacia la izquierda y 25%, hacia la derecha respectivamente
+
+	_así, como también, podremos hacer escalar un elemento en sus dos cordenadas "X/Y", al unísono a través, del atributo "scale()", directamente, ej:
+
+		_transform: scale(0.5);
+
+
+	_de ésta manera, el elemento html, seleccionado se escalará en un "50", tanto en ancho como en alto respectivamente
+
+
+
+	Transform: skew():
+	__________________
+
+	_ésta propiedad nos permitirá sesgar un elemento html, seleccionado tanto en el eje "X", como en el eje "Y"
+
+	_para lo cuál, sesgar un elemento en el eje "X", disponemos del siguiente atributo "skewX();", y para sesgarlo en el eje "Y", disponemos del siguiente atributo "skewY();"
+
+	_y como parámetro podremos pasarle un valor entero "1", ó decimal "0.5", en unidades en grados "deg", ej:
+
+		_transform: skewX(45deg);
+
+
+	Transform: translate():
+	_______________________
+
+	_ésta función ó propiedad nos permitirá transladar ó desplazar un elemento html, seleccionado espacialmente en las cordenadas "X", y "Y", respectivamente
+
+	_a través, del atributo "translateX();" podremos desplazar al elemento html, en la cordenada "X"
+
+	_y a través, del atributo "translateY();", podremos desplazar al elemento html, respectivo en la cordenada "Y"
+
+	_a través de parámetro indicados en unidades en pixeles "px", ó porcentajes "%"
+
+		_transform: translateX(50%;);
+
+
+	_más también, tendremos la posibilidad de desplazar un elemento en sus dos propiedades tanto en "X", como en "Y", a través, del siguiente atributo, "translate(0,0)", indicando un parámetro cada uno de las respectivas cordenadas separados por ",", comas ej:
+
+
+		_transform: translate(10%, 50%);
+
+
+
+	Transform-origin:
+	_________________
+
+	_ésta propiedad nos permitirá cambiar el origen ó "pivot", ó pivote ó anchor point, ó punto de anclaje de un elemento, así, podremos cambiar el sentido de la transformación espacialmente
+
+	_donde el valor por defecto será "50/50", ej:
+
+		_transform-origin: 50%, 50%;
+
+
+	_donde el primer valor equivale a la cordenada "X", y el segundo valor equivaldrá a la cordenada "Y", así, de ésta manera, podremos graduar ó ajustar la ubicación espacil del punto  de anclaje del elemento determinado variando éstos valores respectivamente, ej:
+
+
+		_transform-origin: 0%, 10%;
+
+
+	_así, como también, para éste método podemos utilizar palabras claves como: "left, right, top, bottom", ej:
+
+		_transform-origin: top, left;
+
+
+
+	Transform Shorthand:
+	____________________
+
+	_así, como también, podremos aplicar todos éstos atributos de forma conjunta a través, del método shorthand, en el siguiente orden:
+
+		_transform: translate() scale() rotate() skew();
+
+
+	_el método shorthand, no soporta la propiedad "origin", por énde debemos de declarar éste atributo por a parte
+
+
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;				
+			}
+
+				#proof{
+					width: 300px;
+					height: 200px;
+					margin: auto;
+					color: #fff;
+					background-color: blue;	
+					text-align: center;
+					-webkit-transform-origin: top, left;
+					-webkit-transform: translateX(50%);					
+					/*transition-property: background-color, border-radius;
+					transition-duration: .3s, 3s;
+					transition-delay: 1s;					
+					transition-timing-function: cubic-bezier(.12,.87,.87,.38);*/	
+				}
+
+					/*#proof h1{
+						color: #fff;
+						-webkit-transform: rotate(20deg);
+					}*/			
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<h1>Hola Mundo</h1>			
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

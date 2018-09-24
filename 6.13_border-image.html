@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #37 - Border image - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=kK52pLqFDso&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=37
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+
+
+	Border-image, en CSS3
+
+	_a través, de la propiedad "Boder-Image", podremos aplicar una imágen de fondo en los border de los elementos html
+
+	_para lo cuál, el respectivo elemento ya tendremos que haberle aplicado la propieadad "border", ej: border: 30px"
+
+	_y ésto es posible a través, de los siguientes atributos:
+
+		.containt{
+
+			border: 30px solid;
+
+			border-image-source: url('img/pattern1.png');
+
+				_en la propieada "source", debemos indicar la ruta de la imágen
+
+			border-image-slice: 100% fill;
+
+				_la opción "slide", nos permite cortar ó dividir la imágen en 9 regiones estirando la imágen hasta que ocupe las dimensiones del elemento contenedor
+
+				_podemos indicar valores relativos en porcentajes "10%", ó número enteros "10", donde "100%", es el valor por defecto el cuál, mostrará toda la imágen recortada por el borde del contenedor respectivo
+
+				_si indicamos sólo un valor, éste se aplicará a los cuatro lados más si indicamos dos valores, el primero se aplicará a las dos esquinas superiores y el segundo valor se aplicará a las esquinas inferiores, ej:
+
+					border-image-slice: 10% 30%;
+
+
+				_así, como también, podremos aplicar tres y cuatro valores para tener un mayor control y de forma independiente de las cuatro esquina de los bordes den contenedor respectivo, ej:
+
+					border-image-slice: 20% 10% 5% 25%;
+
+				_tmabién, dispondremos de una palabra clave "fill", para que muestre la parte interna de la imágen la cuál, no se muestra por defecto ya que se muestra sólo el área el borde ó perímetro de la imágen enmarcada ó emcapsulada por el borde
+
+			border-image-repeat: stretch;
+
+				_ésta opción nos permite indicarle al sistema como deseamos que éste repita la imágen ó como ésta se comportará
+
+				_donde el valor "stretch", es el valor por defecto y éste valor hará que la imágen sea estirada ó distorcionada hasta cubrir el área requerida
+
+				_el segundo valor es "repeat", y éste hará que la imágen se repita a partir de cada esquina del elemento contenedor ha modo de módulo y super módulo
+
+				_y para corregir desfaces de los módulos de la repetición de la opción anterior de "repeat", disponemos del atributo "round", el cuál, corrige desfaces e imperfecciones de las modulaciones ó repeticiones de la imágen respectiva dentro del borde del contenedor
+
+				_y la propiedad "space", es una variante de la propiedad ó atributo de "repeat", con algunas diferencias ó variantes sutiles como que le agrega espacio entre módulos
+
+			border-image- width: 20px;
+
+				_con ésta propiedad podremos especificar el ancho y a la vez, el alto que lo hace automáticamente de la imágen modulada
+
+				_de ésta manera, la imágen que será estirada ó modulada podrá presentarse más ancha y alta ó delgada que las originales encontradas en cada esquina de los bordes del contenedor
+
+			border-image-outset: 20px;
+
+				_y en ésta propiedad vamos ha especificar valores para expandir ó alejar el borde de la imágen desde el borde especificado en la propiedad de "border: 30px"
+
+				_así, podríamos entender ésta opción como una especie de "padding", para las imágenes aplicadas como "pattern", de borde
+
+				_e igualmente podremos aplicar un valor para los cuatro lados ó aplicar dos valores ó incluso cuatro valores para cada uno de los cuatro lados ó esquinas del contenedor respectivo
+	
+		}
+
+	_así, como también, a través, de la opción shorthand:
+
+		.containt{
+
+			border: 30px solid;
+
+			border-image: url('img/pattern1.png') 100% fill / 20px 20px;
+	
+		}
+
+		_donde la primera propiedad sería el "source"
+
+		_y la segunda propiedad sería el "fill"
+
+		_y la tercera propiedad sería el "slice", y a partir de éste valor debemos indicar éstos a través, de un "/"
+
+		_y la cuarta propiedad sería el "width"
+
+		_y la quinta propiedad sería el "outset"
+
+
+			
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

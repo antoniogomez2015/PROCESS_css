@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #38 - CSS3 Linear Gradients - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=abAtvrULrUQ&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=38
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+
+
+	Linear-gradients, en CSS3
+
+	_los degradados en css3, son transiciones entre dos colores ó más colores
+
+	_para lo cuál, al respectivo elemento que le deseamos aplicar un degradado debemos previamente haberle aplicado la propiedad de "background:", sobre la cuál, aplicaremos los atributos de degradado lineal en éste caso
+
+	_de ésta manera, lograremos el efecto de degradado lineal a través, de los atributos siguientes: "linear-gradient()"	
+	
+		.containt{
+
+			backgorund: linear-gradient(red, black);
+
+				_así, como también, podría agregar más colores..
+
+			backgorund: linear-gradient(orange, red, black);
+
+		}
+
+	_y dichos valores los podremos indicar a través, de valores exadecimales, rgb, rgba, hls, ej:
+
+		.containt{
+
+			backgorund: linear-gradient(red, rgba(255,125,55,.5), black);	
+
+		}
+
+	_y la dirección ó punto de partida del degradado por defecto será de arriba hacia abajo, por lo cuál, también, podremos personalizar la dirección del degradado lineal a través, de la propiedad "to", "left,right,top,bottom", ej:
+
+		.containt{
+
+			backgorund: linear-gradient(to left, red, black);
+
+		}
+
+	_e incluso podríamos hacer que los degradados se proyecten de forma oblicula ó diagonal ej:
+
+		.containt{
+
+			backgorund: linear-gradient(to right top, red, black);			
+
+		}
+
+	_e incluso podremos ir más allá en las indicaciones para la proyección de un degradado oblicuo a través, del uso de los grados "45deg", ej:
+
+		.containt{
+
+			backgorund: linear-gradient(45deg, red, black);
+				
+		}
+
+	_e incluso podremos controlar también, la proyección de cada color degradado así, como también, la acutancia´y difuminación de éstos entre si
+
+	_para lo cuál, tendremos que especificar en pixeles "px", de donde partirá ha generarse cada color en relación a la dirección del degradado de color generado
+
+	_para ésto, debemos de indicar primero el nombre del color y luego del porcentaja a partir del cuál, éste color comenzará ha generarse en relación a los demás colores, ej:
+
+		.containt{
+
+			backgorund: linear-gradient(45deg, red 10px, black 10px, purple 30px);
+
+		}
+
+	_así, como en el ejemplo de arriba, si dos colores tienen un mismo valor ó porcentaje de inicio ó creación, en éste caso de "10px", habra mucha acutancia ó no habra separación ó difuminación entr ambos colores
+
+	_más en los colores en donde hay una separación entre ambos inicios habra un difuminado ámplio ó extenso y visible
+
+
+
+			
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

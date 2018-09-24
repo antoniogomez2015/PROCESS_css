@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placeholder</title>
+
+	<style type="text/css">
+		
+		*{
+		border: 0;
+		padding: 0;
+		margin: 0;
+		}
+
+		body{
+			width: 100%;
+			height: auto;
+			font-family: 'Oswald', sans-serif;	
+		}
+
+			#wrapper{
+				width: 80%;
+				height: 100vw;
+				background-color: #999;
+				margin: auto;
+				text-align: center;
+				padding-top: 3%;
+			}
+
+				h1{
+					font-size: 2rem;
+					color: white;
+					margin: auto;			
+				}
+
+				#login{
+					width: 50%;
+					min-height: 50%;
+					background: rgba(0,0,0,0.5);
+					border-radius: 10px;
+					margin: auto;
+					margin-top: 2%;
+					padding-top: 2%;
+				}
+
+					#login input{
+						width: 80%;
+						height: 50px;
+						margin-bottom: 1%;
+						border: none;
+						color: white;
+						background-color: #333;
+						font-size: 1.2rem;
+					}
+
+						#login input::placeholder{				
+							color: white;
+							font-size: 1.2rem;					
+						}
+
+						#login input::-ms-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+						#login input::-webkit-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+
+						}
+
+						#login input::-moz-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+
+	</style>
+</head>
+<body>
+
+	<!--
+
+		::selection:
+		____________
+
+		_tenemos la posibilidad de editar el color de fondo todos los texto seleccionados
+
+
+		_para lo cuál, dispondremos del siguiente pseudo elemento ::selection:
+
+
+			h1::selection {
+			    background: green;
+			    color: black;
+			    text-shadow: 1px 1px #fff;
+			}
+
+
+
+		_(*) Actualmente no tiene soporte algunos navegadores, pero lo puedes usar con el prefijo:
+
+
+			h1::-moz-selection {
+			    background: green;
+			    color: black;
+			    text-shadow: 1px 1px #fff;
+			}
+
+
+
+		Reference:
+		__________
+
+			https://cybmeta.com/cambiar-el-color-del-texto-seleccionado-con-css
+
+
+	-->
+
+
+	<div id="wrapper">
+
+		<h1>Inicio de Sesión de Usuario</h1>
+		
+		
+	</div>
+	
+</body>
+</html>

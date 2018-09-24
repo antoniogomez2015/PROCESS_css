@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #41 - Entendiendo Flexbox de CSS3 - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=t58MkLTetKA&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=41
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+	FlexBox , en CSS3
+
+	_flexbox, es un nuevo modelo de trabajo que permite colocar los elementos de una página para que se comporten de una forma predecible cuando el diseño de la página deba acomodarse a diferentes dispositivos ó viewport
+
+
+
+	Flex Container:
+	________________
+
+	_el contenedor que contendrá los elementos html, que tendrán un comportamiento flexible el llamado por el sistema "flexContainer"
+
+	_características: éste contenedor es flexible ya que al cambiar sus dimensiones romperá con las estructuras de los elementos "flex items", que éste contiene y a su vez, creará más líneas sobre las cuales los elementos "flex items", podrán reposicionarse de forma automática y predecible
+
+	_criterios: los criterios por defecto de acción del contenedor "flex container", van de izquierda ha derecha y de arriba hacia abajo en respecto a la creación y administración de contenido
+
+	_ejes: el contenedor "flex container", define dos ejes, "Main axis", ó eje horitonzal ó principal "X", y "Cross axis", ó eje vertical "Y", ó transversal
+
+	_así, como también, los ejes tienen un "main axis star", y un "main axis end", así, como también, un "cross star", y un "cross end"
+
+	_de ésta manera, todo lo que esté dnetro del contenedor flex container, serán elementos flexibles y relativos
+
+
+	Flex Items:
+	___________
+
+	_y los elementos que están dentro del elemento html, contenedor "flex Container", son llamados por el sistema como "Flex Items"
+
+
+
+
+	Workflow:
+	_________
+
+	_así, para aplicar el sistema, debemos seleccionar el elemento html, que hará de "flex container", a través, de CSS, a través, de la propiedad "display:;", por medio de la cuál, podremos agregar el atributo "flex", ej:
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+		
+
+		}
+
+		NOTA: ésta propiedad puede requerir la implementación de los prefijos para la compatibilidad con todos los navegadora antiguos, éstos son "-webkit-", "-ms-", "-moz-", "-o-"
+
+
+	Flex Direction:
+	_______________
+
+	_a través, de la propiedad "flex direction", podremos especificar la dirección en que se moverán los "flex items", dentro del contenedor "flex container", ej:
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-direction:;
+			-webkit-flex-direction:;
+
+		}
+
+	_y los valores que admite la propiedad "flex-direction", son los siguientes:
+
+	row:
+		_"row", ó fila; ésta es la opción que biene por defecto, de ésta manera, los "flex items", se organizarán de forma alineada de izquerda a derecha y a través, de el orden consecutivo por elemento ó "flex items", de (1,2,3,4,...)
+
+		_de ésta manera, podremos ver que la acción se realiza en el eje horizontal ó principal
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			
+		}
+
+	row-reverse:
+
+		_más si aplicamos el valor de "row-reverse", los elementos "flex items", se organizarán de forma alineada de derecha a izquierda dentro del elemento contenedor "flex container",  y a través, de el orden consecutivo inverso por elemento ó "flex items", de (4,3,2,1...)
+
+		_de ésta manera, podremos ver que la acción se realiza en el eje horizontal ó principal
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			
+		}
+
+	column:
+
+		_a través, de éste valor "column", los elementos "flex items", se organizarán con un comporamiento en bloque "block", similar al comportamiento original sin el sistema "flex"
+
+		_de ésta manera, podremos ver que la acción se realiza en el eje vertical ó transversal
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-direction: column;
+			-webkit-flex-direction: column;
+			
+		}
+
+	column-reverse:
+
+		_así, como también, podremos aplicar el valor de "column-reverse", el cuál, nos permitirá colocar los elementos alineados de abajo hacia arriba y organizados de forma inversa (4,3,2,1,....), de igual modo que
+		el valor de "row-reverse"
+
+		_de ésta manera, podremos ver que la acción se realiza en el eje vertical ó transversal
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-direction: column-reverse;
+			-webkit-flex-direction: column-reverse;
+			
+		}
+
+
+	justify-content:
+	________________
+
+	_ésta propiedad nos permitirá ajustar la posición de los elementos "flex items", que se encuentran dentro del elemento "flex container"
+
+	_de ésta manera, la propiedad "justify-content", recibe ó acepta lo siguientes valores:
+
+
+	space-between:
+
+		_ésta opción permite distribuir los elementos "flex items", dentro del elemento html, "flex container", de forma proporcionada en todo el ancho disponible del elemento ó "row", ó fila, alineados tanto a la derecha como a la izquierda de forma similar ó igual a como lo hace la propiedad "text-align: justify", con el texto y demás elemento html
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			
+		}
+
+	flex-start:
+
+		_ésta opción permite distribuir y alinear los elementos "flex items", hacia la izquierda conservando su orden entre si original (1,2,3,4...)
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			justify-content: flex-start;
+			-webkit-justify-content: flex-start;
+			
+		}
+
+	flex-end:
+
+		_ésta opción permite distribuir y alinear los elementos "flex items", hacia la derecha conservando su orden entre si original (1,2,3,4...)
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			justify-content: flex-end;
+			-webkit-justify-content: flex-end;
+			
+		}
+
+	flex-around:
+
+		_ésta opción permite distribuir y alinear los elementos "flex items", hacia la derechaizquierda similar a la opción "flex-srat", conservando su orden entre si original (1,2,3,4...)
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			justify-content: flex-end;
+			-webkit-justify-content: flex-end;
+			
+		}
+
+	center:
+
+		_ésta opción ó valor permite distribuir los elementos "flex items", en el centro del "row", ó fila; del "main axis", del elementos contenedor "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			justify-content: center;
+			-webkit-justify-content: center;
+			
+		}
+
+
+	flex-wrap:
+	__________
+
+	_ésta propiedad nos permitirá hacer que cuando el ancho del elemento html, "flex container", sea muy estrecho en relación a la cantidad de elementos "flex items", éstos nos se desborden ó sangren del elemento "flex container", para lo cuál, la propiedad "flex-wrap", dispone de varios valores para corregir éstas situaciones; los cuales son:
+
+	nowrap:
+
+		_éste valor es el valor por defecto en el cuál, los elemento son flexibles a daptativos en relación al elemento html, "flex container", más no disponen con la propiedad de "wrap", ó salto de línea
+
+		_es decir, el ancho de los elementos "flex items", variará y se adaptará proporcionalmente al ancho del "row", ó fila del elemento html, que hace de "flex container", sin importar si cada elemento html, que hace de "flex item", tenga un valor de "width:;", ó ancho personalizado asignado dentro de su "tag css"
+
+		NOTA: si no colocamos el atributo de "flex-warp: wrap", ó "wrap-inverrse", es como si colocásemos "flex-warp: nowrap", que es el valor por defecto
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-warp: nowrap;
+			-webkit-flex-warp: nowrap;;
+			
+		}
+
+	wrap:
+
+		_éste valor hará que los elementos "flex items", que ya no quepan dentro del ancho ó "row", ó fila del elemento html, "flex container", los elementos "flex items", pasen al siguiente "row", ó fila
+
+		_avitando así, que los elemento "flex items", se desborden ó sangren del elemento "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-warp: wrap;
+			-webkit-flex-warp: wrap;;
+			
+		}
+
+	wrap-reverse:
+
+		_ésta opción ó valor es odéntico al valor antereior más en ésta opción los "flex items", serán representados de forma inversa, (4,3,2,1...)
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			flex-warp: wrap-reverse;
+			-webkit-flex-warp: wrap-reverse;
+			
+		}
+
+
+	align-content:
+	______________
+
+	_La propiedad align-content modifica el comportamiento de la propiedad "flex-wrap", Es similar a alinear elementos, pero en lugar de alinear elementos flexibles, alinea las líneas flexibles
+
+	_de ésta manera, la propiedad "align-content", dispone ó admite los siguientes valores:
+
+
+	stretch:
+
+		_"stretch", éste es el valor por defecto. Las líneas se extienden para ocupar el espacio restante
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: stretch;
+			-webkit-align-content: stretch;
+			
+		}
+
+	flex-start:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia la izquierda en relación al elemento html, "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: flex-start;
+			-webkit-align-content: flext-start;
+			
+		}
+
+	flex-end:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia la derecha en relación al elemento html, "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: flex-end;
+			-webkit-align-content: flex-end;
+			
+		}
+
+	center:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia el centro en relación al elemento html, "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: center;
+			-webkit-align-content: center;
+			
+		}
+
+	space-between:
+
+		_ésta opción permite que los elemento "flex item", se alinien distribuidos en relación el espacio del "row", ó fila al elemento html, "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: space-between;
+			-webkit-align-content: space-between;
+			
+		}
+
+	space-around:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia la izquierda en relación al elemento html, "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-content: space-around;
+			-webkit-align-content: space-around;
+			
+		}
+
+
+	align-items | align-sef:
+	________________________
+
+	_La propiedad align-items alinea verticalmente los elementos del contenedor flexible cuando los elementos no utilizan todo el espacio "vertical", disponible en el eje transversal.
+
+	_Propiedad de los "align-seft", reemplaza la propiedad "align-items", del "flex container", para ese elemento. Tiene los mismos valores posibles que la propiedad "align-items"
+
+	_de ésta manera, la propiedad "align-items", y "align-sef", dispone ó admite los siguientes valores:
+
+
+	stretch:
+
+		_"stretch", éste es el valor por defecto, en ésta opción los elemento "flex items", se estirarán hasta cubrir el tamaño vertical del elemento html, que hace de "flex container"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+	flex-start:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia la hacia la parte superior ó "top", en relación al "row", ó fila en la que se encuentren los elementos "flex items", elemento html, "flex container"
+
+		_así, si hay "flex items", de diferentes alturas todos se alenearán hacia la parte "superior" del elemento "flex item", más alto
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: flex-start;
+			-webkit-align-items: flex-start;
+			
+		}
+
+	flex-end:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia la parte inferior ó "bottom", en relación al "row", ó fila en la que se encuentren los elementos "flex items", en relación al elemento html, "flex container"
+
+		_así, si hay "flex items", de diferentes alturas todos se alenearán hacia la parte "inferior" del elemento "flex item", más alto
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: flex-end;
+			-webkit-align-items: flex-end;
+			
+		}
+
+	center:
+
+		_ésta opción permite que los elemento "flex item", se alinien hacia el centro "verticalmente", en relación al elemento html, "flex container"
+
+		_así, si hay "flex items", de diferentes alturas todos se alenearán hacia la parte "media ó central", del elemento "flex item", más alto
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: center;
+			-webkit-align-items: center;
+			
+		}
+
+	baseline:
+
+		_ésta opción permite que los elemento "flex item", se alinien distribuidos en relación el espacio del "row", ó fila de la lína base al elemento html, "flex container"
+
+		_así, si hay "flex items", de diferentes alturas todos se alenearán hacia la parte "superior ó top", del elemento "flex item", más alto
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: baeline;
+			-webkit-align-items: baseline;
+			
+		}
+
+
+	flex:
+	_____
+
+	_también, tenemos la posibilidad de influir ó configurar los elementos "flex items", de ésta manera, podremos hacer que los elementos flex itmes, tomen el espacio de uno, dos, tres, ó más elementos flex items
+
+	_de ésta manera, podremos hacer que unos elementos html, que hagan de flex items, tengan una mayor importancia que otros
+
+	_para lo cuál, en el selector Css, del cada elemento "flex items", debemos colocar el atributo "flex:;", en el cuál, debemos indicar un valor que representará el ancho ó cantidad de "items", que éste tomará dentro del flujo de "flex items"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+			}
+
+			#lista{
+				width: 300px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 2;
+			}
+
+	_de ésta manera, los elementos "flex items", que en su "tag css", tengan el atributo "flex", con un valor de "flex: 1;", éstos tendrán el ancho normal proporcional al ancho del "row", ó fila del elemento html "flex container"
+
+	_mientras que los elementos "flex items", en su "tag css", tengan el atributo "flex", con un valor de "flex: 2;", éstos tendrán el ancho de dos elementos "flex items", proporcional al ancho del "row", ó fila del elemento html "flex container"
+
+
+	order:
+	______
+	
+	_éste atributo nos permite especificar un orden para los elemento html, que hacen de "flex items", dentro un elemento html, que hace de "flex container"
+
+	_de ésta manera, podremos aplicar el atributo "order", dentro del seleccionar de un elemento "flex item", para que así, éste elemento respectivo se muestre antes ó después de otros elemento "flex items"
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+			}
+
+			#lista{
+				width: 300px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 2;
+
+				order: -1;
+			}
+
+	flex-basis:
+	___________
+
+	_éste atributo permite la posibilidad de poder cnfigurar el ancho de los elementos "flex items", de forma personalizada yendo más allá de las posibilidades que permite la opción "flex: 1,2,.."
+
+	_de ésta manera, tendremos que seleccionar ha un elementos html, que haga de "flex item", a través, de su respectiva "tag css", y agregarle el atributo "flex-basis"
+
+	_para que así, a través, del atributo "flex-basis", poder aumentar el ancho de forma personalizada de éste elemento "flex item", específicamente, de ésta manera, podremos repetir éste proceso para los demás elementos de tipo "flex item"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+
+				flex-basis: 80px;
+				-webkit-flex-basis: 80px;
+			}
+
+
+	flex-flow:
+	__________
+
+	_éste atributo nos permitirá invertir todo el "row", ó fila de un elemento html, "flex container", tenga éste aplicado el atributo "wrap", ó no
+
+	_donde su valor por defecto es "row nowrap", ó sentido normal de izquierda ha derecha
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+
+			flex-flow: row-reverse wrap;
+			-webkit-flex-flow: row-reverse wrap;
+			
+		}
+
+	flex-grow:
+	__________
+
+	_éste atributo nos permite variar también el ancho de los elementos "flex items", y es más exacto que el atributo "flex: 1,2,3,..."
+
+	_de ésta manera, tendremos que seleccionar ha un elementos html, que haga de "flex item", a través, de su respectiva "tag css", y agregarle el atributo "flex-grow"
+
+	_para que así, a través, del atributo "flex-grow", poder aumentar el ancho de forma logarítmica de éste elemento "flex item", ó el doble del ancho que tenía inicialmente específicamente 
+
+	_de ésta manera, podremos repetir éste proceso para los demás elementos de tipo "flex item"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+
+				flex-basis: 80px;
+				-webkit-flex-basis: 80px;
+
+				flex-grow: 2;
+				-webkit-flex-grow: 2;
+			}
+
+
+	flex-shrink:
+	____________
+
+	__éste atributo nos permite variar también el ancho de los elementos "flex items", y es más exacto que el atributo "flex: 1,2,3,...", 
+
+	_de ésta manera, podremos hacer un elemento "flex items". más angosto de los demás elementos "flex items"
+
+	_de ésta manera, tendremos que seleccionar ha un elementos html, que haga de "flex item", a través, de su respectiva "tag css", y agregarle el atributo "flex-shrink"
+
+	_para que así, a través, del atributo "flex-shrink", poder dinminuir el ancho de forma logarítmica de éste elemento "flex item", ó la mitad del ancho que tenía inicialmente específicamente 
+
+	_de ésta manera, podremos repetir éste proceso para los demás elementos de tipo "flex item"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+
+				flex-basis: 80px;
+				-webkit-flex-basis: 80px;
+
+				flex-shrink: 2;
+				-webkit-flex-shrink: 2;
+			}
+
+	
+
+
+
+		
+	*/
+
+	body{
+		width: 100%;
+		background-color: #777;
+		margin: 0 auto;
+
+	}
+
+		#wrapper{
+			width: 100%;
+			margin: 0 auto;
+			display: flex;			
+    		/*justify-content: flex-start;*/
+    		flex-wrap: wrap;
+    		align-items: baseline;  
+    		flex-flow: row-reverse wrap;  		
+		}
+
+		#top, #bottom{
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;
+			flex: 2;
+			order: 2;
+			flex-shrink: 2;
+		}
+
+		#lista{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;
+			flex:2;
+			order: 1;			
+    		flex-basis: 80px;
+		}
+
+		#content2{
+			width: 400px;
+			height: 400px;
+			background-color: white;
+			border: 3px solid grey;
+			flex:1;
+			order:-1;
+			
+		}
+
+
+
+</style>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="lista">
+			
+			<ul>
+				<li>producto1</li>
+				<li>producto2</li>
+				<li>producto3</li>
+				<li>producto4</li>
+				<li>producto5</li>
+				<li>producto6</li>
+				<li>producto7</li>
+			</ul>	
+			
+		</div>
+
+		<div id="content2">
+			
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+			<!--<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+			<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>-->
+
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+	</div>
+
+
+</body>
+</html>

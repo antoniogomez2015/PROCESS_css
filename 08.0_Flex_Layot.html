@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex box</title>
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial:
+	_________
+
+		Guía Completa de Flexbox desde 0 | https://www.youtube.com/watch?v=F-KCncXMPk0
+
+
+
+	Reference:
+	__________
+		
+		https://www.w3schools.com/css/css3_flexbox.asp
+
+		https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS
+
+		https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+
+	*/
+
+
+
+		body{
+			width: 100%;
+			border: 0;
+			margin: 0;
+			padding: 0;
+			background-color: #222;
+			/*para centrar todo*/
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			height:  100vh;
+			text-align: center;		
+		}
+
+			#wrapper{
+				width: 100%;
+				background-color: #777;
+			}
+			
+			.box-row{
+				width: 100%;
+				/*sistema "box-flex", simplificado*/
+				display: flex;
+				display: -webkit- flex;
+				display: -moz- flex;
+				/*propiedades para el contenedor del sistema box-flex*/
+
+				/*propiedad "flex-direction:", para indicar la distribución que tomarán los elmenentos*/
+				/*éste propiedad soporta los siguientes valores:
+
+					row: "elineación a la derecha (por defecto)""
+
+					row-reverse: "ésta inverte el orden y sentido de los elementos hacia la derecha"
+
+					columns: "ésta permite colocar los elementos en forma de columna unos osbre otros"
+
+					column-reverse: "ésta invierte los elementos que a su vez, se encuentran en modo de columnas"
+				*/
+				flex-direction: row;
+				/*propiedad "flex-wrap:", para manejar el sangrado de elementos, especialmente útil para el response design, y el mobile first, para que así, los elementos en vez, de encogerse, pasen a un siguiente nivel más bajo en la organización de elementos*/
+				/*ésta propiedad soporta los siguientes valores:
+		
+					wrap: "ésta respeta el ancho indicado en los elementos así, al llenar el ancho del contenedor principal los elementos que no quepan, pasarán a un siguiente nivel más bajo en el orden de elementos"
+
+					no-rap: "ésta opción no respetará el encho de los elementos si no, que ajustara su ancho para que entre todos ocupen el ancho total del contenedor principal, ésta opción es especialmente útil para realización de menús horizontales"
+
+					wrap-reverse: "éste funciona igual que "wrap", más éste invierte el orden de los elementos
+
+				*/
+				flex-wrap: wrap;
+				/*la propiedad "flex-flow", hace de atajo por que ésta permite configurar dos propiedades a la vez, tanto la propidad "flex-direction", como la propiedad "flex-wrap", quedando expresada así:*/
+				flex-flow: row wrap;
+				/*atributo "justify-content:", permite la justificación y alineamiento del contenido ó items, "sin la inversión ó modificación del mismo", éste propiedad soporta los siguientes valores:
+
+					flex-start: "éste valor alinea el grupo total de elementos hacia la izquierda (éste biene por defecto)
+
+					flex-end: "éste valor alinea el grupo total de elementos hacia la derecha"
+
+					center: "éste valor alinea el grupo de elementos al centro del contenedor"
+
+					space-around: "ésta opción distribuye el grupo de elementos alrededor ó en el espacio del ancho total del contenedor principal, más ésta opción contempla unos margenes a los costados del contenedor"
+
+					space-between: "ésta opción es muy similar a la anterior "space.around", más ésta no contempla márgenes generales (ésta es la opción más recomendada)
+				*/
+				justify-content: space-between;
+				/*la propiedad "align-items:", nos permite alinear contenido ó items, de forma vertical, y que se encuentren en una misma fila ó "row", ó mejor dicho, ésta opción alinea los items, de forma independiente y no como un todo, ésta propiedad soporta los siguientes valores:
+
+					flex-start: "ésta opción alinea los elementos en la parte superior, (ésta es la ópción que biene por defecto)", del contenedor de forma vertical
+
+					center: "ésta opción alinea los elementos en el centro del contenedor de forma vertical"
+
+					flex-end: "ésta opción alinea los elementos en la parte inferior ó final del contenedor de forma vertical"
+
+					stretch: "ésta opción hará que los elementos items, ocupen el 100%, de la altura (height:), del contenedor principal, por ésta razón para éste caso los elementos, tendrán que tener la propidad de altura en automático (height:auto), ó no disponer de (height:..)"
+
+					baseline: "indeterminada"
+				*/
+				align-items: flex-start;
+				/*la propiedad "align-content:", es muy similar a la anterior "align-items:". más ésta nos permitirá alinear elementos en forma de grupo ó grupal, ésta propiedad soporta los siguientes valores:
+
+					flex-start: "ésta opción alinea los elementos en la parte superior, (ésta es la ópción que biene por defecto)", del contenedor de forma vertical
+
+					center: "ésta opción alinea los elementos en el centro del contenedor de forma vertical"
+
+					flex-end: "ésta opción alinea los elementos en la parte inferior ó final del contenedor de forma vertical"
+
+					stretch: "ésta opción hará que los elementos items, ocupen el 100%, de la altura (height:), del contenedor principal, por ésta razón para éste caso los elementos, tendrán que tener la propidad de altura en automático (height:auto), ó no disponer de (height:..)"
+
+					baseline: "indeterminada"
+				*/
+				align-content:;
+
+			}
+
+				header{
+					width: 1024px;
+				}
+
+					#title{
+						width: 150px;
+						height: 100px;
+						background-color: green;
+						/*propiedades para los items*/
+
+						/*la propiedad "flex-basis", es un especie de sinónimo de "width:/height", más éste es dinámico y puede tomarse tanto para el ancho como el alto, dependiendo de que valor tenga la propidad del contenedor "flex-direction:", de ésta manera, si ésta tiene el valor de "row", entonces el valor de "flex-basis:", será para ancho ó "width", más si el valor que tiene "flex-direction:", es de "column", entonces el valor de "flex-basis:", será para el alto "height"*/
+						flex-basis: 150px;
+						/*la propiedad "flex-grow:", permite controlar el crecimiento relativo de los elementos para que éstos tomen ó ocupen el 100%, del ancho del contenedor, de ésta manera, podremos indicar que ciertos elementos tomen otra media relativa, la por defecto es de "1", así podríamos indicar por ej: "2", de ésta manera éste elemento tendrá el doble del incremento agregado en relación a los demás elementos contiguos ha éste*/
+						flex-grow:1;
+						/*la propiedad "flex shrink", lo que hace es exactamente lo contrario que la propiedad "flex-grow", */
+						flex shrink: 2;
+						/*la propiedad "flex:", hace de super atajo en el cuál, podremos declarar hasta tres atributos a la vez, éstos son: "flex-grow:", "flex shrink:", y "flex-basis:", en éste mismo orden, quedando de la siguiente manera:*/
+						flex: 1 1 150px;
+						/*la propiedad "order:", nos permitirá cambiar el orden cronológico de los elementos dentro del contenedor así, podremos hacer ubicar al primer elemento en el lugar del segundo elemento y así, secesivamente, otros*/
+						order:2;
+						/*la propiedad "align-self:", ésta permite hacer alineaciones de items, de forma individual para cada uno de los items, así, si los items, están trabajando en modo "row", éstos entonces harán una alineación "vertical", más si los items, están trabajando en modo "columns", entonces los items, harán una alineación en forma horizontal, así, la propiedad "align-self", soporte los siguientes valores:;
+
+							flex-start: "ésta opción alinea los elementos en la parte superior, (ésta es la ópción que biene por defecto)", del contenedor de forma vertical
+
+							center: "ésta opción alinea los elementos en el centro del contenedor de forma vertical"
+
+							flex-end: "ésta opción alinea los elementos en la parte inferior ó final del contenedor de forma vertical"
+
+							stretch: "ésta opción hará que los elementos items, ocupen el 100%, de la altura (height:), del contenedor principal, por ésta razón para éste caso los elementos, tendrán que tener la propidad de altura en automático (height:auto), ó no disponer de (height:..)"
+
+							baseline: "indeterminada"
+						*/
+						align-self: center;
+
+
+					}
+
+					#logo{
+						width: 150px;
+						height: 100px;
+						background-color: red;
+					}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<header class="box-row">
+			
+			<div id="title">
+	
+				<h1>MONO Producción</h1>
+
+			</div>
+
+			<div id="logo">
+				
+				<p>Logo</p>
+
+			</div>
+
+			<div id="title">
+	
+				<h1>MONO Producción</h1>
+
+			</div>
+
+			<div id="logo">
+				
+				<p>Logo</p>
+
+			</div>
+
+
+
+		</header>
+
+	</div>
+	
+</body>
+</html>

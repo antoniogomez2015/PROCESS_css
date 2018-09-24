@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial: Entendiendo CSS Grid (8 videos)
+		https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+
+
+
+	Display Grid:
+	_____________
+
+	_éste atributo nos permnitirá indicarle a un elemento que éste hará de grid container, para que así, los elemento hijos respondan a las propiedades de grid layout, ej:
+
+		section{
+			width:100%;
+			height: auto;
+			display: grid;
+	
+		}
+
+	_en una primera instancia ésta propiedad no hará ningún cambio aparente en la visualización del elemento para permitirá incorporación ejecutación de las demás propiedades que nos permitirán indicar la forma y características que deseamos que tenga el grid layout, respectivo a través, de otras propiedades adicionales
+
+
+
+
+	*/
+
+		body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+			section{
+				width: 100%;
+				height: auto;	
+				display: grid;												
+			}
+
+				section div{
+					width: 100%;
+					height: auto;
+					display: flex;
+					align-items: center;												
+				}
+
+					section div h2{						
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1.5rem;						
+						color: #fff;
+						text-align: center;						
+					}
+
+					section div:nth-of-type(1){
+						background-color: red;
+					}
+
+					section div:nth-of-type(2){
+						background-color: orange;
+					}
+
+					section div:nth-of-type(3){
+						background-color: green;
+					}
+
+					section div:nth-of-type(4){
+						background-color: blue;
+					}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<div>
+				<h2>Fase 1</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 2</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 3</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 4</h2>					
+			</div>
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

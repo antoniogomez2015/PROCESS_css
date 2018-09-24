@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #42 - Entendiendo las propiedades Multi-Column - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=REsLYlDAbDE&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=42
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+	Multi-column, en CSS3
+
+
+	column-count:
+	_____________
+
+	_la modalidad de la propiedad multi-column, permite la segmentación del contenido en columnas a través, de css3, 
+
+	_ésto es posible a través, del siguiente atributo css, el cuál, se aplicará dentro del "tag selector respectivo css"
+
+	_de ésta manera, la propiedad "column-count", recibe los siguientes atributos básicos:
+
+		_number | auto | initial | inherit
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+		}
+	
+				
+
+	column-gap:
+	___________
+
+	_y a través, del atributo "column-gap", tendremos la posibilidad de indicarle al sistema el "rule", grosor ó ancho de la separación entre columnas
+
+	_de ésta manera, la propiedad "column-gap", recibe los siguientes valores
+
+		_length (1,2,3px..) | normal | initial | inherit
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+
+			column-gap: 20px;
+			-webkit-column-gap: 20px;
+		}
+
+
+	column-rule:
+	____________
+
+	_éste atributo nos permitirá agregar elementos delimitantes entre las columnas generadas por el sistema de "multi-column", como líneas y otros elementos, las cuales serán similares a las que utilizamos con la propiedad "border"
+
+	_de ésta manera, la propiedad "column-rule", se le puede aplicar "width: 2px", ancho "style: solid ó dashed", estilo y "color", color, y a dichos atrubutos se les puede agregar sus respectivos valores al igual que a la propiedad "border"
+
+	_así, la propiedad "column-rule-width", recibe los siguientes valores básicos los cuales harán las líneas separadoras de finas a gruesas de forma gradual:
+
+		_medium | thin | thick | initial | length (1,2,3...px)
+
+	_así, como también, la propiedad "column-rule-style", recibe los siguientes valores básicos los cuales cambiarán el estilo de las líneas separadoras:
+
+		_none | hidden | dotted | dashed | solid | double| groove| ridge | inset | outset | initial | inherit
+
+	_y la propiedad "column-rule-color", recibe los siguientes valores básicos los cuales harán que las líneas separadoras de contenido cambien de color
+
+		_color | initial | inherit
+
+
+	_e incluso ésta propiedades las podemos expresar a través, del método shorthand
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+
+			column-gap: 20px;
+			-webkit-column-gap: 20px;
+
+			column-rule-width: 2px;
+
+			column-rule: 2px solid black; //método shorthand
+		}
+
+
+	column-width:
+	_____________
+
+	_así, como también, podremos definir el ancho que tendrán las columnas de ésta manera, si cambia el ancho del viewport, en vez de escalarse las columnas éstas se irán eliminando ó disminuyendo su cantidad
+
+	_de ésta manera, si inicialmente habían tres columnas, posteriormente se vaya haciendo más angosto el viewport, pasarán ha haber dos columnas y posteriormente habrá sólo una columna con todo el contenido de las tres columnas iniciales
+
+	_ de ésta manera, éste sistema hará de un especia de sistema responsive del contenido en las multi columnas dinámicas
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+
+			column-gap: 20px;
+			-webkit-column-gap: 20px;
+
+			column-rule-width: 2px;
+
+			column-rule: 2px solid black; //método shorthand
+
+			column-width: 300px;
+			-webkit-column-width: 300px;
+		}
+
+
+	column-span:
+	____________
+
+	_ésta propiedad nos permite excluir un contenido determinado del flujo dentro las multi columnas dinámicas
+
+	_así, de ésta manera, por ejemplo; podríamos excluir de las multi columnas dinámicas el título de un post, el cuál, deseamos que quede arriba de las tres columnas de forma centrada y que no se encuentre esté en la parte superior de la primera columna generada sólamente y no en las demás columnas
+
+	_ésta propiedad recibe los siguientes valores:
+
+		_1
+
+			_éste es el valor por defecto, así, de ésta manera, el elemento seleccionado se corresponderá sólo a la primera columna generada
+
+		_all
+
+			_éste valor se corresponderá con todas la columnas generadas permitiéndo así, que el elemento seleccionado sea excluido de todo el sistema de multi-column
+
+		_initial
+
+			_éste valor vuelve al valor inicial "1", de ésta manera, podremos pasar de un estado ha otros ha modo de "suiche"
+
+		_inherit
+
+			_ésta opción heradará el valor del primer elemento padre inmediato
+
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+
+			column-gap: 20px;
+			-webkit-column-gap: 20px;
+
+			column-rule-width: 2px;
+
+			column-rule: 2px solid black; //método shorthand
+
+			column-width: 300px;
+			-webkit-column-width: 300px;
+
+			columna-span: all;
+			-webkit-columna-span: all;
+		}
+
+
+	column-fill:
+	____________
+
+	_éstas propiedad nos permite cambiar especialmente el comportamiento de texto dentro de las columnas así, el texto podrá cobrar un comportamiento diferentes a través, de los diferentes valores que permite ó soporta éste atributo de "colum-fill", los cuales son 
+
+		_inherit
+
+			_valor heredado del primer elemento padre
+
+		_initial
+
+			_éste es el valor por defecto ó tácito
+
+		_auto
+
+			_éste nos permite hacer una variación el comportamiento de los elementos específicamente texto
+
+		_balance
+
+			_éste nos permite hacer una variación el comportamiento de los elementos específicamente texto
+
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+
+			column-gap: 20px;
+			-webkit-column-gap: 20px;
+
+			column-rule-width: 2px;
+
+			column-rule: 2px solid black; //método shorthand
+
+			column-width: 300px;
+			-webkit-column-width: 300px;
+
+			columna-span: all;
+			-webkit-columna-span: all;
+
+			column-fill: balance;
+			-webkit-column-fill: balance;
+		}
+
+
+		
+	*/
+
+	body{
+		width: 100%;
+		background-color: #777;
+		margin: 0 auto;
+
+	}
+
+		#wrapper{
+			width: 100%;
+			margin: 0 auto;	
+			column-count: 3;
+			column-width: 300px;
+			column-gap: 30px;
+			column-rule: 10px solid lightgrey;
+			column-fill: auto;
+		}
+
+		#top, #bottom{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;			
+		}
+
+		#lista{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;			
+		}
+
+		#content2{
+			width: 400px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;			
+		}
+
+
+
+</style>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="lista">
+			
+			<ul>
+				<li>producto1</li>
+				<li>producto2</li>
+				<li>producto3</li>
+				<li>producto4</li>
+				<li>producto5</li>
+				<li>producto6</li>
+				<li>producto7</li>
+			</ul>	
+			
+		</div>
+
+		<div id="content2">
+			
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+			<!--<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+			<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>-->
+
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+	</div>
+
+
+</body>
+</html>

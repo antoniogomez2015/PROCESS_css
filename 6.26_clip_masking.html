@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial: CSS Clipping & Masking (свойства clip-path и mask-image) | https://www.youtube.com/watch?v=2pra1DLA_aQ
+
+		Trucos CSS (1) - Texto con fondo degradado | https://www.youtube.com/watch?v=ZiBH7om0_cs&list=PLv6CkzbbGAlVYK4rlpS556r1Yid_zlyLb
+
+
+	CSS Clipping and Masking:
+	_________________________
+
+		_Css Clipping:
+
+			_-webkit-clip-path
+
+		_Css Masking:
+
+			_-webkit-mask-image
+
+			_-webkit-mask-box-image
+
+
+
+
+	Workflow:
+	_________
+
+	Hacer el efecto de texto enmascarando dondo del mismo elemento:
+
+	_para lo cuál, primero en la propiedad de "color:", del elemento de tipo texto debemos indicarle un valor de "transparent"
+
+	_así, como también, al elemento texto "h1", en éste caso, debemos asignarle el atributo "background: linear-gradient(color,color);"
+
+	_y posteriormente ha éste elemento "h1", del texto, le agregados el atributo "-webkit-background-clip: text;", para que así, de ésta manera, el texto respectivo se enmascare con el fondo del mismo elemento
+
+	NOTA: éste método no es compatible con todos los navegadores incluso con la aplicación de prefijos respectivos para cada navegador
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;					
+			}
+
+				#proof{
+					width: 70%;
+					height: 400px;
+					margin: auto;
+					color: #fff;
+					padding-top: 15%;
+					background-color: #222;	
+					text-align: center;					
+				}	
+
+					h1{
+						color: transparent;
+						font-family: monospace,helvetica,sans-serif;
+						font-size: 6em;
+						background:-webkit-linear-gradient(yellow, red);	
+						-webkit-background-clip: text;					
+					}			
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<h1>Hola Mundo</h1>			
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

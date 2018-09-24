@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial: Entendiendo CSS Grid (8 videos)
+		https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+
+
+
+	CSS Features Queries:
+	_____________________
+
+	_ésta es la opciión disponible para la compatibilidad con navegadores que aún no han implementado la especificación de grid
+
+	_la cuál, funciona ha modo media quieries, en lá cuál, debemos de encerrar el contenido que se ejecutará cuando se cumpla cierta condición
+
+	_para lo cuál, debemos de encerrar todo el contenido que se ejecutará si el navegador reconoce la especificación de grid, a través, del siguiente método: "@supports(){}"
+
+	_y entre los paréntesis debemos de indicar los parámetro de comparasión en los cuáles debemos de indicar las propiedades que deseamos que el navegador respectivo nos ocnfirme si éste las tiene implementadas, indicando así, propiedad y valor respectivamente
+	
+
+		_@supports(display, grid){}
+
+			_en éste caso internet explorer reconoce grid, en su primera versión desestimada, en éste caso no nos serviría
+
+
+
+		_@supports(grid-template-columns: initial){}
+
+			_más ésta propiedad más específica de la nueva versión si nos serviría ya que ésta especificación no la entiende internet explorer
+
+
+
+	_como por ejemplo:
+
+		_de ésta manera, en el siguiente ejemplo si el navegador reconoce ésta propiedad entonces ejecutará el código dentro de "@supports(){}"
+
+		_y si no reconoce la respectiva propiedad entonces no se ejecutará el código dentro de "@supports(){}"	
+			
+
+		_@supports(grid-template-columns: initial){
+
+			section{
+				width: 100%;
+				height: auto;
+				display: grid;
+				grid-template-columns: repeat(4,1fr);
+				grid-gap: 30px;
+			}
+	
+		}
+
+
+
+
+	*/
+
+	body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+		}
+
+			section{
+				width: 100%;
+				height: auto;
+				display: grid;
+				grid-template-columns: repeat(4,1fr);
+				grid-gap: 30px;
+			}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

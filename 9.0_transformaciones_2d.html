@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*
+
+		Tutorial:
+
+			Curso de Diseño y Programación Web: 11. Transformaciones 2D y 3D, transiciones y animaciones | https://www.youtube.com/watch?v=yj93AWX0P_k&index=12&list=PLvq-jIkSeTUbxAO7uRoeNHH6ZCyjr7xq2
+
+	*/
+
+	/*///////////////////////////////////////////////////////////////////////*
+
+	/*
+
+	Transformaciones 2d:
+	____________________
+
+	_disponemos de cuatro tipo de transformaciones las cuáles son las siguientes:
+
+		_translation:
+
+		_rotation:
+
+		_scale:
+
+		_sesgar:
+
+		_todas mixtas a la vez:
+
+
+
+	Sistemas de cordenadas:
+	_______________________
+
+	_el sistema de cordenadas que aplica en el navegador está conformado a partir de sus ejes "X", y "Y", en la esquina superior izquierda como un plano
+
+	_lo que quiere decir es que por ejemplo; las cordenadas en el eje "Y", hacia abajo en el plano en éste caso serán positivas, más las cordenadas hacia arriba serán negativas 
+
+	_de ésta manera, podremos ver que las cordenadas están invertidas en relación al plano carteciano convencional
+
+
+
+	Propiedades CSS:
+	________________
+
+	_dispondremos de la propiedad "transform", a través, de la cuál, podremos realizar todas las transformaciones sobre los elementos html, ej:
+
+
+		_#demo{
+			transform: translate(x,y);
+			transform: rotate(10deg);
+			transform: scale(0.5,0.2);
+			transform: skew(10deg,5deg);
+		}
+
+
+	NOTA: es algunos casos será necesario la implementación de prefijos propietarios para asegurar la compatibilidad de todos los navegadores antiguos
+
+		_webkit- | -moz | -o- | -ms-
+
+
+	_más también, tendré la posibilidad de agregar más de una propiedad css, a la vez, de tipo transformación sobre un elemento html, ej:
+
+
+		_#demo{
+			transform: rotate(12deg) scale(0.5,1.2) skew(13deg,0deg) translate(12px,5px);
+			
+		}
+
+
+
+
+
+	*/
+
+	html,body{
+		border: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+
+		.transformaciones{
+			width: 50%;
+			height: auto;
+			text-align: center;
+			margin: 2% auto;
+		}
+
+			.transformaciones h2{
+				font-family: arial,helvetica,sans-serif;
+				font-size: 2.5rem;
+				font-weight: bold;
+				color: #555;
+			}
+
+			.transformaciones p{
+				width: 85%;
+				height: 70px;
+				color: white;
+				background-color: orange;
+				padding-top: 2%;
+			}
+
+				#t-translacion{
+					transform: translate(40px,10px);
+				}
+
+				#t-rotacion{
+					transform: rotate(5deg);
+				}
+
+				#t-escala{
+					transform: scale(0.6,1.4);
+				}
+
+				#t-sesgar{
+					transform: skew(8deg,0deg);
+				}
+
+				#t-todas{
+					transform: translate(12px,5px) scale(0.5,1.2) rotate(12deg)  skew(13deg,0deg);
+				}
+	
+
+</style>
+
+<body>
+
+	<article class="transformaciones">
+		
+		<h2>Tranformaciones 2d</h2>
+
+		<p id="t-translacion">Translación</p>
+		<p id="t-rotacion">Rotación</p>
+		<p id="t-escala">Escala</p>
+		<p id="t-sesgar">Sesgar</p>
+		<p id="t-todas">Todas</p>
+
+	</article>
+
+	
+
+
+</body>
+</html>

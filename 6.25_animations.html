@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial: #48 - Animaciones en CSS3 - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=qIbxYztFmmU&index=48&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&spfreload=5
+	
+
+	Workflow:
+	_________
+
+	_tenemos la posibilidad de hacer animaciones utilizando las propiedades de "transition", y "transform", en animaciones más complejas las cuáles nos permitirán hacer animaciones más alaboradas
+
+	_así, como también, tendremos la posibilidad de animar cualquier propiedad css, como posiciones y alineamientos como "left, right, top, bottom", border, padding, width, height, y demás atributos css, existentes, lo cuál, extiende las posibilidades de animación de forma casi infinita
+
+	_y a través, de las propiedades de "animation", las cuáles harán de funciones las cuáles permiten agrupar diferentes priedades y elementos al unísono
+
+	_de ésta manera, tendremos que aplicar el sistema de animación en dos pasos, donde en el elemento seleccionado debemos aplicar las propiedades de:
+
+		_parte 1) "animation", como nombre entre otros
+
+		_parte 2) y por a parte los controles de animación como el tiempo, propiedades animadas y demás características
+
+
+
+	Parte 1:
+	________
+
+
+	Nombre:
+
+	_de ésta manera, debemos relacionar el elemento ha animar a través, del atributo "-webkit-animation-name: name;", ej:
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+		} 
+
+	_y dicho "name", ó nombre debe de coincidir con el nombre que debemos darle a la propiedad "@keyframes name{}", que expresaremos posteriormente en la cuál enunciaremos las propiedades, valores y tiempos ha animar
+
+
+	Duración:
+
+	_así, como también, tendremos que definir la duración de la animación en el tiempo para lo cuál dispondremos de valores en números enteros "2s", ó número en decimales "0.5s", ó ".5s", medio segundo
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		} 
+
+
+	Timing-function:
+
+	_y a través, de la propiedad "animation-timing-function", podremos controlar la curva de la velocidad de animación por medio de valores complejos de curvas animación personalizadas optenidos de páginas como "http://cubic-bezier.com/#.12,.87,.87,.38"
+
+	_de ésta manera, la propiedad "animation-timing.function", permite ó recibe los siguientes valores:
+
+		_ease:
+
+			_valor por defecto el cuál, realiza una aceleración suave al inicio y una desaceleración al final de la animación de forma gradual y suave
+
+		_linear:
+
+			_ésta modo no reliaza aceleración ó desaceleración ni inicialmente ni en la finalización de la animación
+
+		_ease-in:
+
+			_éste modo hace una aceleración suave en el inicio de la animación y no hace desaceleración en la finalización de la animación
+
+		_ease-out:
+
+			_éste modo no hace una aceleración suave en el inicio de la animación más si hace desaceleración en la finalización de la animación
+
+		_ease-in-out:
+
+			_éste modo hace tanto aceleración suave al inicio de la animación como una desaceleración suave en la finalización de la animación similar a la opción por defecto de "ease", aunque éste modo es más completo y dedicado
+
+		_step-start:
+
+			_éste modo permite indicar un comportamiento para el inicio de la animación
+
+		_step-end:
+
+			_éste modo permite indicar un comportamiento para el final de la animación
+
+		_steps(int,start|end):
+
+			_éste modo configurar los comportamientos iniciales y finales para una animación determinada
+
+		_cubic-bezier(n,n,n,n):
+
+			_éste modo permite indicar valores personalizados a través, de curvas de velicidad de animación complejas, las cuales podremos optener de páginas como "http://cubic-bezier.com/#.12,.87,.87,.38"
+
+		_initial:
+
+			_éste es el modo inferible por defecto el cuál equivale ha "ease"
+
+		_inherit:
+
+			_éste es el modo de herencia del elemento padre inmediato
+
+
+	_de ésta manera, podremos expresar las sentencias de la siguiente manera:
+
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		 	-webkit-animation-timing-function: cubic-bezier(.12,.87,.81,.03);
+		 }
+
+
+
+	Delay:
+
+	_así, como también, dispondremos de la propiedad ó atributo de "delay", el cuál, nos permitirá indicar un retardo a través, del cuál, podremos hacer que la animación se retarde un tiempo determinado
+
+	_y ha dicha propiedad le podremos indicar valores a través, de números enteros como "1s", un segundo así, como valores decimales "0.5s", ó ".5s", medio segundo
+
+	_de ésta manera, podremos expresar las sentencias de la siguiente manera:
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		 	-webkit-animation-timing-function: ease-out;
+		 	-webkit-animation-delay: 1s;
+		 }
+
+
+
+	Iteration-count:
+
+	_así, como también, podremos controlar cuantas veces se repetirá la animación ha modo de "loop", ó cíclo de animación
+
+	_de ésta manera, podremos indicar la cantidad de veces en cíclo ó loops, que deseamos que repita la animación a través, de valores en números enteros "1"
+
+	_así, como también, podremos indicar una reproducción en cíclo ó loops, infinito a través, de la palabra clave "infinite"
+
+	_y sus otros valores son "initial", ó por defecto y "inherit", ó el modo herencia de su elemento padre inmediato
+
+	_de ésta manera, podremos expresar las sentencias de la siguiente manera:
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		 	-webkit-animation-timing-function: ease-out;
+		 	-webkit-animation-delay: 1s;
+		 	-webkit-animation-iteration-count 3;
+		 }
+
+
+	Direction:
+
+	_así, como también, podremos indicar la dirección que tendrá ó tomará la animación la cuál, permite ó soporta los siguientes valores:
+
+		_normal:
+
+			_éste es el valor por defecto el cuál, va de izquierda ha derecha
+
+		_reverse:
+
+			_éste modo ó valor invertirá el sentido de la animación haciendo que ésta vaya ahora de derecha ha izquierda
+
+		_alternate:
+
+			_ésta opción alternará el sentido de la animación haciendo que ésta vaya de izquierda ha derecha y luego de derecha ha izquierda, repitiendo éste cíclo ó loops, indefinidamente
+
+			_de ésta manera, ésta valor dependerá de la propiedad "interation-count:", su valor sea mayor ha "1", ya que así, dependerá de la cantidad de cíclos ó loops, indicada ó si tiene un valor de "infinite"
+
+		_alternate-reverse:
+
+			_ésta poción tendrá el mismo comportamiento de la opción "alternate", más ésta opción comenzará de forma invertida, es decir, de derecha ha izuqierda
+
+		_initial:
+
+			_ésta es la forma inicial ó por defecto lo cuál equivale al nodo "normal"
+
+		_inherit:
+
+			_éste es el modo herencia del elemento padre inmediato
+
+
+
+	Fil Mode:
+
+	_éste atributo nos permite aplicar estilos css, antes ó despues que se haya ejecutado la animación
+
+	_ésto es posibles a través, de los valores possibles que acepta ó permite ésta propiedad, los cuales son:
+
+		_none:
+
+			_éste es el valor por defecto el cuál, no agrega estilos css, ni al inicio ni al final de la animación respectiva
+
+		_forwards:
+
+			_éste modo ó valor agregar estilos css, al comenzar ó inicio de la animación
+
+		_backwards:
+
+			__éste modo ó valor agregar estilos css, al finalizar la animación
+
+		_both:
+
+			_éste modo ó valor agrega atributos css, tanto en el inicio como en la finalización de la animación
+
+		_initial:
+
+			_éste es el valor inicial referencial el cuál, equivale a el valor "none"
+
+		_inherit:
+
+			_éste es el valor de herencia del elemento padre inmediato
+
+
+	_ésto lo que quiere decir es que éste atributo hace que las propiedades animadas css, dentro de la función ó atributo "@keyframes name{from{} to{}}" sean aplicadas antes ó después de la animación
+
+
+	para lo cuál dispondremos la sentencias de la siguiente manera:
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		 	-webkit-animation-timing-function: ease-out;
+		 	-webkit-animation-delay: 1s;
+		 	-webkit-animation-iteration-count 3;
+		 	-webkit-animation-direction: alternate;
+		 	-webkit-animation-fill-mode: forwards;
+		 }
+
+
+
+	Play State:
+
+	_a través, de ésta propiedad podremos especificar cuando la animación se está reproduciendo y cuando ésta estará detenida
+
+	_para lo cuál, dispondremos de los valores siguientes:
+
+		_paused:
+
+			_éste valor especifica que animación estará detenida
+
+		_running:
+
+			_éste valor especifica que animación estará en funcionamiento ó corriendo
+
+		_initial:
+
+			_éste es el valor por defecto el cuál equivaldrá ha "running"
+
+		_inherit:
+
+			_éste es el valor de herencia del elemento padre inmediato
+
+
+	_de ésta manera, podremos expresar la sentencia de la siguiente manera:
+
+		_#proof{
+			
+			-webkit-animation-name: cubo;
+			-webkit-animation-duration: 2s;
+		 	-webkit-animation-timing-function: ease-out;
+		 	-webkit-animation-delay: 1s;
+		 	-webkit-animation-iteration-count 3;
+		 	-webkit-animation-direction: alternate;
+		 	-webkit-animation-fill-mode: forwards;
+		 	-webkit-animation-play-state: paused;
+		 }
+
+
+	_de éste modo, podremos pausar ó inicializar una animación en un momento determinado
+
+
+
+	ShortHand:
+
+	_así, como también, podremos expresar todos los atributos de animación de forma conjunta ó mimetizada a través, del método shorthand, por medio del atributo simplificado "ainmatión"
+
+	_por medio del cuál, podremos expresar de forma simple y contigua todos los valores de todas las propiedades de animación a través, del siguiente orden:
+
+
+		_1, primero el "nombre"
+
+		_2, segundo la "duración"
+
+		_3, tercero el "timing", ó curva de animación
+
+		_4, cuarto el "delay", ó retardo
+
+		_5, quinto la "iteración", ó "loops"
+
+		_6, sexto la "dirección"
+
+		_7, séotimo "fill-mode"
+
+		_8, octavo "play-state"
+
+
+	_de ésta manera, podremos expresar la sentencia del método shorthand, de la siguiente manera, ej:
+
+			_-webkit-animation: cubo 1s linear .5s 3 normal both paused;
+
+
+
+
+	Parte 2:
+	________
+
+	_y para indicar y seleccionar los parámetro y valores ha animar y así, como el tiempo en que se animarán éstos dispondremos de la propiedad de animación 
+	"@keyframe name{};"
+
+	_a través, de la cuál, podremos indicar propiedades ha animar en tiempos ó estados específicos de forma controlada y específica
+
+
+	Animaciones punto a punto:
+
+	_y ésta propiedad tiene dos modalidades de indicarle argumentos, donde prodríamos decir que una es más simple ó directa y la otra es más completa ó compleja ó específica, éstas modalidades son las siguientes:
+
+	_la modalidad de "@keyframes name{from{} to{}};", ésta expresa sólo dos estados de animación ó de punto, donde uno es el punto inicial de animación y el otro es el punto final de la animación
+
+		@-webkit-keyframes cubo{
+			from{margin-left: 0%;}
+
+			to{margin-left: 80%;}
+		}
+
+	_donde en los parámetros "from{}", ó "desde", "to{}", ó "hasta", podremos indicar los parámetro ó valores css, ha animar
+
+	_entendiendo que los parámetros "from/to", quieren decir que debemos indicarle al sistema como estarán los parámetros ó valores css, ha animar en sus estados inicial "from", y final "to"
+
+	_para que así, el sistema se encargue de hacer la transición entre ambos tipos de estados diferentes de las propiedades y valores indicadas
+
+
+	Animaciones por porcentajes ó paradas:
+
+	_así, como también, tendremos la posibilidad de hacer animaciones con tiempos de parádas ó steps, específicos por medio de la propiedad ó función de "@keyframes name{0%{} 0%{} 0%{}}" a través, de porcentajes de intervalos de animación 
+
+	_de ésta manera, podremos colocar los porcentajes que desiemos y en la escala que necesitemos ej (0% 25% 50% 100%), ó cualquier otra combinación deseada, ej:
+
+		_@keyframes name{
+
+			0%{}
+
+			25%{}
+
+			50%{}
+
+			75%{}
+
+			100%{}
+	
+		}
+
+
+	_lo cuál, nos permitirá un mayor control sobre las acciones y el tiempo ó timing, de la animación en general y su interacción sobre todo con los demás elementos
+
+	_así, de ésta manera ya sea bajo el método de "@keyframes name{form{} to{}}", ó a través, del método "@keyframes name{0% 0% 0% 0%}", podremos aplicar más de una valor ó atributo css, ha animar
+
+	_pudiendo así, separar varios valores ha aninamar separándo éstos con ",", comas e indicando valores concretos dé éstos a través de valores numéricos expresados en unidades en "px", pixeles y en "%", porcentajes ej:
+
+		_#proof{
+
+			@keyframes cubo{
+	
+				form{margin-left: 0%; background-color: orange, width: 50%;}
+
+				to{margin-left: 50%; background-color: red, width: 70%;}
+			}
+	
+		}
+
+		_#proof{
+
+			@keyframes cubo{
+	
+				0%{margin-left: 0%; background-color: orange, width: 50%;}
+
+				50%{margin-left: 50%; background-color: red, width: 70%;}
+
+				100%{margin-left: 25%; background-color: purple, width: 30%;}
+			}
+
+	
+		}
+
+
+	_así, como también, podremos hacer animaciones utilizando atributos de la propiedad de "transform", en conjunto incluso con propiedades css, directamente como los casos anteriores ej:
+
+		_#proof{
+
+			@keyframes cubo{
+	
+				form{-webkit-transform: translate(30% 60%);}
+
+				to{-webkit-transform: translate(10% 30%);}
+			}
+	
+		}
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;					
+			}
+
+				#proof{
+					width: 300px;
+					height: 200px;
+					/*margin: auto;*/
+					color: #fff;
+					background-color: orange;	
+					text-align: center;
+					/*-webkit-animation-name: cubo;
+					-webkit-animation-duration: 2s;
+					-webkit-animation-timing-function: cubic-bezier(.12,.87,.46,.04);
+					-webkit-animation-delay: 1s;
+					-webkit-animation-iteration-count: 3;
+					-webkit-animation-direction: alternate;	
+					-webkit-animation-fill-mode: both;*/
+					-webkit-animation: cubo 1s linear .5s 3 alternate both running
+				}
+
+					@-webkit-keyframes cubo{
+						from{margin-left: 0%; background-color: orange}
+
+						to{margin-left: 80%; background-color: red}
+					}
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<h1>Hola Mundo</h1>			
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style type="text/css">
+
+	/*referencia: http://es.learnlayout.com/box-sizing.html*/
+	
+	body{
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+		background-color: #222;
+	}
+
+		#wrapper{
+			width: 100%;
+			height: auto;
+			/*atributo box-sizing*/
+			-webkit-box-sizing: border-box;
+		}
+
+		/*de ésta manera al agregar border, margins, y paddings, a los contenedores "div's", que se encuentren dentro de en éste caso del contenedor "#wrapper", no se vean afectados por el tamaño relativo del contenedor principal, en éste caso "#wrapper", y así, no hayan conflictos a la hora de tener un contenedor principal con medidas fijas, de ésta manera la propiedad "box-sesing", hará las escalas relativas a contenedores internos para que éstos quepan*/
+
+</style>
+
+<body>
+
+	<section id="wrapper">
+		
+		<article>
+			
+		</article>
+
+	</section>
+	
+</body>
+</html>

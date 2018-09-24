@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial: Entendiendo CSS Grid (8 videos)
+		https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+
+
+
+	Grid-Template-Columns:
+	______________________
+
+	_éste atributo nos permnitirá indicar cuantas columnas tendrá ó estará dividido el sistema, ej:
+
+		section{
+			width:100%;
+			height: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+	
+		}
+
+		_de ésta manera, podremos ver que el sistema de grid layout, estará conformado entonces en éste caso por cuatro columnas, con la misma proporción unas y otras y una fila por defecto
+
+
+
+	Fracciones:
+	___________
+
+	_para lo cuál, se hará de la unidad de medida "fr", ó fracción de ésta manera el sistema de grid layout, dividirá el contenido en "fracciones", en relación al contenedor padre
+
+	_de ésta manera, debemos inicialmente de indicar la cantidad de columnas que deseamos dividir el sistema
+
+	
+	_indicando cada columna deseada a través, de un valor numérico "1", seguido de su nomemclatura "fr"
+
+	_de ésta manera, si deseamos 4 columnas tendremos colocar "1fr", cuatro veces ej:
+
+		section{			
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+	
+		}
+
+	NOTE: éste atributo representará a la linea de elementos más larga del sistema de grid layout, de ésta manera, deberá tenerse en cuenta la línea de elementos más larga para determinar la cantidad de "grid-template-columns", ha indicar, de lo contrario nos dará un desface de proporciones
+
+
+	_y si deseamos que una columna determinada ocupe el doble ó más de otra columna tendremos que duplicar el número de ésta respectiva columna proporcionalmente al del valor de las demás columnas ej:
+
+		_section{			
+			grid-template-columns: 2fr 1fr 1fr 1fr;
+	
+		}
+
+	_de ésta manera, en el caso del ejemplo de arriba la primera columna ocupará el doble del ancho de las demás columnas del sistema
+
+
+
+	Auto:
+	_____
+
+	_más a parte de la unidad "fr", ó fraction, dispondremos de la unidad "auto", la cuál, a diferencia de "fr", la unidad "auto", contempla el ancho ó cantidad de contenido dentro de los respectivos elementos hijos de un elemento grid layout
+
+	_de ésta maenra, los elemento hijos de un elemento grid layout, tendrán diferentes achos en relación ha si éstos tienen contenidos más anchos unos que otros ej:
+
+		_section{			
+			grid-template-columns: auto auto auto auto;
+	
+		}
+
+
+
+	Porcentajes y Pixeles:
+	______________________
+
+	_así, como también, podremos indicar como unidades de medida para el sistema tanto los porcentajes como los pixeles en relación al efecto y desarrollo que estémos realizando ej:
+
+		_section{			
+			grid-template-columns: 25% 25% 25% 25%;
+	
+		}
+
+		_section{			
+			grid-template-columns: 25px 25px 25px 25px;
+	
+		}
+
+	_así, como también, podremos mezclar tipos de unidades como por ej:
+
+		_section{			
+			grid-template-columns: 1fr 25% 25px auto;
+	
+		}
+
+		
+
+
+
+
+	*/
+
+	body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;			
+		}
+
+			section{
+				width: 100%;
+				height: auto;	
+				display: grid;
+				grid-template-columns: 1fr 25% 25px auto;									
+			}
+
+				section div{
+					width: 100%;
+					height: auto;
+					display: flex;
+					align-items: center;												
+				}
+
+					section div h2{						
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1.5rem;						
+						color: #fff;
+						text-align: center;						
+					}
+
+					section div:nth-of-type(1){
+						background-color: red;
+					}
+
+					section div:nth-of-type(2){
+						background-color: orange;
+					}
+
+					section div:nth-of-type(3){
+						background-color: green;
+					}
+
+					section div:nth-of-type(4){
+						background-color: blue;
+					}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<div>
+				<h2>Fase 1</h2>					
+			</div>
+
+			<div>
+				<h2>Proximamente</h2>					
+			</div>
+
+			<div>
+				<h2>Alternativa 3 Estadio 4</h2>					
+			</div>
+
+			<div>
+				<h2>real World</h2>					
+			</div>
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

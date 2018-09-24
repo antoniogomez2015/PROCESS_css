@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial: Entendiendo CSS Grid (8 videos)
+		https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+
+
+
+	Grid Items Grid Lines:
+	______________________
+
+	_las grid lines, nos permitirá controlar ó reposicionar los elementos hijos de un elemento grid layout, de ésta manera, podremos posicionar los elementos items, de cada sistema de grid lines
+
+	_de ésta manera, cada item, ó hijo de un grid layout, está compuesto por una línea perimetral a cada uno de sus costados ha modo de "borde", perimetral
+
+	_de ésta manera, cada item, estará conformado por dos grid lines, verticales para las columnas ó "columns", y dos grid lines, para las files ó "rows"
+
+
+	Características:
+
+	_de ésta manera, podremos hacer referencia u ubicar cada elemento item, del sistema de grid layout, en relación a su distación de las líneas contiguas ha éste y las líneas de los demás elementos existentes en el sistema de grid layout
+
+
+
+	Propiedades:
+
+	_y para controlar los diferentes items, dentro de un sistema grid layout, dispondremos de las siguientes propiedades haciendo uso a su vez, de las referencias de las grid lines, éstas son:
+
+
+		section div{
+			width:100%;
+			height: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 100vh;
+
+			//propiedades
+
+			grid-colum-start: 1;
+			grid-column-end: 2;
+
+			grid-row-start: 1;
+			grid-row-end: 2;
+	
+		}
+
+	_también, dispondremos de un método abreviado a través, del cuál, podremos simplificar el proceso y escribir menos código, ej:
+
+		section div{
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+	_dichas propiedades debemos aplicarlas en los elementos hijos ó items, del elemento grid layout
+
+
+
+	Posicionamiento:
+	________________
+
+	_de ésta manera, a través, de las grid lines, podremos controlar los espacios ó áreas que ocupará cada items, del sistema de grid layout
+
+	_de ésta manera, podremos conformar maquetaciones enteras en las cuáles, podremos crear cabeceras que ocupen todo el ancho, sidebars, bodys, footers, asides, otros
+
+
+	
+
+
+	*/
+
+	body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+			section{
+				width: 100%;
+				height: auto;	
+				display: grid;
+				grid-template-columns: 1fr 4fr 1fr 1fr;	
+				grid-template-rows: 25vh 70vh 25vh;							
+			}
+
+				section div{
+					width: 100%;
+					height: auto;
+					display: flex;
+					align-items: center;											
+				}
+
+					section div h2{						
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1.5rem;						
+						color: #fff;
+						text-align: center;						
+					}
+
+					section div:nth-of-type(1){
+						background-color: red;
+
+						/*grid lines*/
+						grid-column: 1 / 4;				
+						grid-row: 1 / 2;	
+					}
+
+					section div:nth-of-type(2){
+						background-color: orange;
+
+						/*grid lines*/
+						grid-column: 1 / 2;				
+						grid-row: 2 / 3;
+					}
+
+					section div:nth-of-type(3){
+						background-color: green;
+
+						/*grid lines*/
+						grid-column: 2 / 3;				
+						grid-row: 2 / 3;
+					}
+
+					section div:nth-of-type(4){
+						background-color: blue;
+
+						/*grid lines*/
+						grid-column: 3 / 4;				
+						grid-row: 2 / 3;
+					}
+
+					section div:nth-of-type(5){
+						background-color: lime;
+
+						/*grid lines*/
+						grid-column: 1 / 4;				
+						grid-row: 3 / 4;
+					}
+
+					/*section div:nth-of-type(6){
+						background-color: purple;
+
+						/*grid lines*/
+						/*grid-column: 1 / 2;				
+						grid-row: 3 / 4;
+					}*/
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<div>
+				<h2>Fase 1</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 2</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 3</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 4</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 5</h2>					
+			</div>
+
+			<!--<div>
+				<h2>Fase 6</h2>					
+			</div>-->
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*
+
+		Tutorial:
+
+			Como Utilizar Variables en CSS (Sin preprocesadores)
+				https://www.youtube.com/watch?v=--svd6NBe70
+
+
+	*/
+
+	/*///////////////////////////////////////////////////////////////////////*
+
+	//*seleccionar todo el documento html, para que así, el scope, de las variables css, alcance de todos los elementos hijos, del css/html*/
+	:root{
+	/*definir variables "--variableName : valor"*/
+		--colorBase: orange;
+		--fontBase: arial,helvetica,sans-serif;
+		--fontSize: 2.0rem;
+	}
+		
+	p{
+		/*funciones css, "var()" para llamar a variables*/			
+		color: var(--colorBase);
+		font-family: var(--fontBase);
+		font-size: var(--fontSize);
+	}
+
+	#demo{
+		width: 30%;
+		min-height: 150px;
+		background-color: brown;
+		border-radius: 10px;
+		margin: 10% auto;
+	}
+
+	.alter{
+		color: green;
+		font-size: 1.0rem;
+		background-color: purple;
+	}
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+
+</body>
+</html>

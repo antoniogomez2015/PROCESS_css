@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<!--para idiomas en general-->
+	<link rel="alternate" hreflang="en" href="http://en.mipaginaweb.com/pagina.html">
+	<link rel="alternate" hreflang="es" href="http://es.mipaginaweb.com/pagina.html">
+
+
+	<!--para idiomas en paises específicos (mexico, españa)-->
+	<link rel="alternate" hreflang="en-MX" href="http://mx.mipaginaweb.com/pagina.html">
+	<link rel="alternate" hreflang="es-ES" href="http://es.mipaginaweb.com/pagina.html">
+
+	<style type="text/css">
+
+	/*
+
+	Tutorial: Entendiendo CSS Grid (8 videos)
+		https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+
+
+
+	Grid Area:
+	__________
+
+	_de ésta manera, luego de haber agregado al elemento que hará de contenedor principal ó grid layout, el atributo de 
+
+		_grid-templae-areas: "";
+
+	_entonces es hora de agregar a los elementos hijos ó items, del sistema de grid layout, sus respectivos controles los cuáles, le permitirán al sistema relación cada nombre que personalizado que indicados con cada respectiva área y su orden 
+
+	_para lo cuál, dispondremos del siguiente atributo:
+
+		grid-area:;
+
+	_el cuál, se los asignaremos a los elementos hijos y no al elemento padre ó contenedor, ej:
+
+
+		section div{
+			width:100%;
+			height: auto;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 100vh;
+
+			//propiedades
+
+			grid-templae-areas: "inicio sidebar body sidebar footer";
+	
+		}
+
+				section div:nth-of-type(1){
+					background-color: red;
+						
+					//propiedades
+
+					grid-area: inicio;	
+				}
+
+	_de ésta manera, cada uno de los elementos items, hijos del sistema de grid layout, en la misma proporción unos de otros
+
+
+	Changes:
+	________
+
+	_de ésta manera, a través, de medias queries, podremos cambiar el orden de los elementos hijos para que así, éstos sean representados en otra ubicación dentro del sistema y en relación a los demás elementos dentro del sistema de grid layout, ej:
+
+
+		@medio (max-width: 720px){
+
+			section div:nth-of-type(1){
+				background-color: red;
+
+				//grid lines
+				grid-area: siebarLeft;
+			}
+
+			section div:nth-of-type(1){
+				background-color: red;
+
+				//grid lines
+				grid-area: inicio;
+			}
+	
+		}
+	
+
+
+	*/
+
+	body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+			section{
+				width: 100%;
+				height: auto;	
+				display: grid;
+				grid-template-columns: 1fr 1fr 2fr 1fr 1fr;	
+				grid-template-rows: 1fr 1fr 1fr;	
+				grid-template-areas: 
+					"inicio inicio inicio inicio inicio"
+					"sidebarLeft body body sidebarRight"
+					"footer footer footer footer footer";							
+			}
+
+				section div{
+					width: 100%;
+					height: auto;
+					display: flex;
+					align-items: center;											
+				}
+
+					section div h2{						
+						font-family: arial,helvetica,sans-serif;
+						font-size: 1.5rem;						
+						color: #fff;
+						text-align: center;						
+					}
+
+					section div:nth-of-type(1){
+						background-color: red;
+
+						/*grid lines*/
+						grid-area: inicio;						
+					}
+
+					section div:nth-of-type(2){
+						background-color: orange;
+
+						/*grid lines*/
+						grid-area: sidebarLeft;
+					}
+
+					section div:nth-of-type(3){
+						background-color: green;
+
+						/*grid lines*/
+						grid-area: body;
+					}
+
+					section div:nth-of-type(4){
+						background-color: blue;
+
+						/*grid lines*/
+						grid-area: sidebarRight;
+					}
+
+					section div:nth-of-type(5){
+						background-color: lime;
+
+						/*grid lines*/
+						grid-area: footer;
+					}
+
+					/*section div:nth-of-type(6){
+						background-color: purple;
+
+						/*grid lines*/
+						/*grid-column: 1 / 2;				
+						grid-row: 3 / 4;
+					}*/
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<div>
+				<h2>Fase 1</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 2</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 3</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 4</h2>					
+			</div>
+
+			<div>
+				<h2>Fase 5</h2>					
+			</div>
+
+			<!--<div>
+				<h2>Fase 6</h2>					
+			</div>-->
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

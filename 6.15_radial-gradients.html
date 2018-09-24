@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #39 - CSS3 Radial Gradients - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=Y2xWRJ5oSHU&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=39
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+
+
+	Radial-gradients, en CSS3
+
+	_los degradados en css3, son transiciones entre dos colores ó más colores
+
+	_para lo cuál, al respectivo elemento que le deseamos aplicar un degradado debemos previamente haberle aplicado la propiedad de "background:", sobre la cuál, aplicaremos los atributos de degradado lineal en éste caso
+
+	_de ésta manera, lograremos el efecto de degradado radial a través, de los atributos siguientes: "radial-gradient()"	
+	
+		.containt{
+
+			backgorund: radial-gradient(red, black);
+
+				_así, como también, podría agregar más colores..
+
+			backgorund: radial-gradient(orange, red, black);
+
+		}
+
+	_y dichos valores los podremos indicar a través, de valores exadecimales, rgb, rgba, hls, ej:
+
+		.containt{
+
+			backgorund: radial-gradient(red, rgba(255,125,55,.5), black);	
+
+		}	
+
+	_y más si no indicamos propiedades adicionales el degradado radial se creará a partir del centro del contenedor del elemento html
+
+
+	_y su forma por defecto será "elipse", una elipse la cuál, podremos cambiar por "circle", ó círculo, ej:
+
+		.containt{
+
+			backgorund: radial-gradient(circle, red, black);
+				
+		}
+
+	_así, como también, podremos indicarle al sistema donde deseamos que parta ó se inicie el degradado en relación a las dimensiones y proporción del elemento contenedor html, a través, de la propiedad "at", la cuál, significa "en", y "left,right,top,bottom", y éste debe expresarse a continuación de indicar la forma que tendrá el degradado radial "selipse/circle" ej:
+
+		.containt{
+
+			backgorund: radial-gradient(circle at top left, red, black);
+				
+		}
+
+	_así, como también, podremos agregar valores absolutos "px", ó relativos "%", donde el primer valor será el eje horizontal "X", y el segundo valor será el eje vertical "Y", para representar el punto de partida ó de inicio del degradado radial, ej:
+
+		.containt{
+
+			backgorund: radial-gradient(circle at 100px 80px, red, black);
+				
+		}
+
+
+	_así, como también, podremos agregar keyworks, ó palabras claves para personalizar tamaño la forma del degradado final, éstas keyworks, son las siguientes:
+
+		length / closest-side / closest-corner / 
+
+		farthest-side / farthest-corner
+
+	_donde la propiedad "close-side", ó "lados más cercanos" permitirá que el degradado radial se comprima ha una mínima expresión, ej:
+
+		.containt{
+
+			backgorund: radial-gradient(close-side at 100px 80px, red, black);
+				
+		}
+
+	_donde la propiedad "farthest-side", ó "lados más lejanos" permitirá que el degradado radial se exftienda hacia los lados ó extremos, ej:
+
+		.containt{
+
+			backgorund: radial-gradient(farthest-side at 100px 80px, red, black);
+				
+		}
+
+	_y las propiedades "close-corner", y "fathest-corner", permitirán que el degradado radial haga lo mismo que las opciones anteriores pero no con los lados ó extremos del degradado radial sino, con las esquinas del elemento html, respectivo
+
+
+	_así, como también, podremos hacer los stops, color ó definir donde comienza un color en relación a los demás colores para que así, aumentemos ó disminuyamos la acutando ó difuminación entre colores
+
+	_para lo cuál, debemos de indicar éste valor en porcentajes luego de indicar el color, de igualmente que en los degradados "linear-gradients()", ej:
+
+		.containt{
+
+			backgorund: radial-gradient(farthest-side at 100px 80px, red 10%, black 30%);
+				
+		}
+
+
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

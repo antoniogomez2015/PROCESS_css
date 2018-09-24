@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/				
+
+		quedamos aqui: #32- Propiedades Position y Z-index - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=qJwIUaTlJdk&index=32&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+	*/
+	
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+
+	position, en css
+
+	
+	_la propiedad "position", ésta propiedad nos permite organizar los elementos de una forma más avanzada dentro del viewport, con una cantidad superior de creterios a la forma de organización por bloque ó flotada
+
+	_ya que nos permitirá colocar elementos en una posición relativa ha sus elementos padres como al mismo viewport, ó cordenadas específicas ó de manera estática en un ponto determinado
+
+	_más ésta propiedad también, hace uso de otras propiedades para la ubicación de los elementos éstas propiedades son: a las cuales les podemos indicar un valor relativo ó absoluto
+
+		_top
+
+		_left
+
+		_right
+
+		_bottom
+
+
+	_ésta propiedad permite los siguientes atributos:
+
+		_static
+
+			_ésta es la opción que tienen los navegadores por defecto la cuál, permite que los elementos mantengan el flujo del html
+
+		_relative
+
+			_éste hace que los elemento tomen la referencia para su ubicación la ubicación del elemento padre a tavés, de las propiedades "top/lesf/right/bottom", y éstos elementos ya no formarán parte del flujo html, normal y serán inorados por los demás elementos html
+
+			_más con la excepción de que éste elemento con posición relativa no rompa con el flujo html, de los demás elementos tampoco los demás elementos html, podrán tomar el lugar de éste y mover su posición original de flujo a diferencia de float, a tavés, de las propiedades "top/lesf/right/bottom"
+
+			_otra manera de decirlo sería que los demás elementos innorarán ésta acción de los elementos con posición relativa y no tratarán de tomar su lugar ó de romper su flujo html natural, incluso si superponemos unos elementos sobre otros elementos del flujo normal del html
+
+		_absolute
+
+			_con éste atributo tenemos la posibilidad de posicionar los elementos más ahora con una referencia directa al viewport, no al elemento padre como en el caso de la posición relativa, y en éste caso, los demás elementos con el flujo normal html, no lo tomarán en cuanta y si tratarán de tomar su posición a contra posición del caso de los elementos con posición relativa
+
+			_ésto último es así, a menos que el elemento padre de dicho elemento con posición absoluta tenga una posición relativa, entonces en éste caso si tomará como referencia el elemento padre en vez del viewport, ésto a tavés, de las propiedades "top/left/right/bottom"
+
+		_fixed
+
+			_con éste atributo tendremos la posibilidad de colocar elementos fijos en el viewport, éste elemento se encontrará fuera totalmente del flujo html, y dichos elementos no respetarán su posición actual ó posición previa ó anterior, y si tratarán de tomar su posición, y para ubicar ha éste elemento con posición fija podremos hacer a tavés, de las propiedades "top/lesf/right/bottom"
+
+		_inherit
+
+			_ésta es la opción para posiciones heredadas
+
+
+	_más también, aunado a las propiedades de posición también, disponemos de una propiedad complementaria "Z-index:", que permite gerarquizar la estructura de capas ó contenedores permitiédonos indicar ha modo de photoshop, cuál, capa ira sobre las demás para tener así, un mejor y mayor control de los resultados obtenidos en la organización y renderización del contenido html
+
+	
+				
+	Css3: 
+
+		
+		#content{
+			position: relative;
+			z-index: -1;
+		}		
+						
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

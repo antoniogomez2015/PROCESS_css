@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexbox</title>
+
+<style type="text/css">
+
+/*
+align-self: center;
+align-self: flex-end;
+align-self: stretch;
+*/
+
+/*referencia: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
+/*Tutorial: HTML5 y CSS3 - 8 - Flexible box model (cajas flexibles)
+	https://www.youtube.com/watch?v=oHxSyWXzs6w
+
+/*Guía Completa de Flexbox desde 0 | https://www.youtube.com/watch?v=F-KCncXMPk0*/
+
+/*
+
+Tutorial: #41 - Entendiendo Flexbox de CSS3 - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=t58MkLTetKA
+
+Analizamos Flexbox #designIO
+	https://www.youtube.com/watch?v=zCweLx1s3vY
+
+
+	Reference:
+
+		https://www.w3schools.com/css/css3_flexbox.asp
+
+
+
+*/
+	
+	body{
+		/*para flexbox, es recomendable colocar el body, con un ancho de 100%, como punto de anclaje referencial para el sistema*/
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+		background-color: #222;
+	}
+
+
+	/*primero debemos agregar la propiedad flexbox, al contedor principal que contendrá a todos los contenedores ó divs's, de interés*/
+	#wrapper{
+		width: 100%;
+		background-color: #444;
+
+		/*nuevos atributos flexbox*/
+
+		display: box;
+		/*en éste podemos escoger entre las alineaciones de div's "horizontal", y "vertical"*/
+		box-orient: horizontal;
+
+		/*ahora las versiones para los diferentes navegadores*/
+		display: -webkit-box;		
+		-webkit-box-orient: horizontal;
+
+		display: -moz-box;		
+		-moz-box-orient: horizontal;
+
+		/*atributos adicional para cambiar ó intertir el orden de los div's*/
+		-webkit-box-direction: reverse;
+
+		/*atributo para centrar los div's, en el contenedor principal, el cuál, dispone de los siguientes valores de alineación: "star", "center", "end", el valor por defecto que trae ésta propiedad es "stretch"*/
+		-webkit-box-pack: end;
+
+		/*atributo de alineación general, éste dispone de los siguientes valores de alineación: "star", "center", "end", el valor por defecto que trae ésta propiedad es "stretch"*/
+		-webkit-box-align: center;
+
+		/*para indicar la dirección del comportamiento de los elementos hijos*/
+		/*los valores para ésta propiedad son: "row", por defecto "row-reverse", "column", "column.reverse"*/
+		-webkit-flex-direction: row;
+
+		/*y para ajustar la posición de los elementos flexibles*/
+		/*éste soporta los valores de "space-between", "flex-end", "center", "flex-start", "space-around"*/
+		justify-content: space-between;
+
+		/*para evitar que se salgan de su contenedor, especialmente útil para hacer desarrollos escalables para dispositivos móviles y response design, así, los elementos ó items, se ordenarán a modo de pinterest, ó windows metro*/
+		/*éste atributo soporta los siguientes valores; "wrap", "nowrap", "wrap-reverse"*/
+		flex-wrap: wrap;
+
+		/*revisar atajo para las opciones a la vez, de "flex-direction:", y "flex-wrap:", para indicar al unísono sus propiedades, ésta atajo es "flex-flow:", y aplicado quedaría de la siguiente manera:*/
+		flex-flow: row wrap;
+
+	}
+
+
+	/*ahora para aplicar el sistema de flexbox, a todos los div's*/
+	/*si queremos que el sistema sea activado colocamos "1", más para desactivarlo colormos "0"*/
+	#wrapper > div{
+		box-flex: 1;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		/*opcional*/
+		/*width: 100px;
+		height: 100px;*/
+	}
+
+		
+
+		/*ahora a los div's, no le colocamos ancho "width", ni alto "height", para que así, éstos tomen una disposición líquida a través, del sistema "flexbox"*/
+
+		/*NOTE: si ponemos directamente la propidad "box-flex: 1;", en cada div, podremos variar ahora si el mamaño relativo de los div's, entre a través del valor que le indiquemos a la propiedad, ej: "box-flex: 1;", "box-flex: 2;", "box-flex: 3;"*/
+
+		#content1{					
+			margin: 20px;
+			padding: 20px;
+			background-color: red;
+			/*ej: de la propiedad flexbox, aplicada de forma individual*/
+			/*-webkit-box-flex: 3;*/
+			/*ej: para cambiar el orden de los div's, de forma personalizada*/
+			/*-webkit-box-ordinal-group: 2;*/
+		}
+
+		#content2{				
+			margin: 20px;
+			padding: 20px;
+			background-color: blue;
+		}
+
+		#content3{							
+			margin: 20px;
+			padding: 20px;
+			background-color: orange;
+		}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+	<section id="wrapper">
+
+		<div id="content1">
+
+			<p>hola mundo</p>
+			
+		</div>
+
+		<div id="content2">
+
+			<p>hola mundo</p>
+			
+		</div>
+
+		<div id="content3">
+
+			<p>hola mundo</p>
+			
+		</div>
+		
+	</section>
+	
+</body>
+</html>

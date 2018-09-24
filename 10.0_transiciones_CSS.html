@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*
+
+		Tutorial:
+
+			Curso de Diseño y Programación Web: 11. Transformaciones 2D y 3D, transiciones y animaciones | https://www.youtube.com/watch?v=yj93AWX0P_k&index=12&list=PLvq-jIkSeTUbxAO7uRoeNHH6ZCyjr7xq2
+
+	*/
+
+	/*///////////////////////////////////////////////////////////////////////*
+
+	/*
+
+	Transiciones CSS:
+	_________________
+
+	_tenemos la posibilidad de agregar transiciones ha elementos html, para lo cuál, dispondremos de las siguiente propiedades y características:
+
+
+		_#proof{
+			transition: ;
+
+		}
+
+
+	Eventos:
+	________
+
+	_las transiciones requieren eventos de parte del usuario ó de parte del navegador
+
+	_de ésta manera, las transiciones reponden ha eventos de tipo "hover", ó de tipo "click", ó acciones de carga del navegador a través, de javascript, otros
+
+	_lo cuáles, harán de "triggers", ó desencadenantes de las acciones de la transición respectiva, ej:
+
+
+
+		_#proof{
+			transition: background-color 1s ease-out;
+
+		}
+
+			_#proof:hover{
+				background-color: red;
+
+			}
+
+
+	NOTA: lo más recomendable es crear clases css, con los diferentes tipos de animaciones ha realizar para que así, estas animaciones sean reutilizables los elemento iguales y con el mismo comportamiento
+
+
+
+	Propiedades CSS:
+	________________
+
+	_de ésta manera, la propiedad transición dispone de los siguiente valores:
+
+
+		//ejemplo para una sóla propiedad
+		_#demo{
+			transition: propiedad ha animar + duración en (seg) + interpolación;
+			transition: background 1s ease-out;
+		}
+
+		//ejemplo para más de una propiedad
+		_#demo{			
+			transition: background 1s ease-out, color 1.5s ease-in;
+		}
+
+		//ejemplo para todas las propiedad aplicadas en un evento
+		_#demo{			
+			transition: all 1s ease-out;
+		}
+
+
+	NOTA: es algunos casos será necesario la implementación de prefijos propietarios para asegurar la compatibilidad de todos los navegadores antiguos
+
+		_webkit- | -moz | -o- | -ms-
+
+
+
+
+	Tipos de Interpolación:
+	_______________________
+
+	_para las transiciones dispondremos de varios tipos de interpolaciones para que así, podamos configurar el comportamiento de la animación en el tiempo y poder así, ajustar el timming, de la animación resultante
+
+	_para lo cuál, dispondremos de las siguientes curvas de animación:
+
+
+		_linear (por defecto) //un movimiento unifome
+
+		_ease;  //una aceleración constante
+
+		_ease-in; //una aceleración al inicio
+
+		_ease_out;  //una aceleración al final
+
+		_ease-in-out;  //una aceleración al inicio y al final
+
+
+
+
+	*/
+
+	html,body{
+		border: 0 auto;
+		padding: 0;
+		border: 0;
+	}
+
+		.transicionesCSS{
+			width: 50%;
+			height: auto;
+			text-align: center;
+			margin: 2% auto;
+		}
+
+			.transicionesCSS h2{
+				font-family: arial,helvetica,sans-serif;
+				font-size: 3.5rem;
+				font-weight: bold;
+				color: white;
+				margin-top: 3%;
+			}
+
+			#transition{
+				width: 100%;
+				height: 70px;				
+				background-color: orange;
+				cursor: pointer;				
+			}
+
+			.alter{
+				transition: background-color 1s ease-out;
+			}
+
+				#transition:hover{
+					background-color: red;
+				}
+	
+
+</style>
+
+<body>
+
+	<article class="transicionesCSS">
+		
+		<h2>Transiciones</h2>
+
+		<p id="transition" class="alter">Transiciones</p>
+
+
+	</article>
+
+	
+
+
+</body>
+</html>

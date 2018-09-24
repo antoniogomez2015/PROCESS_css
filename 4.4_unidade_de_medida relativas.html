@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		quedamos aqui:  #17 Unidades de Longitud Absolutas - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=bUkLD3mBxxs&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=17
+
+	*/
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	Tutorial: #18 Unidades de Longitud Relativas - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=VYjEcC51Acs&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=18
+
+
+	Unidades de longitud relativas en CSS
+
+		_EM:
+
+			_un EM, en impresión equivale al ancho de la letra "M", y ésto equivale ha 16, puntos, 
+
+			_más en la web, equivalente al tamaño de la fuente indicada para el documento así, 
+
+				1em; equivale al 100%, del tamaño inicial de la fuente de su elemento padre y si no indicamos in valor de fuente para el documento entonces éste tomará el valor por defecto que es 16px, según la w3c
+
+			_en resulmen ésta unidad de medida toma como referencia a su elemento padre inmediato y así, hasta su elemento raíz, de manera en cascada
+
+
+		_EX:
+
+			_ésta unidad representa a la latura de la letra minúscula "X", de la letra actual
+
+			_otra referencia es que "1ex, //equivale ha 0.5em"
+
+
+		_REM:
+
+			_un "rem", es equivalente sólo al tamaño de la fuente del elemento raíz del documeto html, la etiqueta <html>
+
+			_de ésta manera ésta propiedad requiere configurar previamente el font-size, del tag <html>
+
+
+		_%:
+
+			_ésta porcentaje está conformado por un valor numérico seguido del símbolo "%", y siempre si referencia será otra medida ó el tamaño de su elemento padre
+
+		
+		_Viewport:
+
+			_ésta es una de las etiquetas más representativas de la web mobil, que nos permite configurar como debe interpretar una página el navegador web, para móviles
+
+			VW, y WH:
+
+				_éstas representan porcentajes la anchura y la altura del viewport, del dispositivo móvil, respectivo
+
+				_así, 1vw = 1/100th, de la anchura del viewport, 
+
+				_ej: 1vw, equivale al 1%, de la anchura del navegador, donde "VW", singnifica "viewport with"
+
+				_y por ende 1vh = 1/100th, de la altura del viewport
+
+				_lo que quiere decir, que 1vh, equivale al 1%, de la altura del navegador
+
+
+			Vmin, y Vmax:
+
+				_vmin = 1/100th, del valor mínimo entre la altura y anchura del viewport, donde "vmin", significa "valor mínimo del navegador"
+
+				_vman = 1/100th, del valor máximo entre la altura y anchura del viewport, donde "vman", significa "valor máximo del navegador"
+
+				_donde por ejemplo, si el viewport, ó navegador es de 1000px x 700px, entonces el viewport mínimo y máximo serian:
+
+					_vmin: 700px
+
+					_vmax: 1000px
+
+
+
+	Css3: 
+
+		"unidades de medidas absolutas:"	
+
+		
+		_aplicación de unidades relativas;
+
+		
+			#top{
+				font-size: 2em;
+			}
+
+			html{
+				font-size: 10px;
+			}
+
+				#top{
+					font-size: 3rem;
+				}
+
+			#top{
+				width: 100vw;
+				height: 100vh;
+			}
+
+
+		
+						
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

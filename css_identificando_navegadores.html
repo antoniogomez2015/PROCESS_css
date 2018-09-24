@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css personalizado por navegador</title>
+</head>
+
+<body>
+
+	<!--
+
+		Referencia:
+
+			CSS y Javascript condicional. Página Web correcta en todos los navegadores
+
+				http://blog.moises-soft.net/76/css-y-javascript-condicional-pagina-web-correcta-en-todos-los-navegadores.html
+
+	-->
+
+	<!--
+
+		Abreviaturas para navegadores:
+
+			FF => Firefox en cualquier versión
+			IE => Internet Explorer en cualquier versión
+			Opera => Opera en cualquier versión
+			Safari => Safari en cualquier versión
+			Konqueror => Konqueror en cualquier versión
+			iCab => iCab en cualquier versión (navegador propietario para Mac OS)
+
+
+		sintaxis que se pueden usar:
+
+			lt – Menor que 
+			lte – Menor o igual 
+			eq – Igual 
+			gte – Mayor o igual 
+			gt – Mayor que 
+
+			El operador negación (!)
+
+
+		Como usar la sintaxis condicional en documentos CSS:
+
+			#header {  
+				heigth: 200px;  
+				[if IE 6] heigth: 300px;  
+			}
+
+			"En este ejemplo se arriba hemos cambiado el alto de una etiqueta con ID header en cualquier navegador tiene 200 pixel ; pero en IE tiene 300"
+
+
+
+		También se pueden importar CSS distintos desde un documento CSS:
+
+			[if IE] @import('ie.css');  
+ 			[if FF] @import('ff.css');  
+
+
+
+ 		CSS condicionales a nivel código del lado del servidor (Ejemplo con PHP) 
+
+			En PHP con la variable Global: $_SERVER se puede obtener datos del navegador que hizo la petición, uno de estos datos es el tipo de agente , que se obtiene de la siguiente manera : $cliente = $_SERVER["HTTP_USER_AGENT"] ;
+			Luego teniendo el cliente se puede poner condicionalmente lo que se desee:
+			 
+
+			$cliente  = $_SERVER["HTTP_USER_AGENT"] ;
+			$firefox = strops($cliente  , 'Firefox') ? true : false;
+			$safari = strpos($cliente  ,'Safari') ? true : false; 
+			$chrome = strpos($cliente  ,'Chrome') ? true : false;
+
+			if($firefox )
+			echo ‘’;
+			else
+			if($safari)
+			echo ‘’;
+
+
+	-->
+	
+</body>
+</html>

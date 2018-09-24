@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+	*/
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	aqui quedamos: #17 Unidades de Longitud Absolutas - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=bUkLD3mBxxs&index=17&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+	Pseuso clases:
+
+	_éstas nos permiten se aún más específicos al seleccionar elementos html, éstas son parecidas a las clases, la gran diferencia es que éstas nos se definen en el documento html 
+
+	_éstas se conforman de la siguiente manera:
+
+		selector:pseudo-class{property:value;};
+
+		selector.class:pseudo-class{property:value;};
+
+
+	css1: (estados de los enlaces)
+
+		:link
+
+			_ésta nos permite configurar los enlaces que nos han sido visitados ó clicados, ej:
+
+			a:link{
+				text-decoration: none;
+			};
+
+
+		:visited
+
+			_ésta nos permite configurar los enlaces que ya han sido visitados ó clicados, ej:
+
+			a:visited{
+				text-decoration: none;
+			};
+
+
+		:active
+
+			_ésta nos permite configurar el momento en los enlaces sobre los cuales el usuario hace click, ej:
+
+			a:active{
+				text-decoration: none;
+			};
+
+
+	Css2: (acciones dinámicas)
+
+		:hover
+
+			_ésta nos permite configurar los la acción que tomarán los elementos cuando el usuario se posa sobre éstos, ej:
+
+			a:hover{
+				margin-left: 30px;	
+			};
+
+		:focus
+
+			_ésta permite configurar el foco sobre los elementos interactivos html, como lo son enlaces y campos ó inpus, ej:
+
+			input:focus{
+				background-color; #222;
+			};
+
+		:lang
+
+			_para permitir que un elemento tenga un lenguaje en específico
+
+		:first-child
+
+			_para coincidir con el primer elemento hijo de un elemento ó etiquetas de un mismo tipo
+
+
+	Css3: ()
+
+		"pseudo clases estructurales:"
+
+		:first-child
+
+			_éste nos permite seleccionar al primer elemento hijo de un elemento determinado, ej:
+
+			#content:first-child{
+				background-color; #222;
+			};
+
+			_así, los cambios se aplicarán sobre el primer elemento hijo, sea esta una tag <>, u otro
+
+
+		:last-child
+
+			_éste nos permite seleccionar al último elemento hijo de un elemento determinado, ej:
+
+			#content:last-child{
+				background-color; #222;
+			};
+
+			_así, los cambios se aplicarán sobre el último elemento hijo, sea esta una tag <>, u otro
+
+			
+		:only-child
+
+			éstos nos permiten seleccionar elementos en los cuales en sus elementos hijos sólo haya un coincidencia del elemento hijo indicado, ej:
+
+			#content p{
+				font-size: 2em;
+			};
+
+			_de ésta manera el elemento seleccionado será el primer y único párrafo de un elemento con id="", en éste caso "content", más en otros id="", "content", donde haya más de una párrafo no se seleccionará ningún párrafo ó <p>
+
+
+
+		:nth:child(N)
+
+			_
+
+		:nth-last-child(N)
+
+			_
+
+		:nth-of-type(N)
+
+			_
+
+		:nth-last-of-type(N)
+
+			_
+
+		:last-child
+
+			_
+
+		:first-of-type
+
+			_
+
+		:last-of_type
+
+			_
+
+		:only-child
+
+			_
+
+		:only-of-type
+
+			_
+
+		:only-of-type
+
+			_
+
+		:root
+
+			_
+
+		:empty
+
+			_
+
+		:target
+
+			_
+
+		:enable
+
+			_
+
+		:disable
+
+			_
+
+		:cheked
+
+			_
+
+		:not(S)
+
+			_
+
+			
+
+
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+
+</body>
+</html>

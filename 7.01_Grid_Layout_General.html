@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid Layout</title>
+
+	<style type="text/css">
+
+	/*
+
+
+	Tutoriales en Video:
+	____________________
+
+
+		Tutorial: Entendiendo CSS Grid (8 videos)
+			https://www.youtube.com/playlist?list=PLM-Y_YQmMEqBxmylkI5WJn9ouUxWlJNOW
+
+
+		Empieza a usar CSS Grid hoy mismo #envivo
+			https://www.youtube.com/watch?v=d-1-2_DWehE
+
+
+
+	Documentación Oficial:
+	______________________
+
+
+		https://www.w3schools.com/w3css/w3css_grid.asp
+
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+
+		https://developers.google.com/web/updates/2017/01/css-grid
+
+		https://gridbyexample.com/
+
+		https://css-tricks.com/snippets/css/complete-guide-grid/
+
+		https://css-tricks.com/getting-started-css-grid/
+
+
+
+
+
+	Grid Layout Generales:
+	______________________
+
+	_display grid, es modelo de layout, donde un layout, es un algoritmo del navegador que le perminte al navegador donde colocar cada elemento, que dimensiones, como separarlos, otros
+
+	_de ésta manera, grid alyout, nos permitirá crear sistema/layouts, de rejilla ó cuadrículas de forma nativa, es decir, sin hacks, sin floats, sin tablas
+
+	_lo cuál, incluso nos permitirá ir más allás de las posibilidades de "flex layout", ó flex box, ya que la opción de grid layout, nos permitirá solucionar problemas que no eran posibles dentro de flex layout
+
+
+	Grid Layout y Flex Box:
+	_______________________
+
+	_la api, de grid layout, es mucho más ámplica que la de flex box, más grid layout, es totalmente compatible con flex box, y no compite con flexbox
+
+	_por ende podremos utilizar ambas modalides al mismo tiempo, otros
+
+
+	_para lo cuál, el contenedor al cuál, deseamos aplicar las propiedades de "grid", y a sus elemetos hijos, debemos aplicarle al elemento padre la propiedad:
+
+			_display: grid;
+
+
+	_de ésta manera, podremos tener un contenedor principal con "display: grid", y los elementos "hijos", de éste ser elemento con "display: flex", y todas sus propiedades y comportamientos sin que éstos entren en conflicto con las propiedades y características de "grid layout"
+
+
+
+	Dimensiones:
+	____________
+
+	_grid Layout, está estructurado en dos dimensiones, por ende éste puede proyectarse tanto a lo ancho como a lo alto indistintamente y a la vez
+
+
+
+	Características:
+	________________
+
+	_de ésta manera, cuando se establece que un contenedor hará de "grid container", sus elementos hijos podrán posicionarse en difernentes ubicaciones del grid, respectivamente
+
+	_y el respectivo grid, de sub-elementos creado puede ser flexible ó fijo
+
+	_éstas propiedades tanto del elemento que hará de contenedor ó grid, como de los elementos hijos de éste se podrán redifinir con "media-queries"
+
+	_de ésta manera, el orden ó ubicación de un elemento hijo dentro de grid layout, se podrá variar directamente con un media-querie
+
+	_de ésta manera, lo que inicialmente estaba al final podrá estar posteriormente al princípio y lo que ocupaba una columna ahora puede ocupar cuatro columnas, otros
+
+
+
+
+
+
+	*/
+
+	body{
+		border: 0;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+		#wrapper{
+			width: 90%;
+			height: auto;
+		}
+
+			section{
+				width: 100%;
+				height: auto;
+				display: grid;
+				grid-template-columns: repeat(4,1fr);
+				grid-gap: 30px;
+			}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<section>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		</section>
+
+	</div>
+	
+</body>
+</html>

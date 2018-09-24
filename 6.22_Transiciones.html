@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial: #45 - Las Transiciones y sus Propiedades - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=WuRh7VDXOYU&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=45
+	
+
+	Workflow:
+	_________
+
+	_una transición en cambio progresivo y suave cuando deseamos que determinados elementos html, pasen de un estado ha otro
+
+	_de ésta manera, podremos hacer una "transición", ó "suavizado", un elementos html, determinados que cambiarán propiedades css, en el tiempo a través, de activador ó "trigger", como un pseudo elemento "hover", por ejemplo
+
+	NOTA: más si le aplicamos las propiedades de "transition", directamente al elemento html, ó tag, ha animar y no al elemento que hará de "trigger", las transiciones se realizarán en ambas direcciones
+
+	reconociendo el sistema tantos los cambios de una acción inicial "hover/in", como "hover/out"
+
+	ya que si le aplicamos las propiedades de "transition", al elemento disparador ó "trigger", "hover", en éste caso, sólo se aplcará las transiciones cuando el mouse, se pose sobre el elemento determinado, más no hará transición para cuando el mouse, se retire de sobre el elemento html, determinado
+
+
+	Transition-property:
+	____________________
+
+	_de ésta manera, debemos de aplicar ésta propiedad "Transition-property: ;", al elemento que hará de "trigger", ó disparador de la acción del cambio de propiedades para elemento html, determinado
+
+	_dentro de la cuál, tendremos que asignarle como valor,es las propiedades respectivas separadas por ",", comas ha tomar en cuenta para hacer de éstas transiciones específicas, ej
+
+		_transicion-property: background-color, border-radius;
+
+	_más si deseamos hacer transiciones de todas las propiedades del tag, ó elemento disparador ó "trigger", podremos utilizar la palabra clave "all", de ésta manera, no tendremos que indicar todas las propiedades de forma manual ej:
+
+		_transition-property: all;
+
+
+	Transition-duration:
+	____________________
+
+	_así, como también, tendremos que asignar una duración para que se realize la transición entre las respectivas propiedades
+
+	_la cuál, podremos indicarla en valores enteros en segundos "1s", como también, en valores de tipo milisegundos "0.3s", ó directamente ".3s", ej:
+
+		_transition-duration: .3s;
+
+
+	_más incluso podremos ser hasta específicos, indicando tiempos de transición para cada propiedad separados por ",", comas indicada como valor dentro de la propiedad "transition-duration", ej:
+
+		transition-duration: .3s, .5s;
+
+	_de ésta manera, siguiendo con el ejemplo de arriba, en éste caso; se aplicaría una transición de ".3s", al "background-color", y ".5s", al "border-radius", respectivamente
+
+
+	Transition-delay:
+	_________________
+
+	_ésta opción nos permitirá retardar los efectos de transición para que así, podamos controlar la acción de "trigger", ó disparador por medio de un "delay"
+
+	_dicha acción de retardo la podremos expresar en valor enteros como "1s", segundos y en valores en milisegundos "0.1s", ó directamente ".1s"
+
+		_transition-delay: 1s;
+
+
+	_y de igual manera, podremos aplicar un delay, específico para cada propiedad separándolos por ",", comas si así, lo deseamos, siguiendo con el ejemplo de arriba sería de la siguiente manera; ej:
+
+		_transition-delay: 1s, .3s;
+
+
+	Transition-timing-function:
+	___________________________
+
+	_ésta opción nos permitirá indicar la curva de animación en el tiempo, permitiéndonos así, graduar la curva de valocidad y decaimiento de la animación generada por el efecto, ej:
+
+		_transition-timming-function: lienar;
+
+
+	_de ésta manera, la propiedad "transition-timming-function", permite ó acepta los siguientes valores:
+
+		_ease:
+
+			_ésta es la opción que biene por defecto la cuál, comienza suavemente para luego aumentar la velocidad para finalmente disminuir la velocidad al finalizar la transición
+
+		_linear:
+
+			_éste modo permite una transición con una valocidad constante tanto de inicio como de finalización
+
+		_ease-in:
+
+			_éste modo permite una transición de entrada "in", con una valocidad suavizada y una valocidad de dalida "out", constante
+
+		_ease-out:
+
+			_éste modo permite una transición con de inicio ó entrara "in", constante y una transición de salida ó "out", suavizada
+
+		_ease-in-out:
+
+			_éste modo permite tanto una transición de entrada como de salida suavizadas
+
+		_step-start:
+
+			_ésta opción nos permite hacer transiciones ha intervalos ó por pasos entre cortados
+
+		_step-end:
+
+			_ésta opción nos permite hacer transiciones ha intervalos ó por pasos entre cortados
+
+		_steps(<integer>[[stat | end]]?):
+
+			_éste modo nos permitirá aplicar el tipo de transición de pasos entrecortados de forma práctica
+
+		_cubic-bezier(n,n,n,n):
+
+			_ésta modalidad nos permite indicar valores personalizados de curvas de velocidad
+
+			_y para aplicar valores personalizados disponemos de herramientas en lína las cuáles nos ayudarán ha estimas los valores deseados de forma gráfica, yendo ha "http://cubic-bezier.com/#.17,.67,.83,.67"
+
+
+	Steps(<integer>[[stat | end]]?):
+	________________________________
+
+	_en el siguiente ejemplo, realizaremos la transición de propiedades en "5", pasos hasta terminar ésta
+
+	_para lo cuál, debemos de indicar la cantidad de pasos en la cuál, será dividida la longitud de la transición hasta su finalización
+
+	_de ésta manera, si indicamos que la transición se realizará en cintro "5", pasos entonces su longitud de "100%", será dividida entre "5", partes ó un "20%", más su aplicación de aceleración ó desaceleración a través, de las palabras clave "start/end", posteriormente, ej:
+
+		_transition-timing-function: steps(5, end);
+	
+
+	cubic-bezier(n,n,n,n,):
+	_______________________
+
+	_ésta opción nos permite indicar calores de curva de animación personalizados a través, de los cuales podremos hacer nuestro propio timming, de animación en las transiciones
+
+	_para lo cuál, debemos hacer uso del valor de "cubic-bezier(0,0,0,0)", e indicándole parámetros optenidos por ejemplo de la página "http://cubic-bezier.com/#.12,.87,.87,.38", para tener así, una interface, gráfica más amigable y fácil de interpretar, ej:
+
+		_transition-timing-function: cubic-bezier(.12,.87,.87,.38);
+
+
+	ShortHand Mode:
+	_______________
+
+	_así, como también, tendremos la posibilidad de aplicar éste método con todas sus propiedades a través, del método shorthand
+
+	_a través, de la propiedad "transition:", podremos aplicar todas las propiedades en el siguiente orden
+
+	_primero las propieadades especificadas ó a través, de la palabra clave "all"
+
+	_para posteriormente indicar la "duración" "1s"
+
+	_para posteriormente indicar el "timing", "linear"
+
+	_para posteriormente indicar el "delay", si ésta lleva efecto de retardo
+
+	_ej:
+
+		_transition: all, 1s linear .2s;
+
+
+	_y si estamos trabajando directamente con propiedades específicas podremos utilizar el método shorthand, repetidas veces seperados por ",",comas ej:
+
+		_transition: background-color, 1s linear .2s,;
+					 border-radius, 1s cubic-bezier(.12,.87,.87,.38) .2s,;
+
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;				
+			}
+
+				#proof{
+					width: 200px;
+					height: 200px;
+					margin: auto;
+					background-color: blue;	
+					cursor: pointer;
+					transition-property: background-color, border-radius;
+					transition-duration: .3s, 3s;
+					transition-delay: 1s;
+					/*transition-timing-function: steps(3, end);*/			
+					transition-timing-function: cubic-bezier(.12,.87,.87,.38);	
+				}
+
+					#proof:hover{
+						border-radius: 50%;
+						background-color: red;
+
+						/*transition-property: background-color, border-radius;
+						transition-duration: .5s;*/
+					}
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<h1>Hola Mundo</h1>
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

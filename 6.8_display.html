@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/				
+
+		quedamos aqui: #30 La propiedad display - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=fr71i33558U&index=30&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+	*/
+
+	body{
+		display: block;
+	}
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+
+	display, en css
+
+	
+	_la propiedad "displya", ésta propiedad nos permite configurar como se visualizarán los elementos y cuales criterios existirán para su interacción con los demás elementos contiguos ha éste
+
+
+	_ésta propiedad permite los siguientes atributos:
+
+		_block
+
+			_ésta es la opción por defecto, a través, de ésta opción los elementos tomarán toda la anchura de su elemento padre, tomando todo el ancho posible del viewport, impidiendo que otro elemento pueda colocarse de forma contigua ha éste
+
+		_none
+
+			_éste hace que el elemento no sea visible ó renderizable por el navegador y de hecho lo elimina de la estructura html, a lo dejará de renderizar el contenido en el navegador y su logar será tomado por otro elemento.
+
+			_de ésta manera varios tipos de contenido podrían mostrarse en línea ó de forma contigua uno al lado del otro mientras que éstos quepan en su conjunto ó totalidad en el ancho de su elemento contenidor ó padre
+
+		_inline
+
+			_con éste valor hacemos que el contenido tome sólo alcho de su valor nominal y no todo el ancho del viewport, como lo hacen los elemento en bloque
+
+			_éste hace que los elementos que no tienen el valor de inline, en línea aplicado por defecto se muestren en línea
+
+			_ahora un elemento en línea es aquel que sigue el flujo del contenido sin interrumpirlo dentro de los demás elementos, es decir; éste sólo va ocupar el valor de si mismo y se pueden agrupar varios de éstos en una sóla línea a diferencia de lo que hacen los elementos en bloque que ocupan todo el ancho que tienen disponible en el viewport
+
+		_inline-block
+
+			_éste valor nos permite tratar ha un elemento con un comportamiento en línea como un enlace por ejemplo, y tratarlo ahora como un elemento en bloque para que así, podamos asignale un ancho, alto y demás propiedades que sólo pueden aplicarse ha elemento con un comportamiento en bloque
+
+			_de ésta manera, ahora los elementos con las propiedad "inline-block", ahora éstos se comportarán y renderizarán en línea pero recivirán valores de elemento en bloque
+
+			_lo cuál, es especialmente útil para maquetaciones flexibles
+
+		_list-item
+
+			_de ésta manera, los elementos se mostrarán con los docs, de una lista y tomarán dicho comportamiento como items, de lista, de ésta manera, podremos aplicarse estilos de lista aunque en realizad no sean elemento de lista
+
+		_table
+
+			_así, como también, tenemos ha disposición los valores con el comportamiento de tabla, los cuales extienden las posibilidades de visualización de los elementos como si fuesen una "table", y poder así, agregarles atributos de tabla
+
+
+	
+				
+	Css3: 
+
+		
+		section{
+			display: inline-block;
+		}		
+						
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

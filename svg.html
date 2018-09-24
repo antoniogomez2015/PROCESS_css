@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/graphics/svg_intro.asp
+				https://developer.mozilla.org/es/docs/Web/SVG/Element/defs
+
+
+		Tutorial: Advanced SVG: masking images | https://www.youtube.com/watch?v=y8NvpFfdprM
+
+		Animaciones SVG #vectoresIO | Animaciones SVG #vectoresIO
+
+		Animación de un logo con SVG y CSS usando Keyframes | https://www.youtube.com/watch?v=yFnbbl9n3MU&t=44s
+
+		SVG Line Animation Tutorial with CSS & Other Fun Stuff | https://www.youtube.com/watch?v=XBdbgD2BaEI
+
+		Create a SVG Loading Animation with Adobe Illustrator | https://www.youtube.com/watch?v=1lmFMsrLgwM
+
+		Aplicando SVG al mundo del diseño y desarrollo web #designIO | https://www.youtube.com/watch?v=l6TUPU1VwAw
+
+		CSS3 Desde Cero: CSS para SVG (graficos vectoriales) | https://www.youtube.com/watch?v=w6ZL2ae06so
+
+
+		sources:
+
+			http://vectormagic.com/home
+
+			http://jorgeatgu.com/blog/optimizar-svg-con-svgcleaner/ //optimizadores SVG
+
+				_Optimizar con: SVG Cleaner
+
+				_Optimizar SVG con: SVGO
+
+
+			Librerias:
+
+				http://snapsvg.io/ //de adobe
+
+				http://dmitrybaranovskiy.github.io/raphael/
+
+				http://svgjs.com/
+
+				https://d3js.org/
+
+				http://nerdyjs.com/script/950711   //smiles.js
+
+				http://velocityjs.org/
+
+
+
+	Ejemplo de Porcentajes Circulares:
+
+	_a través, de las opciones de SVG, podemos crear gráficos de porcentajes circulares a través, de los cuáles, podremos crear unteracción y estadísticas para el usuario la cuál, puede ser hasta de forma diámica e interactiva
+
+		
+		<style type="text/css">
+
+			#container{
+				width: 500px;
+				height: 400px;
+				border: solid 2px black;
+				margin: auto;
+				display: block;
+			}	
+
+				circle{
+					fill: red;  //color del relleno
+					stroke: grey;  //color del contorno
+					stroke-width: 5px;  //ancho ó grosor del contorno
+					stroke-dasharray: 40px 10px;  //valor 1 = segmentos valor 2 = separación
+					stroke-dashoffset: 100px;
+				}		.
+
+		<style>
+
+		<body>
+
+			<svg id="container">
+
+				<circle cx="250px" cy="200px" r="100">
+
+			<svg>
+
+		<body>
+
+
+	_de ésta manera, a través, de la etiqueta ó tag, "<svg>", podremos crear elementos vectoriales dentro de html5
+
+	_y dentro de las etiquetas "<svg>", podremos crear más etiquetas dedicadas especialmente para la construcción de elementos vectoriales específicos como en éste caso "<circle>"
+
+	_de ésta manera, también, podremos referirnos ha éstas etiquetas especializadas a través, del css, para aplicar atributos css, especiales sobre éstas los cuáles, están en las especificaciones del lenguaje html, para las estructuras svg, ej:
+
+		circle{
+			fill: red;  //color del relleno
+			stroke: grey;  //color del contorno
+			stroke-width: 5px;  //ancho ó grosor del contorno
+			stroke-dasharray: 40px 10px;  //valor 1 = segmentos valor 2 = separación
+			stroke-dasharray: 628px; //totalidad de la longitud de la circunferencia
+			stroke-dashoffset: 314px; //mitad de la longitud de la circunferencia
+		}
+
+	_de ésta manera, es recomendable saber la distacia de la circunferencia la cuál, se consigue a través, de la siguiente ecuación:
+
+		2 pi * r
+
+	_donde "pi", vale "3.14", entonces 2 pi, equivalen ha "6.28"
+
+	_y si el "r", radio vale "100", entonces la circunferencia tendrá entonces "628px"
+
+	_de ésta manera, éste es valor que tendremos que colocar en atributo "stroke-dasharray:", para que así, el stroke, cubra toda la longitud de la circunferencia
+
+	_e incluso tenemos la posibilidad de hasta animar éste hablador informativo a través, de los atributos y modos de animación de css:
+
+		circle{
+			fill: red;  //color del relleno
+			stroke: grey;  //color del contorno
+			stroke-width: 5px;  //ancho ó grosor del contorno
+			stroke-dasharray: 40px 10px;  //valor 1 = segmentos valor 2 = separación
+			stroke-dasharray: 628px; //totalidad de la longitud de la circunferencia
+			stroke-dashoffset: 314px; //mitad de la longitud de la circunferencia
+			animation: estadisticas 4s linear;
+		}
+
+		@keyframes estadisticas{
+			from{
+				stroke-dashoffset: 0px;	
+			}
+			to{
+				stroke-dashoffset: 314px;	
+			}
+		}
+
+
+
+	
+
+
+	Ejemplo Complejo ó Avanzado de SVG:
+	___________________________________
+
+	_a continuación utilizaremos diferentes técnicas para la representación de una imágen enmascaradas por otra imágen la cuál, hace uso de su canal alpha
+
+	_para lo cuál, previamente debemos hacer uso de la herramiento de Photoshop, para la edición y composición de las imágenes para que así, ambas coincidan y tengan las mismas dimensiones, proporciones y motivo/reserva entre embas
+
+
+
+	Edición:
+
+	_primeramente debemos de preparar las imágenes de photoshop, donde primero debemos de abrir la imágen motivo ha editar
+
+	_a partir de la cuál, debemos de crear una máscara a través, de las diferentes herramientas de photoshop 
+
+		_como lo son el picel de pintura sobre máscara asignada ha una layer, haciendo control + mouse left click, sobre la respectiva layer, y mouse left click, sobre el icono de "Add Vector Mask", del panel Layers
+
+		_ó a través, de un path, a través, de la pluma de edición perzonalizada de trazados de photoshop, por medio de la cuál, podremos crear máscaras yendo ha el panel layers, y haciendo mouse left click, sobre el icono de "Add Vector Mask"
+
+	_más a continuación debemos de crear una nueva layer, en photoshop, yendo al panel de layers, y darle al ícono de "Create a New Layers", para luego, rellenar ésta layer, de color blanco a través, del shortcut "Control + Backspace"
+
+		_así, luego de haber creado la nueva layer, debemos volver a la layer, a la cuál, le hemos creado una máscara vectorial sobre el motivo
+
+		_para posteriormente arrastrar ésta máscara vectorial y soltarla sobre la nueva layer, que hemos creado hasta asignarle ésta máscara vectorial a la nueva layer
+
+	_para posteriormente seleccionar la nueva layer, que hemos creado y asignado la máscara vectorial y con ésta seleccionada ir a las opciones de guardado optimizado, "Save for Web", shortcut "Control + Shift + Alt + S", más previamente debemos de ocultar la layer, del motivo para que así, ésta no estorve en el proceso de optimización y exportación del nuevo archivo que hará de matte, posteriormente en el proceso de enmascarado
+
+		_y allí, proceder con la optimización de la imágen; en la cuál, escogeremos el formato de salida ha "PNG-8"
+
+		_en las opciones de matte, seleccionaremos la opción de "Black"
+
+		_en las opciones de profundidad de bits, "Colors", seleccionaremos la opción de "32Bits"
+
+		_así, como también, desactivaremos la opción de "Transparency"
+
+		_para posteriormente proceder ha salvar la imagen en formado "PNG", ej: CG_Mask.png;
+
+
+	_de ésta manera, al final debemos de tener dos versiones de la ímágen; una en formado jpg, y otra en forma png, a partir de las cuáles, crearemos el efecto de enmascaramiento
+
+
+
+	Mask Effect:
+
+	_para posteriormente de tener las imágenes editadas correctamente si proceder con el proceso de configuración para la creación del efecto de enmascaramiento:;
+
+
+		<svg width="940" height="587" viewBox="50 50 940 587">
+
+			<defs>
+
+				<mask id="mask1">
+
+					<image width="940" height="587" xlink:href="sources/img/CG_Mask.png">
+
+				</mask>
+				
+			</defs>
+
+			<image mask="url(#mask1)" width="940" height="587" xlink:href="sources/img/CG.jpg">
+
+		</svg>
+
+
+
+
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;					
+			}
+
+				#container{
+					width: 500px;
+					height: 400px;
+					border: solid 1px black;
+					margin: auto;
+					display: block;
+				}
+
+					circle{
+						fill: none;  /*color del relleno*/
+						stroke: #245278;  /*color del contorno*/
+						stroke-width: 50px;  /*ancho ó grosor del contorno*/
+						/*stroke-dasharray: 50px 15px;  valor 1 = segmentos valor 2 = 
+						separación*/
+						stroke-dasharray: 628px;
+						stroke-dashoffset: 314;
+						animation: estadisticas 3s linear;
+					}	
+
+						@keyframes estadisticas{
+							from{
+								stroke-dashoffset: 0px;	
+							}
+							to{
+								stroke-dashoffset: 314px;	
+							}
+						}
+
+			
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<svg width="940" height="587" viewBox="50 50 940 587">
+
+			<defs>
+
+				<mask id="mask1">
+
+					<image width="940" height="587" xlink:href="sources/img/CG_Mask.png">
+
+				</mask>
+				
+			</defs>
+
+			<image mask="url(#mask1)" width="940" height="587" xlink:href="sources/img/CG.jpg">
+
+		</svg>
+
+
+		<svg id="container">
+
+			<circle cx="250px" cy="200px" r="100">
+
+		<svg>
+
+		
+	</div>
+	
+</body>
+
+</html>

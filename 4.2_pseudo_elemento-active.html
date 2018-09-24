@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placeholder</title>
+
+	<style type="text/css">
+		
+		*{
+		border: 0;
+		padding: 0;
+		margin: 0;
+		}
+
+		body{
+			width: 100%;
+			height: auto;
+			font-family: 'Oswald', sans-serif;	
+		}
+
+			#wrapper{
+				width: 80%;
+				height: 100vw;
+				background-color: #999;
+				margin: auto;
+				text-align: center;
+				padding-top: 3%;
+			}
+
+				h1{
+					font-size: 2rem;
+					color: white;
+					margin: auto;			
+				}
+
+				#login{
+					width: 50%;
+					min-height: 50%;
+					background: rgba(0,0,0,0.5);
+					border-radius: 10px;
+					margin: auto;
+					margin-top: 2%;
+					padding-top: 2%;
+				}
+
+					#login input{
+						width: 80%;
+						height: 50px;
+						margin-bottom: 1%;
+						border: none;
+						color: white;
+						background-color: #333;
+						font-size: 1.2rem;
+					}
+
+						#login input::placeholder{				
+							color: white;
+							font-size: 1.2rem;					
+						}
+
+						#login input::-ms-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+						#login input::-webkit-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+
+						}
+
+						#login input::-moz-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+					#login input:focus{
+						background: blue;
+					}
+
+					#login input:active{
+						background: orange;
+					}
+
+
+	</style>
+</head>
+<body>
+
+	<!--
+
+		::active:
+		_________
+
+		_tenemos la posibilidad de editar las características de un input, cuando el usuario hace click, sobre éste, la diferencia de ésta opción con la opción de "::focus", es que la opción de acive, sólo aplicará cuando el usuario esté haciendo click, sobre el input,
+
+		_de ésta manera, cuando el usuario deja de hacer click, sobre el elmento de tipo input, los estilos dejarán de aplicarse
+
+		_de ésta manera, podremos editar el color del texto, el color del fondo y demás características del input
+
+
+		_para lo cuál, dispondremos del siguiente pseudo elemento ::focus:
+
+
+			input:active {
+				border:3px solid #000;
+				background-color:#F0F8FF;
+				margin-right:10px;
+			}
+
+
+
+
+		Reference:
+		__________
+
+			http://www.forosdelweb.com/f53/cambiar-color-borde-input-dar-click-580424/
+
+
+	-->
+
+
+	<div id="wrapper">
+
+		<h1>Inicio de Sesión de Usuario</h1>
+
+		<form action="login.php" method="post" id="login">
+			
+			<input type="email" name="email" placeholder="  Ingrese su E-mail">
+			<input type="password" name="pw" placeholder="  Ingrese su Contraseña">
+			<input type="submit" name="enviar">
+
+		</form>
+		
+		
+	</div>
+	
+</body>
+</html>

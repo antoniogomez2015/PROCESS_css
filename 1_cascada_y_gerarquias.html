@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+	
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+	*/
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	/*1_estilos en línea*/
+	/*éstos son los que tienen una mayor prioridad al estar aplicados directamente dentro de los selectores*/
+	/*ésta modalidad sólo afecta al elemento padre, no a los elementos hijos*/
+
+
+	/*2_estilos internos*/
+	/*éstos sólo afectarán sólo al tocumento donde se están aplicando*/
+
+	/*
+		<style type="text/css">
+		
+			body{
+				background-color: #222;
+			}
+
+		</style>
+
+	*/
+
+
+	/*3_estilos externos*/
+	/*éstos son estilos relacionados ó externos los cuales se pueden aplicar a diferentes documentos html, ésta es la opción más recomendable*/
+
+		/*<link rel="stylesheet" type="text/css" href="css/main.css">*/
+
+
+	/*4_estilos importados*/
+	/*éstos pueden colocarse en la parte superior de nuestra hoja de estilo ó en otra hoja relacionada "link"*/
+	/*ésta es una excelente alternativa para documentos complejos para no llenar todo el head de multitud de hojas de estilo si no, de ésta manera podremos importar hojas de estilo dentro de otras*/
+	
+	/*productos disponibles en el cintillo azul del botón "Productos"*/
+	@import 'productos_disponibles.css';
+
+
+
+
+
+
+</style>
+
+<body>
+
+	<!--estilos en línea-->
+	<p style="margin-left:20px;">Texto de Párrafo</style></style>
+	
+</body>
+</html>

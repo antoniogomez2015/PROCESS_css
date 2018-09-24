@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i" rel="stylesheet">
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #43 - Web fonts, Fuentes personalizadas con @font-face | https://www.youtube.com/watch?v=BAakU9qp0pA&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=43
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+	@font-face, en CSS3
+
+	
+	_la propiedad de @font-face, nos permitirá incluir fuentes personalizadas dentro de nuestro html, éstas fuentes pueden ser embebidas ó relacionales
+
+	_así, las fuentes relacionales son las que son distribuidas por los "CDN", ó "redes de dsitribución de contenidos", como los son las páginas de "google web font", ó "font squirrel", u otras
+
+	_éste atributo se aplica como un atributo de tipo de familia tipografica normal dentro de css, esté la nueva nuente ha incorporar relacionada ó embebida, ej:
+
+		@font-face {
+    		font-family: myFirstFont;
+    		src: url(sansation_light.woff);
+		}
+
+		ó
+
+		h3{
+			font-family: myFirstFont;
+    		src: url(sansation_light.woff);
+		}
+
+
+	CDN Fonts:
+	__________
+
+	_y a través, de un ejemplo de incorporación de un fuente a través, de un distribuidor de contenido en éste caso "https://fonts.google.com/"
+
+	_de ésta manera, debemos buscar ó ubicar la fuente que nos guste y se ajuste ha nuestro trabajo para luego obtener el enlace de relacionamiento entre nuestra página web, y el sitio "CDN", de "google fonts", en éste caso; de ésta manera optendremos un elace como el siguiente:
+
+		"<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i" rel="stylesheet">"
+
+	_el cuál, tendremos que pegar en la cabecera ó "<head>", de nuestra respectiva página web
+
+	_así, como también, el sistema nos arrojará la familia tipográfica ha especificar en el "tag css", en éste caso sería la familia:
+
+		"font-family: 'Open Sans', sans-serif;"
+
+		
+
+		#wrapper{
+			width:100%;
+			height:auto;
+			margin:0 auto;
+			
+			column-count: 3;
+			-webkit-column-count: 3;
+		}
+
+
+	Embebed Fonts:
+	_______________
+
+	_así, como también, tendremos la posibilidad de encrustar ó embeber fuentes tipográficas web, externas ó convertidas ó adaptadas para web, las cuales deberán formar parte de la estructura de archivos de nuestro proyecto ó sitio web
+
+
+	///////////////////////////////////////////////////////////////////////////
+
+	_algunas páginas que ofrecen servicios de descarga y conversión de fuentes:
+
+		http://fontdeck.com/typefaces
+
+		http://www.linotype.com/
+
+		http://www.fontsquirrel.com/ (tipografias web disponibles)
+
+		https://onlinefontconverter.com/
+
+		https://www.web-font-generator.com/
+
+		http://transfonter.org/
+
+		http://www.font2web.com/
+
+		https://everythingfonts.com/ttf-to-woff
+
+
+	///////////////////////////////////////////////////////////////////////////
+	
+	_proceso de conversión y aplicación de una fuente embebida a trávés, de la página web
+				
+		"http://www.fontsquirrel.com"
+
+
+	Proceso:
+	________
+
+
+			1_primero procedemos a subir la fuente que deseamos convertir y que previamente descargamos a nuestro pc
+
+				
+			2_luego aceptamos los términos "Agreement:"
+
+		
+			3_para luego si descargar el "Download Web Kit"
+
+
+	Download Web Kit:
+	_________________
+
+
+		_de ésta manera, los archivos descargados a través, del proceso web kit, debemos descomprimirlos dentro de nuestra
+
+		estructura de archivos, de nuestra web, ej: miSitio/fonts/alpha-echo/
+
+
+		_así, podremos encontrar ésta información en el archivo "stylesheet.css", ubicado en los mismos archivos
+
+		extraidos del web kit
+
+
+		@font-face {
+    		font-family: 'alpha_echoregular';
+    		src: url('alpha_echo-webfont.eot');
+   			src: url('alpha_echo-webfont.eot?#iefix') format('embedded-opentype'),
+         	url('alpha_echo-webfont.woff2') format('woff2'),
+         	url('alpha_echo-webfont.woff') format('woff'),
+         	url('alpha_echo-webfont.ttf') format('truetype'),
+         	url('alpha_echo-webfont.svg#alpha_echoregular') format('svg');
+    		font-weight: normal;
+    		font-style: normal;
+
+			}	
+
+	_así, tendremos que colocar ésta regla al principio de nuestro archivo css, de nuestro documento de nuestro proyecto
+
+	_más, de ésta manera, tendremos que cambiar las rutas de los archivos a la ruta de nuestro proyecto ej:
+
+		@font-face {
+    		font-family: 'alpha_echoregular';
+    		src: url('sources/fonts/alpha_echo/alpha_echo-webfont.eot');
+    		src: url('sources/fonts/alpha_echo/alpha_echo-webfont.eot?#iefix') format('embedded-opentype'),
+         	url('sources/fonts/alpha_echo/alpha_echo-webfont.woff2') format('woff2'),
+         	url('sources/fonts/alpha_echo/alpha_echo-webfont.woff') format('woff'),
+         	url('sources/fonts/alpha_echo/alpha_echo-webfont.ttf') format('truetype'),
+         	url('sources/fonts/alpha_echo/alpha_echo-webfont.svg#alpha_echoregular') format('svg');
+    		font-weight: normal;
+    		font-style: normal;
+
+		}
+
+
+	_dentro de la esctructura de archivos extraidos de la descarga del web kit, encontremos archivos que no son requeridos
+
+		de forma esctricta para el funcionamiento de la fuente, los cualos prodremos suprimir para ahorar espacio, éstos son:
+
+			
+			_el archivo demo:
+
+				_alpha_echo-demo.html
+
+
+			_los archivos extras:
+
+				_specimen_files
+
+
+	Aplicación:
+	___________
+
+
+		_para aplicar la fuente relacionada a nuestro proyecto debemos agregar la siguiente instrucción ej:
+
+
+			h3{
+				font-size: 2em;
+				font-family: 'alpha_echoregular', Arial, sans-serif;
+
+			}
+
+
+	Icon fonts:
+	___________
+
+	Tutorial: #44 - Icon fonts, Iconos basados en Fuentes con @font-face de CSS3 | https://www.youtube.com/watch?v=N10_GlMQauk&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=44
+
+	_algunas páginas dedicadas ha iconfonts:
+
+		_http://fontawesome.io/
+
+		_https://icomoon.io/
+
+			_https://icomoon.io/#preview-free
+	
+		
+	*/
+
+	body{
+		width: 100%;
+		background-color: #777;
+		margin: 0 auto;
+
+	}
+
+		#wrapper{
+			width: 100%;
+			margin: 0 auto;	
+			column-count: 3;
+			column-width: 300px;
+			column-gap: 30px;
+			column-rule: 10px solid lightgrey;
+			column-fill: auto;
+		}
+
+		#top, #bottom{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;			
+		}
+
+		#lista{
+			width: 300px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;			
+		}
+
+		#content2{
+			width: 400px;
+			height: 200px;
+			background-color: white;
+			border: 3px solid grey;	
+			font-family: 'Open Sans', sans-serif;	
+		}
+
+
+
+</style>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="lista">
+			
+			<ul>
+				<li>producto1</li>
+				<li>producto2</li>
+				<li>producto3</li>
+				<li>producto4</li>
+				<li>producto5</li>
+				<li>producto6</li>
+				<li>producto7</li>
+			</ul>	
+			
+		</div>
+
+		<div id="content2">
+			
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+			<!--<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+			<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>-->
+
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+		<div id="top">
+
+			<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+			<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+		</div>
+
+		<div id="bottom">
+			
+			<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+			<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+			
+		</div>
+
+	</div>
+
+
+</body>
+</html>

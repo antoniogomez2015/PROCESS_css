@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Placeholder</title>
+
+	<style type="text/css">
+		
+		*{
+		border: 0;
+		padding: 0;
+		margin: 0;
+		}
+
+		body{
+			width: 100%;
+			height: auto;
+			font-family: 'Oswald', sans-serif;	
+		}
+
+			#wrapper{
+				width: 80%;
+				height: 100vw;
+				background-color: #999;
+				margin: auto;
+				text-align: center;
+				padding-top: 3%;
+			}
+
+				h1{
+					font-size: 2rem;
+					color: white;
+					margin: auto;			
+				}
+
+				#login{
+					width: 50%;
+					min-height: 50%;
+					background: rgba(0,0,0,0.5);
+					border-radius: 10px;
+					margin: auto;
+					margin-top: 2%;
+					padding-top: 2%;
+				}
+
+					#login input{
+						width: 80%;
+						height: 50px;
+						margin-bottom: 1%;
+						border: none;
+						color: white;
+						background-color: #333;
+						font-size: 1.2rem;
+					}
+
+						#login input::placeholder{				
+							color: white;
+							font-size: 1.2rem;					
+						}
+
+						#login input::-ms-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+						#login input::-webkit-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+
+						}
+
+						#login input::-moz-input-placeholder{
+							color: white;
+							font-size: 1.2rem;
+						}
+
+
+	</style>
+</head>
+<body>
+
+	<!--
+
+		::placeholder:
+		______________
+
+		_tenemos la posibilidad de editar todos los aributos placeholder, de cualquier tag, html, especialmente la de los inputs, de formularios, otros
+
+
+		_para cambiar los estilos generales de “todos” los placeholder (ej. color de texto azul) se usa el pseudo-elemento ::placeholder:
+
+
+			::placeholder { color: blue; }
+
+
+		_(*) Actualmente no tiene soporte para IE, pero lo puedes usar con el prefijo:
+
+
+			:-ms-input-placeholder { color: blue; } /* IE 10+ */
+
+
+		_Y si usas algún navegador con alguna versión antigua, estos son los de webkit y moz:
+
+
+			::-webkit-input-placeholder { color: blue; } /* WebKit */
+			::-moz-placeholder { color: blue; } /* Firefox 19+ */
+
+
+
+
+
+
+
+		Reference:
+		__________
+
+			http://www.bufa.es/cambiar-color-placeholder/
+
+
+	-->
+
+
+	<div id="wrapper">
+
+		<h1>Inicio de Sesión de Usuario</h1>
+
+		<form action="login.php" method="post" id="login">
+			
+			<input type="email" name="email" placeholder="  Ingrese su E-mail">
+			<input type="password" name="pw" placeholder="  Ingrese su Contraseña">
+			<input type="submit" name="enviar">
+
+		</form>
+		
+	</div>
+	
+</body>
+</html>

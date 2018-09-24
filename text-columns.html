@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+
+	body{
+		width: 100% auto;
+		border:0px;
+		padding: 0px;
+		margin: 0px auto;
+		background-color: #222;
+	}
+
+		#content2{
+			width: 60%;
+			height: auto;
+			margin: 0px auto;
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			-o-column-count: 3;
+
+			-webkit-column-gap: 1rem;
+			-moz-column-gap: 1rem;
+			-o-column-gap: 1rem;
+
+			-webkit-column-rule: 1px solid green;
+			-moz-column-rule: 1px solid green;
+			-o-column-rule: 1px solid green;
+		}
+
+			#content2 p{
+				font-size: arial, helvetica, sans-serif;
+				font-size: 1.5em;
+				line-height: 1.2;
+				color: #888;
+				text-align: justify;
+			}
+		
+	/*tutorial:
+
+		Referencias:
+
+			Texto en varias columnas con CSS3	
+
+				https://www.youtube.com/watch?v=3UQsR_bo-eE
+
+					http://www.cristalab.com/tutoriales/texto-en-columnas-con-css3-c107874l/
+		
+
+	*/
+	
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+
+	colummns, en css
+
+	
+	_para la distribución de texto en columnas dentro de un mismo contenedor contamos con las siguientes propiedades css:, las cuales requerirán los prefijos para navegadores como los son -webkit-moz-o-
+
+
+		_column-count: 3; //para indicar la cantidad de columnas deseadas
+
+		_column-gap: 3; //para indicar la cantidad de separación entre las columnas generadas
+
+		_column-rule: 1px solid green; //éste permite demarcar un border entre columnas
+
+				
+	Css3: 
+
+		
+		#content2{
+			column-count: 3;
+			column-gap: 1rem;
+			column-rule: 1px solid green;						
+		}		
+						
+		
+	*/
+
+</style>
+
+	<body>		
+
+		<div id="content2">
+			
+			<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+			<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+			<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+		</div>
+
+		
+
+	</body>
+
+</html>

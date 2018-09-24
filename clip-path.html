@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IconsFonts</title>
+
+	<!--iconfonts CSS-->
+	<link rel="stylesheet" type="text/css" href="sources/icon_fonts_demo/style.css">
+
+	<style type="text/css">
+
+		/*Curso (48 videos):		
+
+		Referencias:
+
+			https://www.w3.org/
+				http://www.w3schools.com/css/css3_transitions.asp
+
+
+		Tutorial: Trucos CSS (38) - Recortar imágenes sin Photoshop | https://www.youtube.com/watch?v=2iqmJ3htzTg
+
+	
+
+
+	CSS Clip-Path:
+	______________
+
+		_la propiedad clip-path, nos permite enmascaras elementos a través, de una forma geométrica ó una forma personalizada a través, de diferentes méotodos de ésta propiedad clip-path, la cuál, aún no está soportada por todos los navegadores
+
+		_la propiedad clip-path, aplica tanto para imágenes de fondo como para imágenes cargadas dentro de un contenedor propiamente dicho
+
+
+
+	Clip-Path Creación:
+	___________________
+
+
+		Container:
+
+		_para crear un clip-path, lo primero que necesitamo será un elemento html, creado de tipo caja ó contenedor
+
+		_para lo cuál, crearemos un contenedor de "<div>", al cuál, vía css, se agregaremos un fondo el cuál, vamos ha modifica a través, de la propiedad clip-path
+
+
+		Clip-Path Método Inset():
+
+		_a través, del método inset(), podremos marginar una imágen para que así, de ésta manera, podamos recortar ésta en cualquiera de sus extremos ha modo de margen negativo ej:
+
+			#proof{
+				width: 50%;
+				height: auto;
+				clip-path: inset(0 10% 0 10%);
+			}
+
+		_de éta manera, entre los paréntesis podremos agregar en porcentajes la cantidad de imágen a eliminar por lado siguiente el mismo esquema de la dirección inversa de la manesillas del reloj
+
+
+
+		Clip-Path Método circle():
+
+		_el método circle(), de la propiedad clip-path, nos permitirá dibujar un círculo rápidamente el cuál, enmascará la respectiva imágen
+
+		_para lo cuál, tendremos que indicarle a la propiedad circle(), tanto el rádio "en grados ó en pixeles", como también, el centro del círculo para la generación del círculo 
+
+		_más para la generación del círculo la propiedad clip-path, requiere de una palabra clave de asignación a través, de la cuál, relacionará las palabras claves y los valores correspondientes al centro del círculo ha generar, ésta para clave de asignación es:
+
+			_"at"
+
+			_la cuál, irá seguida del tamaño que tendrá el círculo tanto en porcentajes como en pixeles
+
+		_más para la generación ó creación del círculo a través, de su centro es necesario que le indiquemos a la propiedad clip-path, a partir de donde ésta tomará el centro de la imágen para generar el círculo a partir de éste punto, para lo cuál, la propiedad "clip-path", dispone de los siguientes atributos:
+
+
+			_"Center", a través, de éste atributo podremos hacer ó generar un círculo a partir del centro absoluto de la imágen respectiva sin hacer ningún tipo de cálculo sobre la imágen respectiva
+
+
+				#proof{
+					width: 50%;
+					height: auto;
+					clip-path: circle(50% at center);
+				}
+
+
+			_"X,Y", así, como también, podremos expresar el centro a través, de valores independientes en un plano bidimensional en las cordenadas de acción "X", y "Y", ej:
+
+
+				#proof{
+					width: 50%;
+					height: auto;
+					clip-path: circle(50% at 25% 10%);
+				}
+
+
+
+		_Clip-Path Método Ellipse():
+		
+		_a través, del atributo elipse, podremos imágenes con fomras elipticas de una forma sencilla y directa
+
+		_para lo cuál, tendremos que en éste caso definir dos rádios en vez de uno en el caso del círculo para a continuación indicar el punto ó centro a partir del cuál, se generará la elipse 
+
+		_donde un rádio indicará el punto más agudo ó extremos ó rádio en "X", de la elipse, y el otro rádio indicará la parte más ancha ó central ó rádio en "Y", de la elipse ej:
+
+
+			#proof{
+				width: 50%;
+				height: auto;
+				clip-path: ellipse(50% 20% at 25% 10%);
+			}
+
+
+
+		Clip-Path Método Polygon():
+
+		_a través, del método Polygon, podremos generar todos los puntos que representarán al polígono de forma personalizada por nosotros, 
+
+		_de ésta manera, podremos generar formas personalizadas las cuáles, enmascararán la imágen respectiva
+
+		_donde cada punto de representar un polígono estará representado por dos cordenadas "X,Y", y en donde el punto "0,0,", estará ubicado por defecto en la parte superior izquierda del canvas de la imágenes ó contenedor
+
+
+
+
+
+
+
+
+
+
+	*/
+
+		
+		body{
+			width: 100%;
+			background-color: #777;
+			margin: 0 auto;
+
+			}
+
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;					
+			}
+
+				#proof{
+					width: 70%;
+					height: 620px;
+					margin: auto;
+					color: #fff;
+					padding-top: 15%;
+					/*background-image: url(sources/img/CicloM.jpg);*/
+					text-align: center;					
+								
+				}	
+
+					#proof img{
+						/*clip-path: inset(0 10% 3% 10%);*/
+						/*clip-path: circle(50% at 50% 54%);*/
+						clip-path: ellipse(50% 20% at 50% 50%);
+					}
+
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="proof">
+
+			<img src="sources/img/CicloM.jpg">	
+
+		</div>
+
+		
+	</div>
+	
+</body>
+
+</html>

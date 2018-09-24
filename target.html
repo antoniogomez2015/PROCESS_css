@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>target</title>
+</head>
+
+<style type="text/css">
+	
+	/*
+
+	Descripción:
+	____________
+
+	_la pseudo clase ":target", nos permitirá capturar el evento "click", del usuario para generar una acción a partir de éste evento
+
+	_para que así, éste evento realizado por el usuario de haber hecho "click", sirva de disparador ó "trigger", de alguna acción por como ajemplo, aplicar algunos estilos entre otras posibilidades
+
+	_y dicho proceso se compone de dos pasos, el primero es crear un enlace con una ruta especial que hará de ancla para a partir de éste punto capturar el evento del click, del usuario y así, enviar al usiario al punto de ancla de destino
+
+	_y el otro paso sería el destino del ancla, el cuál, será un elemento html, con un "id", respectivo
+
+
+	Aplicación:
+	___________
+
+	_primero, al elemento html, al cuál, queremos referirnos para posteriormente aplicar cambios sobre éste, debemos de asignarle un atributo de tipo 'id=""',' por ejemplo: "factor_1"
+
+	_para posteriormente éste mismo nombre que le hemos dado el 'id=""', respectivo del ejemplo anterior "factor_1", debemos indicarlo como ruta del enlace precedido por el signo de almohadilla "#", quedando de la siguiente manera: "#factor_1"
+
+	
+		_<a href="#factor_1">Entrar Aquí</a>
+
+
+	_para que el enlace haga referencia inmedia como punto de ancla al elemento de de punto de ancla de destino
+
+
+	Acción:
+	_______
+
+	_para que así, sólo nos quede programar la acción, para cuál, haremos uso del tag, css, ":target{]"
+
+	_el cuál, podremos utilizar de forma genérica para referirnos a todos los elementos de tipo enlace con la ruta "#name"
+
+	_ó de forma específica precediéndono de un selector ej: "#factor_1:target{}"
+
+	_en el siguiente ejemplo se utiliza ó aplica la pseudo clase ":target{}", de forma genérica para todos los elementos de tipo <a>, con una ruta "#", ej:
+
+		_:target{
+			background-color: red;
+			color: #fff;
+		}
+
+	_de ésta manera, al usuario al hacer click, sobre uno de los enlaces disponibles le aplicará la regla de estilo css, al respectivo elemento html, a partir del evento click realizado por el usuario
+
+
+	*/
+
+	body{
+		border:0;
+		padding:0;
+		margin: 0 auto;
+		background-color: #222;
+	}
+
+		a{
+			font-family: helvetica,arial,sans-serif;
+			font-size: 2rem;
+			text-decoration: none;
+			color: #fff;
+		}
+
+			h1{
+				font-family: helvetica,arial,sans-serif;
+				font-size: 2rem;
+
+			}
+
+			h2{
+				font-family: helvetica,arial,sans-serif;
+				font-size: 1.5rem;
+
+			}
+
+			:target{
+				background-color: red;
+				color: #fff;
+			}
+
+
+
+</style>
+
+
+<body>
+
+	<a href="#factor_1"><h1>Hola Mundo</h1></a>
+
+	<a href="#factor_2"><h2>Bienvenidos</h2></a>
+
+	<div id="factor_1">
+
+		<h3>Factor 1</h3>
+		
+	</div>
+
+	<div id="factor_2">
+
+		<h3>Factor 2</h3>
+		
+	</div>
+	
+</body>
+
+</html>

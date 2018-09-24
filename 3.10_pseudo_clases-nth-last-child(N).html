@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+	*/
+
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	Tutorial: #8 Introducción a las Pseudo Clases de CSS - Curso de CSS3 desde cero | https://www.youtube.com/watch?v=suiS2MsGvR0&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=8
+
+
+	Pseuso clases:
+
+	_éstas nos permiten se aún más específicos al seleccionar elementos html, éstas son parecidas a las clases, la gran diferencia es que éstas nos se definen en el documento html 
+
+	_éstas se conforman de la siguiente manera:
+
+		selector:pseudo-class{property:value;};
+
+		selector.class:pseudo-class{property:value;};
+
+
+	Css3: ()
+
+		"pseudo clases estructurales:"
+		
+		:nth-last-child(N)
+
+			_éstas nos permite seleccionar elementos hijos específicos dentro de otros, más con la diferencia de la opción ":nth-child(N)", es que ésta tomará todos los criterios de selección de forma inversa, es decir, de abajo hacia arriba, ésta opción permite hacer transversing, de una más ámplia y selectiva, ej:
+
+			ul li:nth-child(5){
+				background-color: red;
+	
+			};
+
+			_así, en éste ejemplo, se le aplicará éstos cambios el elementos de lista número "5", de abajo hacia arriba de los items, de lista
+
+			_más también, ésta propiedad nos permite seleccionar de forma automática los elementos hijos pares e impares, ej:
+
+
+			ul li:nth-last-child(even/odd){
+				background-color: red;
+	
+			};
+
+			_de ésta manera se les aplicará la propiedad sólo elementos pares e impares respectivamente de que valor de haya aplicado
+
+			_también, éste atributo nos permite hacer operaciones más complejas como en programación, ej:			
+
+			ul li:nth-last-child(2n+4){
+				background-color: red;
+	
+			};
+
+			_de ésta manera queremos decir que, que comience ha seleccionar a partir del item, ó elemento número "4", y que comience ha iterar a partir de "2" a través, del índice "n", y relice la operación
+
+			_en resumen; que comience ha seleccionar elementos a partir de elemento "4", y que luego siga seleccionando elementos de "2", en dos encontrados y así sucesivamente
+
+			2n+4
+			2x0+4=4
+			2x1+4=6
+			2x2+4=8
+			2x3+4=10
+
+
+
+		
+
+
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Atributo-Content</title>
+</head>
+
+<style type="text/css">
+	
+	/*
+
+	Content:
+	________
+
+	_tenemos la posibilidad de agregar cntenido éxtra ha elementos a través, de pseudo clases como ":febore", y ":after"
+
+	_a través, de las cuáles podremos agregar contenido tanto antes como despues de haber renderizado dicho elemento html
+
+	_la propiedad ó atributo "content", soporta ó permite los siguientes valores:
+
+		_normal:
+
+			_ésta es el valor por defecto el cuál, no agrega ningún elemento
+
+		_none:
+
+			_ésta opción ó valor no agrega ningún elemento al no tener ningún elemento especificado, al igual que la opción por dfecto
+
+		_counter:
+
+			_ésta opción permite agregar valores incrementales entre elementos renderizados
+
+		_attr:
+
+			_ésta opción permite optener un atributo del selectior ó elemento html, repectivo de ésta manera, ésta atributo puede ser ahora renderizado
+
+		_string:
+
+			_ésta opción permite agregar una cadena de texto como atributo
+
+		_open-quote:
+
+			_ésta opción permite agregar comillas abriertas como contenido dinámico
+
+		_close-quote:
+
+			_ésta opción permite agregar comillas cerradas como contenido dinámico
+
+		_no-open-quote:
+
+			_ésta opción permite eliminar comillas abriertas existentes de forma dinámica
+
+		_no-close-quote:
+
+			_ésta opción permite eliminar comillas cerrada existentes de forma dinámica
+
+		_url(url):
+
+			_ésta opción permite agregar contenido extra de forma dináca, dicho contenido podrá estar enlazado ha nuestra estructura de proyecto ó de manera remota
+
+		_initial:
+
+			_éste es el valor inicial, similar a la opción del valor por dfecto "normal"
+
+		_inherit:
+
+			_éste es la opción de valor heredado del primero elemento padre
+
+
+
+		Content Aplicación:
+		___________________
+
+		_Counter:
+
+			p {
+			    counter-increment: myIndex;
+			}
+
+			p:before {
+			    content:counter(myIndex);
+			}
+
+			_de ésta manera, cada párrafo estará precedido por un número "1 First make",
+
+			y así suscesivamente cada párrafo más la numeración será de forma incremental, así el siguiente párrafo quedará de la siguiente manera: "2 Then insert"
+
+
+		_Attr:
+
+			h1:after{
+				content: attr(id);
+			}
+
+			_<h1 id="miTitulo">El Título es: </h1>
+
+			_de ésta manera, será renderizado el valor del atributo "id="", justo después del string´, ó cadena de texto del atributo "h1"
+
+			_quedando de la siguiente manera en el navegador: "El Título es: miTulo", aunque el string, atregado por css, no será seleccionable en el navegador
+
+
+		_String:;
+
+			p:before {
+			    content: "Read this -";
+			}
+
+			_ésta opción nos permitirá incluir texto plano deliveradamente
+
+
+		_open-quote:
+
+			_p:before {
+			    content: open-quote;
+			}
+
+		_ésta opción nos permitirá agregar comillas abiertas en ésta caso
+
+
+		_close-quote:
+
+			_p:before {
+			    content: close-quote;
+			}
+
+		_ésta opción nos permitirá agregar comillas cerradas en ésta caso
+
+
+		_no-open-quote:
+
+			_p.hometown:before {
+			    content: no-open-quote;
+			}
+
+		_ésta opción nos pemritirá eliminar comillas existentes previamente
+
+
+		_no-close-quote:
+
+			p.hometown:after {
+			    content: no-close-quote;
+			}
+
+		_ésta opción nos pemritirá eliminar comillas existentes previamente
+
+
+		_URL():
+
+			p:before {
+			    content: url(smiley.gif);
+			}
+
+		_ésta opción nos permitirá agregar elemento locales ó remotos ha un elemento html
+
+
+	*/
+
+	h1:after{
+		content: attr(id);
+	}
+
+
+</style>
+
+
+<body>
+
+	<h1 id="miTitulo">El Título es: </h1>
+	
+	<p>First make a variable (myIndex) and make it increase every time a p element occurs.</p>
+
+	<p>Then insert the counter in front of all p elements</p>
+
+	<p><b>Note:</b> For the counter property to work in IE8, a DOCTYPE must be declared.</p>
+
+</body>
+</html>

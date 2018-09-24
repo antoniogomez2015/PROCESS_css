@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<style type="text/css">
+		
+	/*Curso (48 videos):
+
+		Slider CSS sin Javascript
+			https://www.youtube.com/watch?v=IYh0PkyOhxY
+
+		#1 Introduccion - Curso CSS3 desde cero
+			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+
+		Referencias:
+
+			https://www.w3.org/
+				https://www.w3.org/TR/tr-groups-all
+
+		Quedamos aquí: #35 - Border-radius - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=-pVpbOZ-8gU&index=35&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
+
+	*/
+
+
+	
+	/*//////////////////////////////////////////////////////////////////////////////////////////*
+
+	
+
+
+	Border-radius, en CSS3
+
+	_a través, de la propiedad "Border-radius", podremos redondear los bordes de elementos como contenedores de forma nativa a través, de las nuevas funciones Css3, sin la necesidad de utilizar imágenes u otros apaños ó efectos logrados
+
+
+	_y ésto es posible a través, de las siguientes propiedades por medio de las cuáles podremos controlar el aspecto de cada esquina del respectivo contenedor
+
+		.content{
+
+			border-top-left-radius: 30px;
+
+			border-top-right-radius: 10px;
+
+			border-bottom-right-radius: 30px;
+
+			border-bottom-left-radius: 10px;
+		}
+
+		
+
+	_así, como también, disponemos del método shorthand, el cuál, contempla todos los valores de las cuatro esquinas en un sólo control; ej:
+
+		.content{
+
+			border-radius: 10px; //para los cuatro valores a la vez
+
+			border-radius: 10px 20px;  //para las esquinas intercaladas
+
+			border-radius: 10px 20px 25px 10px;  //de forma independiente
+		}	
+
+
+	_y podemos aplicarle valores tanto absolutos como relativos ha éstas propiedades como:
+
+		_30px //pixeles
+
+		_10% //porcentajes
+
+	_así, como también, tenemos la posibilidad de asignarle al sistema dos valores, para cada uno de los vectores que conforman la curva generada, uno para el vector horizontal y otro valor para el vector vertical; ej:
+
+		.content{
+
+			border-top-left-radius: 10px 30px;
+
+			border-top-right-radius: 10px 25px;
+
+			border-bottom-right-radius: 10px 30px;
+
+			border-bottom-left-radius: 10px 25px;
+		}
+
+		NOTA: y para aplicar dos valores de una propiedad en la expresión shorthand, disponemos de "/", para indicarle al sistema que ambos valores pertenecerán ha una sóla propiedad y ha dos de éstos, ej;
+
+		.content{
+
+			border-radius: 10px / 15px;		
+
+			border-radius: 10px 15px / 20px 10px;
+
+			border-radius: 10px 15px / 20px 10px / 12px 25px / 14px 30px;	
+		}	
+
+			NOTA: así, el valor de "10px", será para un vector y el valor de "15px", será para el otro vector de una misma propiedad
+
+
+		
+
+	_de ésta manera, a través de la indicación de dos valores podemos tener un control más preciso de la curva resultante para cada esquina del respectivo contenedor
+
+	_otra forma de entenderlo sería es que ahora podremos hacer a parte de círculos también, podremos hacer ahora elípticas y formar residuales con ángulos variados ó imperfectos ó estiramientos
+
+
+
+						
+		
+	*/
+
+</style>
+
+<body>
+
+	<div id="top">
+
+		<p><a href="#" alt="titulo del sitio">MONO Producción</a></p>
+
+		<p><a href="#" alt="master-pro">MONO Producción</a></p>		
+
+	</div>
+
+	<div id="bottom">
+		
+		<p><a href="#" alt="sub-titulo">MONO Producción</a></p>	
+
+		<p><a href="documents/archivo.rar" alt="Brochure">Brochure</a></p>			
+		
+	</div>
+
+	<div id="lista">
+		
+		<ul>
+			<li>producto1</li>
+			<li>producto2</li>
+			<li>producto3</li>
+			<li>producto4</li>
+			<li>producto5</li>
+			<li>producto6</li>
+			<li>producto7</li>
+		</ul>	
+		
+	</div>
+
+	<div id="content2">
+		
+		<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,</p>
+
+		<p>Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad</p>
+
+		<p>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar</p>
+
+	</div>
+
+
+</body>
+</html>

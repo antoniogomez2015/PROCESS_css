@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    :root{
+        --colorBase: rgb(250, 92, 29);
+        --textBase: green;
+        --linkBase: rgb(17, 0, 255);
+        --bgColor: yellow;
+    }
+
+    body{
+        background: var(--bgColor);
+    }
+
+    
+    p{
+        color: var(--textBase);
+        font-size: 24px;
+    }
+
+    a{
+        color: var(--linkBase);
+        font-size: 24px;
+    }
+    
+    
+</style>
+<body>
+<!--
+
+    Scope de las Variables CSS:
+    ___________________________
+
+
+        _las variables pueden tener un scope, ámbito ó alcance , los cuales pueden ser tanto locales como globales
+
+        _de ésta manera, en relación a nuestras necesidades y estructura de nuestro proyecto podremos crear variables con diferentes scopes
+
+
+        Variables Locales:
+        __________________
+
+        _de ésta manera, las variables locales tendrán un ámbito limitado el cuál, sólo tendrá alcance hasta cierto límite ó herencia entre elementos padres e hijos
+
+
+        Variables Globales:
+        ___________________
+
+        _las varaibles globales tendrán un ámbito el cuál, puede ser accedido desde cualquier logar sin importar ó tomar en cuenta la herencia entre elementos padres y elementos hijos respectivamente
+
+        _de ésta manera, para que una variable sea global
+
+        _debemos declarar la respectiva variable en el elementos más alta de la estructura del DOM (document object mode)
+
+            _de ésta manera, el elementos más alto en la esctructura html, es el tag:
+
+
+                _html{
+
+                    --myVar: valor;
+
+                }
+
+
+        _más existe una pseudo clase que tiene una especifidad aún mayor que html, la cuál, es:
+
+
+            :root{
+
+                --myVar: valor;
+
+            }
+
+        _de ésta manera, ésta es la opción más recomendada para creación de variables globales
+
+
+        NOTA: las variables en css, son "key sentitive", es decir, que debemos escribir de igual manera los nombres de las varaibles, en relación a las mayúsculas y minúsculas respectivamente
+
+
+
+
+
+        In Line:
+        ________
+
+        _más también, tendremos la posibilidad de agregar variable en línea
+
+        _lo cuál, creará una gerarquía directa e inmediata para las variables, ej:
+
+
+            _<article style="--color: red">
+
+            _<p style="color: var(--color)"">Hola mundo</>
+
+
+
+
+
+
+        Extended:
+        _________
+
+        _incluso tenemos la posibilidad de re utilizar variables entre diferentes archivos html, de un mismos proyecto
+
+        _de ésta manera, podremos utilizar variables que hayamos creado en un documendo general, en otros dicumentos html
+
+        _de ésta manera, podremos alegerar el proceso y organizar mucho mejor un proyecto
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+    <h1>Bienvenido</h1>
+
+    <p>Sección 1</p>
+
+    <a href="http://www.google.com" target="_blank">Goggle</a>
+
+
+    
+</body>
+</html>

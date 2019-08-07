@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        --colorBase: rgb(250, 92, 29);
+        --textBase: green;
+        --linkBase: rgb(17, 0, 255);
+    }
+    
+    p{
+        --colorBase: yellow;
+        color: var(--colorBase);
+        font-size: 24px;
+    }
+
+    a{
+        color: var(--linkBase);
+        font-size: 24px;
+    }
+    
+    
+</style>
+<body>
+<!--
+
+    Cascada de las Variables CSS:
+    ______________________________
+
+
+        _el modo cascada en las variables nos permitirá que más a delante tengamos la posibilidad de sobre escribir ó cambiar un valor por otro en otra variable
+
+        _en éste ejemplo en el selector:
+
+
+            body{
+                --colorBase: rgb(250, 92, 29);
+                --textBase: green;
+                --linkBase: rgb(17, 0, 255);
+            }
+
+
+        _estamos declarando el valor de la variable "--colorBase"
+
+        _más en el selector:
+
+
+            p{
+                --colorBase: yellow;
+                color: var(--colorBase);
+                font-size: 24px;
+            }
+
+    
+        _de ésta manera, en éste caso estamos volviendo a declarar ó invocar la variable "--colorBase", a la cuál, le estamos re asignando el valor de "yellos"
+
+        _de ésta maera, ahora al llamar ha ésta variable, ésta renderizará el último valor que le hayamos asignado, en éste caso:  color: var(--colorBase);
+
+
+
+
+-->
+
+
+
+    <h1>Bienvenido</h1>
+
+    <p>Sección 1</p>
+
+    <a href="http://www.google.com" target="_blank">Goggle</a>
+
+
+    
+</body>
+</html>

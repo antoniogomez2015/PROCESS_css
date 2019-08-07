@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    :root{                
+                    
+        --linkBase: rgb(17, 0, 255);
+        --bgColor: yellow;
+    }
+
+
+    body{
+        background: var(--colorBase, red);
+        color: var(--textBase, var(--bgColor));
+
+    }
+    
+    
+</style>
+<body>
+<!--
+
+    Variables CSS y Javascript:
+    ___________________________
+
+
+        CSSOM:
+        ______
+
+            _CSSOM, es el modelo de objetos de CSS, similar a lo que es el DOM, en html
+
+            _de ésta manera, dispondremos del método:
+
+
+                getComputedStyle()
+
+
+            _el cuál, nos devolverá un objeto con todas las propiedades css, una vez que el navegador las haya calculado previamente
+
+            _al cuál, a su vez, debemos pasarle como parámetro, el elementos html, al cuál, deseamos recuperar sus estilos css
+
+
+
+
+
+        Recuperar todos el CSS:
+        _______________________
+
+            <script>
+
+                getComputedStyle(h1).color
+
+            </script>
+
+
+            _de ésta manera, recuperaremos todo el css, relacionado con éste elemento sin filtro ninguno
+
+
+
+
+
+        Recuperar Propiedades Específicas CSS:
+        ______________________________________
+
+            _e incluso tenemos la posibilidad de indicarle una propiedad css, ha recuperar específicamente, ej:
+
+
+                <script>
+
+                    getComputedStyle(h1).color
+
+                </script>
+
+
+            _como podremos ver hemos concatenado ".", la propiedad en éste caso "color", que desiabamos obtener al método respectivo
+
+            _de ésta manera, obtendremos como resultado:
+
+                "rgb(0,128,0)"
+
+
+
+
+
+
+        Recuperar Valores de Variables CSS:
+        ___________________________________
+
+            _más también, tendremos la posibilidad de recuperar variables css
+
+            _para lo cuál, debemos de concatenar el método:
+
+
+                getPropertyValue()
+
+
+            _al cuál, como parámetro debemos de pasarle como un string, "", el nombre de la variable ha recuperar, ej:
+
+
+                <script>
+
+                    getComputedStyle(h1).getPropertyValue('--textColor')
+
+                </script>
+
+
+            _de ésta manera, obtendremos el siguiente resultado:
+
+                "green"
+
+
+            _así, como también, podríamos cambiar el valor de una variable des javascript, ej:
+
+
+                <script>
+
+                    element.style.setProperty('variableName', 'newValue');
+
+                </script>
+
+
+
+        Recuperar los Valores de :Root:
+        _______________________________
+
+            _para lo cuál, debemos de usar los siguientes:
+
+
+                <script>
+
+                    document.documentElement
+
+                </script>
+
+
+            _lo cuál, nos devolverá "html", el cuál, conteniene a todos los demás elementos html
+
+            _más para capturar el css, de html, debemos implementar:
+
+
+                 <script>
+
+                    getComputedStyle(document.documentElement)
+
+                </script>
+
+
+            _de ésta manera, si obtendremos todos las propiedades css, en todo el html global
+
+            _de ésta manera, podremos capturar éste proceso en una constante, ej:
+
+
+                 <script>
+
+                    cons rootStyle = getComputedStyle(document.documentElement);
+
+                </script>
+
+
+            _de ésta manera, posteriormente sólo tendremos de hacer referencia ha "rootStyle", para obtener una propiedad en específico
+
+        
+
+
+
+                
+
+
+
+
+
+
+
+-->
+
+
+
+    <h1>Bienvenido</h1>
+
+    <p>Sección 1</p>
+
+    <a href="http://www.google.com" target="_blank">Goggle</a>
+
+
+    
+</body>
+</html>

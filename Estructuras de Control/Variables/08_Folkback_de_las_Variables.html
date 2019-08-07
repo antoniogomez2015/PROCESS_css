@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    :root{                
+                    
+        --linkBase: rgb(17, 0, 255);
+        --bgColor: yellow;
+    }
+
+
+    body{
+        background: var(--colorBase, red);
+        color: var(--textBase, var(--bgColor));
+
+    }
+    
+    
+</style>
+<body>
+<!--
+
+    Folkback de las Variables CSS:
+    ______________________________
+
+
+        _para los casos en que una variable no esté declarada ó haya algún cambio inesperado ó pedida de variable respectiva
+
+        _podremos crear folkbacks, para que así, en caso de error con la variable a la cuál, hace referencia una propiedad en un caso determinado
+
+        _vaya a una opción alternativa para que así, la propiedad respectiva tome otro valor u otra variable incluso, siempre como segunda opción, ej:
+
+
+            :root{                
+                
+                --linkBase: rgb(17, 0, 255);
+                --bgColor: yellow;
+            }
+
+
+            body{
+                background: var(--colorBase, red);
+                color: var(--textBase, var(yellow));
+
+            }
+
+
+        _de ésta manera, como podremos ver en éste ejemplo; la propiedad "background", se le ha asignado como valor la variale "--colorBase"
+
+        _pero a su vez, se le ha agregado seguido de una coma ",", un color alternativo por si valiable falla por algún motivo
+
+        _en el segundo ejejmplo; "color", se le ha asignado como valor la variable "--textBase"
+
+        _pero a su vez, se le ha agregado seguido de una "," una segunda variable "var(--bgColor)", como valor alternativo
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+    <h1>Bienvenido</h1>
+
+    <p>Sección 1</p>
+
+    <a href="http://www.google.com" target="_blank">Goggle</a>
+
+
+    
+</body>
+</html>

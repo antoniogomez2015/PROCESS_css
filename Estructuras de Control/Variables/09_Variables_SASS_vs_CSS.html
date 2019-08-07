@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    :root{                
+                    
+        --linkBase: rgb(17, 0, 255);
+        --bgColor: yellow;
+    }
+
+
+    body{
+        background: var(--colorBase, red);
+        color: var(--textBase, var(--bgColor));
+
+    }
+    
+    
+</style>
+<body>
+<!--
+
+    Variables SASS Vvs CSS:
+    _______________________
+
+
+        _lo más recomendable es utilizar ambos tipos de variables dentro del mismo código pre procesado sass
+
+        _ya que ambos tipos de variables se complementan gracias a sus diferencias, las cuáles son:
+
+
+            1_las variables sass, se pueden declarar sin selector, ej
+
+                body{
+                    $color: red;
+                }
+
+                    p{
+                        color: $color;
+                    }
+
+
+            2_las variables de sass, tiene scope, de tipo bloque, mientras que las variables de ccs, tienen scope de tipo DOM, (dpcument object mode), ej:
+
+                body{
+                    --color: red;
+                    $color: red;
+                }
+
+                    p{
+                        color: var(--color);
+                    }
+
+
+                _de ésta manera, podremos ver que podemos utilizar de forma conjunta tanto variables sass, como variables css, dentro del mismo código sass moderno aprovechando sus características y diferencias
+
+
+            3_Operaciones Aritméticas vs Calc()
+
+                _de ésta manera, en sass, podremos hacer operaciones directas con ciertos valores, ej:
+
+
+                    $size: 2em;
+
+                    div{
+
+                        height: ($size*2) + 5em;
+                    }
+
+
+                _más en las variables css, dispondremos de de la función calc(), la cuál, nos permitirá realizar operaciones similares, ej:
+
+
+                    :root{
+
+                        --size: 2em;
+
+                    }
+
+                    div{
+
+                        height: calc(var(--size) * 2);
+
+                    }
+
+
+            4_las variables sass, pueden ser interpoladas, mientras que las variables css, no pueden  ser interpoladas
+
+                _de ésta manera, podremos utilizar las variables para construir otros elementos como propiedades, valores, expresiones, sentencias, otros, ej:
+
+                    
+                    _$selector: red;
+
+                    .#{$selector}{
+
+                        color: $selector;
+
+                    }
+
+
+                _para que así, sea compilado lo siguiente:
+
+
+                    .red{
+
+                        color: red:
+
+                    }
+
+
+                _otro ejemplo para la creacíon controlada de media queries
+
+
+                    $largeBp: 1024px;
+
+
+                        @media screen and (min-width: $largeBp){
+
+                            sentencias..
+                        }
+
+                        NOTA: ésto sólo se puede hacer con variables sass, aún no se puede hacer con vriables css
+
+
+
+                _otro ejemplo más complejo de como crear un ciclo:
+
+
+                    $red: red;
+
+                    $green: greem;
+
+                    $blue;
+
+
+                    @each $color  in $red, $green, $blue{
+
+                        .#{$color}{
+
+                            color: $color;
+                        }
+                    }
+
+
+            5_las variables sass, no pueden re definir mientras que las variables css, si se pueden re definir, ó lo que es lo mismo decir, que las variables sass, no obedecen al modo en cascada
+
+                _ya que sass, no compila declaraciones de variables, si no que sólo compila las llamadas ó implementaciones de las variables en si ya declaradas previamente
+
+
+
+            6_las variables sass, no existen después de la compilación. mientras que las variables css, si existen en el DOM
+
+                _ya que las variables sass, no son parte del css, y no existen en el navegador
+
+                    
+
+                
+
+
+
+
+
+
+
+-->
+
+
+
+    <h1>Bienvenido</h1>
+
+    <p>Sección 1</p>
+
+    <a href="http://www.google.com" target="_blank">Goggle</a>
+
+
+    
+</body>
+</html>

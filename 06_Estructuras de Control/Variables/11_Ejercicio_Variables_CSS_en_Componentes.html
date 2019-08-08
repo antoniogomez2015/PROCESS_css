@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    :root{                
+                    
+        --main-color: blue;
+    }
+
+    /*de ésta forma podremos seleccionar todas las clases con el id "button"*/
+    [class*=button]{
+        display: inline-block;
+        padding: 1em 2em;
+        text-decoration: none;
+        border: none;
+        margin:  1em;
+        color: white;
+        background-color: var(--main-color); 
+        border-radius: 1em
+    }
+
+    /*más posteriormente podremos cambiar el valor de la variable como para cada uno de los casos de los botones a través, de las clases alternativas y modificaciones que creamos inicialmente*/
+    
+    .button--alert{
+        --main-color: red;
+    }
+
+    .button--cta{
+        --main-color: orange;
+    }
+
+    /*
+    
+        _de ésta manera, podremos hacer controles generales a través, de un control de clases global
+
+        _y después ir personalizando las variables a través, de clases modificaciones, en éste caso siguiendo el método BEM
+    
+    */
+    
+    
+    
+
+
+
+</style>
+
+<body>
+<!--
+
+    Ejercicio Variables CSS en Componentes:
+    _______________________________________
+
+
+          
+
+
+
+                
+
+
+
+
+
+
+
+-->
+
+
+
+    <div class="button">Button</div>
+
+    <div class="button--alert">Button</div>
+
+    <div class="button--cta">Button</div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+
+    Order:
+	______
+	
+    _éste atributo nos permite especificar un orden para los elementos html, que hacen de "flex items" 
+    
+    _y que a su vz, estén dentro un elemento html, que haga de "flex container"
+
+    _de ésta manera, podremos aplicar el atributo "order", dentro del selector de un elemento "flex item" 
+    
+    _para que así, éste elemento respectivo se muestre antes ó después de otros elemento "flex items"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+			}
+
+			#lista{
+				width: 300px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 2;
+
+				order: -1;
+			}
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+-->
+</body>
+</html>

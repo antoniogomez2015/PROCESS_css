@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+
+    Flex:
+	_____
+
+    _también, tenemos la posibilidad de influir ó configurar los elementos "flex items" 
+    
+    _de ésta manera, podremos hacer que los elementos flex itmes, tomen el espacio de uno, dos, tres, ó más elementos flex items
+
+	_de ésta manera, podremos hacer que unos elementos html, que hagan de flex items, tengan una mayor importancia que otros
+
+    _para lo cuál, en el selector Css, de cada elemento "flex items", tendremos que colocarle el atributo "flex: --;" 
+    
+    _en el cuál, debemos indicar un valor que representará el ancho ó cantidad de "items", que éste tomará dentro del flujo de "flex items"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+			}
+
+			#lista{
+				width: 300px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 2;
+			}
+
+
+
+    _de ésta manera, los elementos "flex items", que en su "tag css", tengan el atributo "flex" 
+    
+    _con un valor de "flex: 1;", éstos tendrán el ancho normal proporcional al ancho del "row", ó fila del elemento html "flex container"
+
+    _mientras que los elementos "flex items", en su "tag css", tengan el atributo "flex", con un valor de "flex: 2;" 
+    
+    _éstos tendrán el ancho de dos elementos "flex items", proporcional al ancho del "row", ó fila del elemento html "flex container", y así, suscesivamente
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+-->
+</body>
+</html>

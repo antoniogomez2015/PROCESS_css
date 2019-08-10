@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+
+    Flex-Basis:
+	___________
+
+    _éste atributo permite la posibilidad de poder cnfigurar el ancho de los elementos "flex items" 
+    
+    _de forma personalizada yendo más allá de las posibilidades que permite la opción "flex: 1,2,.."
+
+	_de ésta manera, tendremos que seleccionar ha un elementos html, que haga de "flex item", a través, de su respectiva "tag css", y agregarle el atributo "flex-basis"
+
+	_para que así, a través, del atributo "flex-basis", poder aumentar el ancho de forma personalizada de éste elemento "flex item", específicamente 
+	
+	_de ésta manera, podremos repetir éste proceso para los demás elementos de tipo "flex item"
+
+
+		#wrapper{
+
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			display: -webkit-flex;
+
+			align-items: stretch;
+			-webkit-align-items: stretch;
+			
+		}
+
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+
+				flex: 1;
+
+				order: 2;
+
+				flex-basis: 80px;
+				-webkit-flex-basis: 80px;
+			}
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+-->
+</body>
+</html>

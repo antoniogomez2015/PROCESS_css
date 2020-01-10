@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<!--
+		
+	
+	Función Color:
+    ______________
+    
+    Indica el numero de bits por componente de color del dispositivo de salida 
+    
+    Si el dispositivo no soporta colores, este valor es 0
+
+
+
+    Nota: Si el componente de color tiene diferente numero de bits por color, entonces el valor mas pequeño es utilizado 
+    
+    Por Ejemplo, si una pantalla utiliza 5 bits para azul y rojo y 6 bits para el verde, entonces se utilizan 5 bits por componente de color 
+    
+    Si el dispositivo utiliza índices de color se usara el mínimo valor de bits por color en la tabla
+
+
+            Valor: <color>
+
+            Medio: media/visual
+
+            Acepta prefijos min/max: si
+
+
+
+
+    Ejemplo:       
+		
+-->
+
+
+        <style type="text/css">
+        
+
+            /*Para aplicar una hoja de estilo a todos los dispositivos que soporten colores:*/
+            @media all and (color){}
+
+
+            /*Para aplicar una hoja de estilo a dispositivos con al menos 4 bits por componente de color:*/
+
+            @media all and (min-color: 4){} 
+
+
+
+		</style>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<!--
+		
+	
+	Función Device Aspect Ratio:
+    ____________________________
+    
+    Describe la proporción de aspecto del dispositivo de salida 
+    
+    Este valor consiste de dos enteros positivos separados por una barra ("/") 
+    
+    Este representa la proporción de aspecto de los pixeles horizontales (primer termino) a los pixeles verticales (segundo termino)
+
+
+            Valor: <ratio>
+
+            Medio: media/visual media/tactile
+
+            Acepta prefijos min/max: si
+
+
+
+
+    Ejemplo: 
+    
+        El siguiente código selecciona una hoja de estilo especial para ser aplicada en pantallas panorámicas ("widescreen").
+		
+-->
+        
+
+        <style type="text/css">
+        
+
+            /*Este selecciona el estilo cuando la proporción de aspecto sea 16:9 o 16:10*/
+            @media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10){}
+
+
+
+		</style>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<!--
+		
+	
+	Operador Not:
+    _____________
+    
+    El operador not aplica a todo el query y retorna verdadero si es posible 
+    
+    y sino retorna falso (como por ejemplo monochrome en un monitor a color o una ventana con un ancho mínimo de min-width: 700px en un monitor de 600px) 
+    
+    Un not negara un query si es posible pero no a todos los query posibles si están ubicados en una lista separada por comas 
+    
+    El operador not no puede ser usado para negar un query individual sólo para un query completo 
+    
+    Por ejemplo, el not en el siguiente query es evaluado al final:
+        
+		
+-->
+
+
+        <style type="text/css">
+        
+
+            /*ejemplo:*/
+            @media not all and (monochrome){}
+            
+                /*Esto significa que el query es evaluado de la siguiente forma:*/
+
+            @media not (all and (monochrome)){}
+            
+                /*... y no de esta forma:*/
+
+            @media (not all) and (monochrome) { ... }
+            
+            
+            /*Otro Ejemplo:*/
+
+            @media not screen and (color), print and (color){}
+            
+                /*Es evaluado de la siguiente forma:*/
+
+            @media (not (screen and (color))), print and (color){}    
+
+
+
+		</style>
+
+
+
+
+</body>
+</html>

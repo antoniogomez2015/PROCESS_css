@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>curso de css3</title>
+
+</head>
+
+<!--
+		
+	
+	Función Width:
+    ______________
+    
+    La función width describe el ancho de la superficie a renderizar en el dispositivo de salida 
+    
+    (como el ancho de una ventana de un documento o el ancho de la bandeja de papel en una impresora)
+
+
+
+            Valor: <length>
+
+            Medio: media/visual, media/tactile
+
+            Acepta prefijos min/max: si:         
+    
+
+
+    Nota: Cuando el usuario cambia el tamaño de una ventana Firefox también cambia las hojas de estilo para utilizar la mas adecuada basándose en los valores de width y height del query
+		
+-->
+
+            <!--Esta query especifica una hoja de estilo para ser aplicada a un medio impreso con un ancho mayor a 8.5 pulgadas:-->
+
+            <link rel="stylesheet" media="print and (min-width: 8.5in)"
+            href="http://foo.com/mystyle.css" />
+        
+
+
+        <style type="text/css">
+
+
+            @media speech and (width) and (max-width: 15em){} 
+        
+
+            /*Si usted quiere especificar una hoja de estilo para dispositivos portátiles o pantallas con un ancho de al menos 20em, usted puede usar esta query:*/
+
+            @media handheld and (min-width: 20em), screen and (min-width: 20em){}
+
+
+            /*Esta query especifica una hoja de estilo para ser utilizada cuando la ventana tiene un ancho entre 500 y 800 pixeles:*/
+
+            @media screen and (min-width: 500px) and (max-width: 800px){}
+
+
+		</style>
+
+
+
+
+</body>
+</html>

@@ -6,16 +6,9 @@
 
 </head>
 
-<style type="text/css">
+<!--
 		
-	/*Curso (48 videos):
-
-		Slider CSS sin Javascript
-			https://www.youtube.com/watch?v=IYh0PkyOhxY
-
-		#1 Introduccion - Curso CSS3 desde cero
-			https://www.youtube.com/watch?v=643dVVz65Ls&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85
-
+	
 
 		Referencias:
 
@@ -23,31 +16,68 @@
 				https://www.w3.org/TR/tr-groups-all
 
 		Quedamos aquí: #41 - Entendiendo Flexbox de CSS3 - Curso de CSS3 desde 0 | https://www.youtube.com/watch?v=t58MkLTetKA&list=PL5mZlJHWhPyxCif2OzY0DZKad0byKFq85&index=41
-	*/
+	
 
 
 	
-	/*//////////////////////////////////////////////////////////////////////////////////////////*
+	/////////////////////////////////////////////////////////////////////////////////////////
 
 	
-	Media Queries , en CSS3
 
-	_media queries, es una modalidad la cuál, permite que el sistema sea sensible y que permite que el tamaño del viewport, sea auto detectable para que así, podamos condicionar y cambiar el css, en relación a un tamaño de viewport, mínimo y específico
+	Media Queries en CSS3:
+	______________________
 
-	_donde primeramente debemos de haber agregado en el <head>, el tag, <meta>, específicamente el tag:
+	_media queries, es una modalidad ha modo de condicional de programación
+	
+	la cuál, permite que el sistema sea sensible y que permite que el tamaño del viewport, sea auto detectable 
+	
+	para que así, podamos condicionar y cambiar el css, en relación a un tamaño de viewport, mínimo y específico
 
 
-		<meta name="viewport" content="width=device-width, user-scalable=no, 
-	initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	Sintaxis:
+	_________
+
+	la sintaxis que expresa una media queries se define primeramente por un: 
+	
+
+		_@
 
 
+	seguido de la palabra:
+	
 
-	_ésto es posible a través, de la siguiente sentencia ó atributo css, el cuál, se aplicará dentro del documento ".css" ej:
+		_@media 
+		
+
+	y seguido de paréntesis:
+
+
+		_@media()
+
+
+	y como parámetro indicaremos la condición ó ancho máximo del dispositivo a detectar a través, de la instrucción:
+
+
+		_@media(max-with: 768px)
+
+
+	donde por último se agergarán llaves donde se agregarán las sentencias css, que corresponderán con ese media querie
+
+
+		_@media(max-with: 768px){
+
+		}
+
+
+-->
+
 
 		<style type="text/css">
 
 
-			//opción básica:
+
+			/*opción básica:*/
 
 			@media screen and (max-width: 768px){
 
@@ -60,7 +90,7 @@
 	
 			}
 
-			//opción completa:
+			/*opción completa:*/
 
 			@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
 
@@ -73,61 +103,69 @@
 
 			} 
 
+		</style>
 
-	_de ésta manera, a través, de los media queries, podremos hacer en éste ejemplo que los elementos "flex items", el contenedor principal cambien totalmente cuando el viewport, se haga muy angosto en dispositivos móviles para que así, en éste caso, los elementos "flex items", pasen ha una visualización "flex-directopm:column"
+
+<!--
+
+	_de ésta manera, a través, de los media queries, podremos hacer en éste ejemplo que los elementos "flex items", el contenedor principal cambien totalmente cuando el viewport 
+	
+	se haga muy angosto en dispositivos móviles para que así, en éste caso, los elementos "flex items", pasen ha una visualización "flex-directopm:column"
 
 	_ha una visualización en columnas, que es más cercana al usuario de móviles con pantallas pequeñas que la visualización por "row", ó filas adaptada a pantallas ámplias de escritorio
 
-	*/		
+-->
 
-	
+	<style>	
 
-	body{
-		width: 100%;
-		background-color: #777;
-		margin: 0 auto;
-
-	}
-
-		#wrapper{
+		body{
 			width: 100%;
+			background-color: #777;
 			margin: 0 auto;
-			display: flex;			
-    		justify-content: flex-start;
-    		flex-wrap: wrap;
-    		align-items: baseline;
+
 		}
 
-		#top, #bottom{
-			width: 200px;
-			height: 200px;
-			background-color: white;
-			border: 3px solid grey;
-			flex: 2;
-			order: 2;
-		}
+			#wrapper{
+				width: 100%;
+				margin: 0 auto;
+				display: flex;			
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				align-items: baseline;
+			}
 
-		#lista{
-			width: 300px;
-			height: 200px;
-			background-color: white;
-			border: 3px solid grey;
-			flex:2;
-			order: 1;
-		}
+			#top, #bottom{
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+				flex: 2;
+				order: 2;
+			}
 
-		#content2{
-			width: 400px;
-			height: 400px;
-			background-color: white;
-			border: 3px solid grey;
-			flex:1;
-			order:-1;
-		}
+			#lista{
+				width: 300px;
+				height: 200px;
+				background-color: white;
+				border: 3px solid grey;
+				flex:2;
+				order: 1;
+			}
+
+			#content2{
+				width: 400px;
+				height: 400px;
+				background-color: white;
+				border: 3px solid grey;
+				flex:1;
+				order:-1;
+			}
+
+	</style>
 
 
 
-</style>
+
 
 <body>
 

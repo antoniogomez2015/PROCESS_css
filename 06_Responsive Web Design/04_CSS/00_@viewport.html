@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+        @viewport:
+        __________
+
+        La etiqueta meta viewport fue la solución de Apple al problema. Fue adoptada rápidamente por otras plataformas, pero nunca fue presentada por la W3C. Microsoft sacó esto a la luz cuando ellos eligieron ignorar para IE10 ignorar el viewport metatag bajo ciertas circunstancias. En vez de eso, ellos optaron por usar Adaptación CSS a Dispositivos, que es en lo que la W3C se está apoyando.
+
+
+        En pocas palabras, propiedades similares a viewport son definidas dentro de CSS usando la regla @viewport, en lugar de dentro del HTML.
+
+    -->
+
+    
+            <style>
+        
+                @viewport{
+                    zoom: 1.0;
+                    width: device-width;
+                }
+
+            </style>
+
+
+    <!--
+
+        Ó, de acuerdo con nuestro más nuevo acercamiento no especifiques ancho de dispositivo, podríamos fijar lo siguiente:
+
+    -->
+
+            <style>
+
+                @viewport{
+                    zoom: 1.0;
+                    width: extend-to-zoom;
+                }
+
+            </style>
+
+
+    <!--
+
+        Dado que es un trabajo en progreso, IE10 requiere la versión prefijada de la proposición, la cual luce algo como esto:
+
+    -->
+
+
+            <style>
+        
+                @-ms-viewport{
+                    width: extend-to-zoom;
+                    zoom: 1.0;
+                }
+
+            </style>
+
+    <!--
+
+        Es una solución mucho más elegante que la metatag, pero está muy lejos de ser totalmente respaldada. 
+        
+        
+        Ingresala en tu CSS ahora, para asegurarte de que tu diseño responsive se comporta en IE10 "snap mode (modo quebrar)", y hecha un ojo a su progreso en el futuro. 
+        
+        
+        Esto es a donde el control por viewport se dirige.
+
+
+        Puedes leer más acerca de esto en el artículo de Tim Kadlec's, IE10 Snap Mode(Modo quebrar) y Diseño Responsivo
+
+
+
+        Conclusión:
+
+            El diseño responsivo no es solo para la gente que disfruta ver sus navegadores crecer y encogerse 
+            
+            ¡se trata de satisfacer tantos dispositivos diferentes, pantallas y resoluciones como sea posible! 
+            
+            Implementa la etiqueta meta viewport en tu <head>, más la regla @viewport en tu CSS cuando estés construyendo layouts flexibles y estás listo para seguir
+
+
+
+
+
+            Referencia
+
+                https://webdesign.tutsplus.com/es/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972
+
+
+
+
+
+
+
+    -->
+
+
+
+</body>
+</html>
